@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qbb.scheduler.mapper.SchedulerMapper">
+
+	<resultMap id="baseResultMap" type="JobModel">
+		<id column="job_id" property="id" jdbcType="DECIMAL" />
+		<result column="job_name" property="name" jdbcType="VARCHAR" />
+		<result column="job_group" property="group" jdbcType="VARCHAR" />
+		<result column="sched_name" property="schedName" jdbcType="VARCHAR" />
+		<result column="job_description" property="description" jdbcType="VARCHAR" />
+		<result column="clazz" property="clazz" jdbcType="VARCHAR" />
+		<result column="cron" property="cron" jdbcType="VARCHAR" />
+		<result column="start_at" property="startAt" jdbcType="VARCHAR" />
+		<result column="end_at" property="endAt" jdbcType="VARCHAR" />
+		<result column="misfire" property="misfire" jdbcType="VARCHAR" />
+		<result column="is_active" property="active" jdbcType="DECIMAL" />
+		<result column="remark" property="remark" jdbcType="VARCHAR" />
+		<result column="create_id" property="createId" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="modify_id" property="modifyId" jdbcType="VARCHAR" />
+		<result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+		<result column="person_liable" property="personLiable" jdbcType="VARCHAR" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="trigger_state" property="state" jdbcType="VARCHAR" />
+		<result column="trigger_state_name" property="stateName" jdbcType="VARCHAR" />
+		<result column="is_monitor" property="monitor" jdbcType="DECIMAL" />
+	</resultMap>
+	<resultMap id="jobStateResultMap" type="JobState">
+		<result column="job_id" property="id" jdbcType="DECIMAL" />
+		<result column="trigger_state" property="state" jdbcType="VARCHAR" />
+		<result column="trigger_state_name" property="stateName" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<sql id="base_columns">
+		`job_id`, `job_name`, `job_group`, `sched_name`, `job_description`, `clazz`, `cron`, `start_at`, `end_at`, `misfire`, `is_active`, `remark`, `create_id`, `create_time`,
+		`modify_id`, `modify_time`, person_liable, phone, is_monitor
+	</sql>
+
+	<select id="getJobInfo" parameterType="java.lang.Long" resultMap="baseResultMap">
+		select
+		<include refid="base_columns" />
+		from sys_jobs
+		where is_active=1 and job_id=#{id}
+	</select>
+
+	<select id="getAllJob" resultMap="baseResultMap">
+		select
+			j.`job_id`,j. `job_name`, j.`job_group`, j.sched_name, j.`job_description`, j.`clazz`,j. `cron`,j. `start_at`,j. `end_at`, j.`misfire`, j.`is_active`, j.`remark`,j. `create_id`, j.`create_time`,
+			j.`modify_id`, j.`modify_time`, ifnull(t.trigger_state, 'NOT_START') trigger_state,
+			case ifnull(t.trigger_state, 'NOT_START') when 'ACQUIRED' then '运行中'
+			when 'WAITING' then '等待运行'
+			when 'PAUSED' then '已停止'
+			when 'PAUSED_BLOCKED' then '等待结束'
+			when 'BLOCKED' then '阻塞'
+			when 'ERROR' then '错误'
+			when 'NOT_START' then '未开始' end as trigger_state_name, j.person_liable, j.phone, j.is_monitor
+		from sys_jobs j
+		left join qrtz_triggers t on j.job_name=t.TRIGGER_NAME and j.job_group=t.TRIGGER_GROUP and j.sched_name=t.SCHED_NAME
+		where is_active=1 and j.sched_name=#{schedName}
+		order by j.job_group desc, j.job_id desc
+	</select>
+
+	<insert id="addJob"   parameterType="JobModel">
+		INSERT INTO `sys_jobs` (`job_name`, `job_group`, sched_name, `job_description`, `clazz`, `cron`, `start_at`, `end_at`, `misfire`,
+		`is_active`, `remark`,
+		`create_id`, `create_time`, person_liable, phone, is_monitor)
+		VALUES (#{name}, #{group}, #{schedName}, #{description}, #{clazz}, #{cron}, #{startAt}, #{endAt}, #{misfire}, 1, #{remark},
+		#{createId}, #{createTime}, #{personLiable}, #{phone}, #{monitor})
+	</insert>
+
+	<update id="updateJob" parameterType="JobModel">
+		UPDATE `sys_jobs`
+		<set>
+			<if test="name != null">`job_name`=#{name},</if>
+			<if test="group != null">`job_group`=#{group},</if>
+			<if test="description != null">job_description=#{description},</if>
+			<if test="clazz != null">`clazz`=#{clazz},</if>
+			<if test="cron != null">`cron`=#{cron},</if>
+			<if test="startAt != null">`start_at`=#{startAt},</if>
+			<if test="endAt != null">`end_at`=#{endAt},</if>
+			<if test="misfire != null">`misfire`=#{misfire},</if>
+			<if test="remark != null">`remark`=#{remark},</if>
+			<if test="modifyId != null">`modify_id`=#{modifyId},</if>
+			<if test="modifyTime != null">`modify_time`=#{modifyTime},</if>
+			<if test="personLiable != null">`person_liable`=#{personLiable},</if>
+			<if test="phone != null">`phone`=#{phone},</if>
+			<if test="monitor != null">`is_monitor`=#{monitor},</if>
+		</set>
+		WHERE `job_id`=#{id}
+	</update>
+	<delete id="deleteJob" parameterType="java.lang.Long">
+		update sys_jobs set is_active=0 where job_id=#{id}
+	</delete>
+
+	<select id="getTaskState" resultMap="jobStateResultMap" parameterType="java.lang.Long">
+		select j.job_id,t.trigger_state,
+			case t.trigger_state when 'ACQUIRED' then '运行中'
+			when 'WAITING' then '等待运行'
+			when 'PAUSED' then '已停止'
+			when 'PAUSED_BLOCKED' then '等待结束'
+			when 'BLOCKED' then '阻塞'
+			when 'ERROR' then '错误'
+			end as trigger_state_name
+		from sys_jobs j, qrtz_triggers t
+		where j.job_name=t.TRIGGER_NAME and j.job_group=t.TRIGGER_GROUP and j.sched_name=t.SCHED_NAME and j.is_active = 1
+		<if test="id != null">
+			and j.job_id=#{id}
+		</if>
+	</select>
+	
+</mapper>

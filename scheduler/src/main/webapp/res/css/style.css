@@ -1,0 +1,41 @@
+html, body {
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+}
+
+.task-table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-color: black;
+	width: 100%;
+	margin: 0px auto;
+}
+
+.task-table tr td, .task-table tr th {
+	padding: 5px 3px;
+	word-wrap:break-all;
+	white-space:normal;
+}
+
+.task-table tr td.center {
+	text-align: center;
+}
+
+.task-table tr td.left {
+	text-align: left;
+}
+
+.task-table tr td.right {
+	text-align: right;
+}
+
+.task-table tr td.op input {
+	width: 60px;
+	height: 22px;
+	margin: 0px 1px;
+}
+
+.template {
+	display: none;
+}
