@@ -19,43 +19,6 @@ public interface IMonitorSystemService {
 	void runEveryMinute(JobModel jobModel) throws SchedulerException;
 
 	/**
-	 * MO9自动投标成功短信每天16:00执行一次 发送
-	 * 
-	 * @param jobModel
-	 * @throws SchedulerException
-	 */
-	void runMo9AotoInvestSuccess(JobModel jobModel) throws SchedulerException;
-
-	/**
-	 * MO9回款提醒短信 11.30执行
-	 * 
-	 * @param jobModel
-	 * @throws SchedulerException
-	 */
-	void runMo9Repay1130Msg(JobModel jobModel) throws SchedulerException;
-
-	/**
-	 * MO9回款提醒短信 17.30执行
-	 * 
-	 * @param jobModel
-	 * @throws SchedulerException
-	 */
-	void runMo9Repay1700Msg(JobModel jobModel) throws SchedulerException;
-
-	/**
-	 * 月月赢回款提醒短信 17.00执行
-	 * 
-	 * @param jobModel
-	 * @throws SchedulerException
-	 */
-	void runMonthWinRepay1700Msg(JobModel jobModel) throws SchedulerException;
-
-	/**
-	 * 星期5查询周末核保且需要还款的标的数据
-	 */
-	void runReekendCoreBorrowAndRepayment();
-
-	/**
 	 * 发送每日报告
 	 */
 	void sendDayReport(JobModel job);
