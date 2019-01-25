@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+     http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-2.5.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+	<!-- 理财页省心理财mo9标的加载 -->
+	<bean id="initMo9BorrowJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="borrowService" />
+		<property name="targetMethod" value="initMo9BorrowList" />
+		<property name="concurrent" value="false"></property>
+	</bean>
+	
+	<bean id="initMo9BorrowTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="initMo9BorrowJobDetail" />
+		<property name="cronExpression" value="16/5 * * * * ?" />
+	</bean>
+	
+	<bean id="mo9BorrowDetailJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="2037" />
+		<property name="targetMethod" value="initData" />
+		<property name="concurrent" value="false"></property>
+	</bean>
+	
+	<bean id="mo9BorrowDetailTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="mo9BorrowDetailJobDetail" />
+		<property name="cronExpression" value="15/5 * * * * ?" />
+	</bean>
+	<!-- 优选直投 -->
+	<bean id="borrowListJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="2035" />
+		<property name="targetMethod" value="initBorrowList" />
+		<property name="concurrent" value="false"></property>
+	</bean>
+	
+	<bean id="borrowListDetailTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="borrowListJobDetail" />
+		<property name="cronExpression" value="14/6 * * * * ?" />
+	</bean>
+
+	<bean id="bemsInvest_scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="initMo9BorrowTrigger" />
+				<ref bean="mo9BorrowDetailTrigger" />
+				<ref bean="borrowListDetailTrigger" />
+				
+            </list>
+		</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,556 @@
+2017-01-15 12:00:03,677 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 10ms
+2017-01-15 12:00:13,669 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:00:23,689 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 19ms
+2017-01-15 12:00:28,542 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:00:28,546 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:00:33,670 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:00:43,670 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:00:53,671 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:01:03,682 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 11ms
+2017-01-15 12:01:13,672 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:01:23,673 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:01:28,546 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:01:28,549 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:01:33,673 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:01:43,674 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:01:53,683 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 11ms
+2017-01-15 12:02:03,674 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:02:13,674 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:02:23,676 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:02:28,550 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:02:28,553 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:02:33,677 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:02:43,677 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:02:53,679 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:03:03,680 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:03:13,681 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:03:23,681 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:03:28,553 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:03:28,557 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:03:33,682 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:03:43,682 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:03:53,683 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:04:03,683 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:04:13,699 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 15ms
+2017-01-15 12:04:23,686 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:04:28,557 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:04:28,561 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:04:33,686 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:04:43,687 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:04:53,689 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:05:03,690 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:05:13,703 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 13ms
+2017-01-15 12:05:23,693 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:05:28,562 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:05:28,566 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:05:33,704 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 10ms
+2017-01-15 12:05:43,696 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:05:53,697 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:06:03,719 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 22ms
+2017-01-15 12:06:13,698 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:06:23,698 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:06:28,567 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:06:28,571 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:06:33,707 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 10ms
+2017-01-15 12:06:43,701 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 2ms
+2017-01-15 12:06:53,700 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:07:03,727 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 27ms
+2017-01-15 12:07:13,701 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:07:23,702 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:07:28,571 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:07:28,573 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:07:33,703 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:07:43,703 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:07:53,714 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 11ms
+2017-01-15 12:08:03,704 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:08:13,704 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:08:23,717 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 13ms
+2017-01-15 12:08:28,574 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:08:28,576 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:08:33,706 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:08:43,706 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:08:53,716 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 9ms
+2017-01-15 12:09:03,707 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:09:13,707 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:09:23,707 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:09:28,575 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:09:28,578 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:09:33,710 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:09:43,717 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 8ms
+2017-01-15 12:09:53,710 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:10:03,713 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:10:13,729 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 16ms
+2017-01-15 12:10:23,714 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:10:28,577 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:10:28,579 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:10:33,714 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:10:43,729 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 15ms
+2017-01-15 12:10:53,716 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:11:03,716 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:11:13,718 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:11:23,719 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:11:28,578 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:11:28,581 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:11:33,720 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:11:43,720 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:11:53,720 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:12:03,721 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:12:13,722 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:12:23,723 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:12:28,580 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:12:28,584 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:12:33,750 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 27ms
+2017-01-15 12:12:43,725 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:12:53,726 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:13:03,728 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:13:13,728 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:13:23,729 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:13:28,582 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:13:28,585 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:13:33,757 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 29ms
+2017-01-15 12:13:43,731 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:13:53,732 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:14:03,732 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:14:13,733 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:14:23,743 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 10ms
+2017-01-15 12:14:28,585 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:14:28,588 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:14:33,734 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:14:43,734 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:14:53,744 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 10ms
+2017-01-15 12:15:03,735 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:15:13,735 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:15:23,748 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 13ms
+2017-01-15 12:15:28,589 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:15:28,591 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:15:33,737 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:15:43,738 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:15:53,739 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:16:03,739 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:16:13,752 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 13ms
+2017-01-15 12:16:23,740 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:16:28,590 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:16:28,593 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:16:33,741 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:16:43,757 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 17ms
+2017-01-15 12:16:53,742 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:17:03,743 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:17:13,745 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:17:23,746 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:17:28,592 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:17:28,595 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:17:33,749 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:17:43,749 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:17:53,749 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:18:03,749 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:18:13,749 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:18:23,751 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:18:28,595 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:18:28,597 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:18:33,784 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 34ms
+2017-01-15 12:18:43,753 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:18:53,755 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:19:03,756 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:19:13,757 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:19:23,757 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:19:28,598 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:19:28,601 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:19:33,757 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:19:43,758 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:19:53,758 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:20:03,767 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 9ms
+2017-01-15 12:20:13,758 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:20:23,772 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 15ms
+2017-01-15 12:20:28,602 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:20:28,604 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:20:33,759 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:20:43,771 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 11ms
+2017-01-15 12:20:53,774 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 13ms
+2017-01-15 12:21:03,762 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:21:13,773 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 11ms
+2017-01-15 12:21:23,775 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 12ms
+2017-01-15 12:21:28,606 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:21:28,608 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:21:33,764 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:21:43,765 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:21:53,776 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 10ms
+2017-01-15 12:22:03,768 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:22:13,768 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:22:23,769 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:22:28,609 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:22:28,610 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:22:33,769 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:22:43,771 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:22:53,772 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:23:03,773 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:23:13,774 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:23:23,775 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:23:28,611 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:23:28,613 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:23:33,775 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:23:43,800 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 25ms
+2017-01-15 12:23:53,777 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:24:03,777 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:24:13,788 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 11ms
+2017-01-15 12:24:23,779 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:24:28,613 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:24:28,615 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:24:33,780 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:24:43,781 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:24:53,782 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:25:03,784 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:25:13,784 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:25:23,785 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:25:28,615 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:25:28,619 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:25:33,802 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 17ms
+2017-01-15 12:25:43,788 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:25:53,788 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:26:03,818 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 30ms
+2017-01-15 12:26:13,823 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 35ms
+2017-01-15 12:26:23,790 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:26:28,617 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:26:28,620 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:26:33,803 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 14ms
+2017-01-15 12:26:43,790 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:26:53,791 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:27:03,791 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:27:13,801 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 10ms
+2017-01-15 12:27:23,792 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:27:28,621 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:27:28,622 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:27:33,793 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:27:43,793 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:27:53,802 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 10ms
+2017-01-15 12:28:03,794 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:28:13,795 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:28:23,795 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:28:28,623 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:28:28,625 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:28:33,796 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:28:43,797 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:28:53,798 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:29:03,798 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:29:13,798 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:29:23,799 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:29:28,625 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:29:28,627 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:29:33,799 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:29:43,800 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:29:53,801 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 2ms
+2017-01-15 12:30:03,801 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:30:13,802 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:30:23,802 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:30:28,628 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:30:28,631 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:30:33,804 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:30:43,804 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:30:53,804 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:31:03,805 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:31:13,805 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:31:23,806 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:31:28,629 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:31:28,631 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:31:33,806 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:31:43,828 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 21ms
+2017-01-15 12:31:53,810 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:32:03,830 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 21ms
+2017-01-15 12:32:13,811 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:32:23,812 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:32:28,632 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:32:28,634 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:32:33,830 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 19ms
+2017-01-15 12:32:43,814 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:32:53,814 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:33:03,847 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 34ms
+2017-01-15 12:33:13,814 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:33:23,815 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:33:28,634 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:33:28,635 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:33:33,816 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:33:43,816 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:33:53,817 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:34:03,818 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:34:13,819 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:34:23,819 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:34:28,635 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:34:28,637 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:34:33,821 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:34:43,822 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:34:53,822 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:35:03,848 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 27ms
+2017-01-15 12:35:13,823 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:35:23,824 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:35:28,637 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:35:28,639 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:35:33,824 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:35:43,824 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:35:53,826 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:36:03,826 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:36:13,827 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:36:23,826 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:36:28,639 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:36:28,641 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:36:33,828 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:36:43,830 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:36:53,830 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:37:03,831 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:37:06,594 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:37:06,594 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:37:06,595 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select IFNULL(MAX(max_rate),0)maxRate ,IFNULL(min(min_rate)  ,0) minRate,IFNULL(SUM(surplus_money) ,0) money from zn_plan_total where status=?]
+2017-01-15 12:37:06,595 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:37:06,635 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:37:13,831 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:37:23,832 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:37:26,268 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:37:26,269 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:37:26,269 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select IFNULL(MAX(max_rate),0)maxRate ,IFNULL(min(min_rate)  ,0) minRate,IFNULL(SUM(surplus_money) ,0) money from zn_plan_total where status=?]
+2017-01-15 12:37:26,269 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:37:26,287 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:37:33,860 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 29ms
+2017-01-15 12:37:36,565 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:37:36,566 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:37:36,566 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select a.user_name userName,ROUND(IFNULL(b.join_money,0),2) joinMoney, DATE_FORMAT(b.create_time,'%c-%d %H:%m:%s') joinTime from cnp_user a, zn_plan_join b where a.user_id = b.user_id ORDER BY b.create_time desc limit 0, 30]
+2017-01-15 12:37:36,566 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:37:36,631 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:37:43,845 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 12ms
+2017-01-15 12:37:44,150 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:37:44,150 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:37:44,150 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select IFNULL(MAX(max_rate),0)maxRate ,IFNULL(min(min_rate)  ,0) minRate,IFNULL(SUM(surplus_money) ,0) money from zn_plan_total where status=?]
+2017-01-15 12:37:44,150 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:37:44,167 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:37:53,834 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:38:03,834 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:38:13,571 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:38:13,572 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:38:13,572 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select IFNULL(MAX(max_rate),0)maxRate ,IFNULL(min(min_rate)  ,0) minRate,IFNULL(SUM(surplus_money) ,0) money from zn_plan_total where status=?]
+2017-01-15 12:38:13,572 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:38:13,589 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:38:13,834 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:38:15,446 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:38:15,446 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:38:15,446 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select IFNULL(MAX(max_rate),0)maxRate ,IFNULL(min(min_rate)  ,0) minRate,IFNULL(SUM(surplus_money) ,0) money from zn_plan_total where status=?]
+2017-01-15 12:38:15,446 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:38:15,464 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:38:23,835 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:38:33,835 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:38:43,836 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:38:53,837 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:39:03,837 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:39:13,837 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:39:23,839 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:39:28,640 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:39:28,642 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:39:33,841 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:39:43,843 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:39:53,844 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:40:03,844 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:40:13,845 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:40:23,845 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:40:28,642 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:40:28,644 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:40:33,845 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:40:43,847 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:40:53,847 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:41:03,847 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:41:13,848 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:41:23,849 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:41:28,644 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:41:28,646 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:41:33,850 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 2ms
+2017-01-15 12:41:43,851 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:41:53,852 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:42:03,852 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:42:13,853 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:42:23,861 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 9ms
+2017-01-15 12:42:28,646 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:42:28,649 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:42:33,853 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:42:43,854 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:42:53,853 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:43:03,855 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:43:13,856 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:43:23,856 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:43:28,648 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:43:28,650 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:43:33,857 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:43:43,857 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:43:53,858 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:44:03,858 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:44:13,859 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:44:23,869 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 11ms
+2017-01-15 12:44:28,651 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:44:28,653 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:44:33,861 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:44:43,861 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:44:53,874 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 13ms
+2017-01-15 12:45:03,863 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:45:13,863 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:45:23,864 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:45:28,653 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:45:28,655 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:45:33,865 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:45:43,865 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:45:53,866 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:46:03,867 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:46:13,867 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:46:23,868 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:46:28,655 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:46:28,657 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:46:33,869 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:46:43,870 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:46:53,870 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:47:03,871 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:47:13,871 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:47:23,872 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:47:28,656 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:47:28,658 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:47:33,872 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:47:43,873 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:47:53,874 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:48:03,874 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:48:13,876 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:48:23,876 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:48:28,658 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:48:28,660 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:48:33,878 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:48:43,877 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:48:53,877 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:49:03,879 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:49:13,879 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:49:23,881 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:49:28,660 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:49:28,662 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:49:33,882 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:49:43,885 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:49:53,887 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:50:03,887 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:50:13,887 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:50:23,888 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:50:28,661 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:50:28,663 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:50:33,889 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:50:43,889 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:50:53,890 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:51:03,890 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:51:13,891 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:51:23,891 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:51:28,663 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:51:28,665 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:51:33,891 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:51:43,892 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:51:47,008 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:51:47,009 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:51:47,009 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select IFNULL(MAX(max_rate),0)maxRate ,IFNULL(min(min_rate)  ,0) minRate,IFNULL(SUM(surplus_money) ,0) money from zn_plan_total where status=?]
+2017-01-15 12:51:47,009 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:51:47,025 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:51:53,892 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:52:03,893 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:52:13,894 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:52:23,895 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:52:33,898 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:52:34,293 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:52:34,293 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:52:34,293 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select ROUND(IFNULL(sum(b.user_earned),0),2) as totalIncome, ROUND(IFNULL(sum(zn_daishou_total),0),2) as willEarnMoney,ROUND(IFNULL(sum(zn_can_Exit),0),2) as zn_can_exit, (select ROUND(IFNULL(SUM(join_actual_money),0),2) from zn_plan_join where user_id=2355) as total_join ,(select ROUND(IFNULL(SUM(sign_actual_money),0),2) from zn_plan_sign where status='1' and user_id=2355) as total_sign_already, (select ROUND(IFNULL(SUM(sign_money),0),2) from zn_plan_sign where status='0' and user_id=2355) as quitIngMoney from (select investor_id ,sum(IF(brp.`status`='15' ,repay_detail_money+detail_interest,0)) as zn_daishou_total  ,sum(IF(brp.`status`='15' and TIMESTAMPDIFF(MONTH,brp.create_time,NOW())>=1 and TIMESTAMPDIFF(DAY,NOW(),repayment_time)>3 ,repay_detail_money,0)) as zn_can_Exit from bid_repayment_detail brp LEFT JOIN bid_borrow bb on brp.borrow_sq=bb.borrow_sq where bb.is_plan =1 and if(brp.zq_status='F' or brp.zq_status='C' or brp.zq_status='M' ,'true','false')=false and investor_id = ? union all select investor_id ,sum(IF(brp.`status`='15' ,repay_detail_money+detail_interest,0)) as zn_daishou_total  ,sum(IF(brp.`status`='15' and TIMESTAMPDIFF(MONTH,brp.create_time,NOW())>=1 and TIMESTAMPDIFF(DAY,NOW(),repayment_time)>3 ,repay_detail_money,0)) as zn_can_Exit from bid_repayment_detail_hist brp LEFT JOIN bid_borrow bb on brp.borrow_sq=bb.borrow_sq where bb.is_plan =1 and if(brp.zq_status='F' or brp.zq_status='C' or brp.zq_status='M' ,'true','false')=false and investor_id=? ) a ,cnp_user_financing b where b.user_id = ? and acct_type = 3]
+2017-01-15 12:52:34,294 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:52:34,361 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:52:36,674 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:52:36,674 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:52:36,675 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select ROUND(IFNULL(sum(b.user_earned),0),2) as totalIncome, ROUND(IFNULL(sum(zn_daishou_total),0),2) as willEarnMoney,ROUND(IFNULL(sum(zn_can_Exit),0),2) as zn_can_exit, (select ROUND(IFNULL(SUM(join_actual_money),0),2) from zn_plan_join where user_id=2355) as total_join ,(select ROUND(IFNULL(SUM(sign_actual_money),0),2) from zn_plan_sign where status='1' and user_id=2355) as total_sign_already, (select ROUND(IFNULL(SUM(sign_money),0),2) from zn_plan_sign where status='0' and user_id=2355) as quitIngMoney from (select investor_id ,sum(IF(brp.`status`='15' ,repay_detail_money+detail_interest,0)) as zn_daishou_total  ,sum(IF(brp.`status`='15' and TIMESTAMPDIFF(MONTH,brp.create_time,NOW())>=1 and TIMESTAMPDIFF(DAY,NOW(),repayment_time)>3 ,repay_detail_money,0)) as zn_can_Exit from bid_repayment_detail brp LEFT JOIN bid_borrow bb on brp.borrow_sq=bb.borrow_sq where bb.is_plan =1 and if(brp.zq_status='F' or brp.zq_status='C' or brp.zq_status='M' ,'true','false')=false and investor_id = ? union all select investor_id ,sum(IF(brp.`status`='15' ,repay_detail_money+detail_interest,0)) as zn_daishou_total  ,sum(IF(brp.`status`='15' and TIMESTAMPDIFF(MONTH,brp.create_time,NOW())>=1 and TIMESTAMPDIFF(DAY,NOW(),repayment_time)>3 ,repay_detail_money,0)) as zn_can_Exit from bid_repayment_detail_hist brp LEFT JOIN bid_borrow bb on brp.borrow_sq=bb.borrow_sq where bb.is_plan =1 and if(brp.zq_status='F' or brp.zq_status='C' or brp.zq_status='M' ,'true','false')=false and investor_id=? ) a ,cnp_user_financing b where b.user_id = ? and acct_type = 3]
+2017-01-15 12:52:36,675 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:52:36,679 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:52:43,899 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:52:47,136 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:52:47,136 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:52:47,137 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select a.plan_name planName,a.plan_sq planSq ,DATE_FORMAT(b.create_time,'%Y-%m-%d')  createTime,CONCAT(a.min_rate,'-',a.max_rate) rateRange ,ROUND(sum(join_money) ,2) investMoney,ROUND(sum(actual_interest) ,2)  totalIncome from zn_plan_total a,zn_plan_join b,zn_plan_sign c where b.user_id=? and a.plan_sq = b.plan_sq and a.plan_sq=c.plan_sq group by a.plan_sq limit 0, 10]
+2017-01-15 12:52:47,137 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:52:47,140 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:52:47,169 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:52:47,169 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:52:47,169 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select a.plan_name planName,DATE_FORMAT(b.over_time,'%Y-%m-%d') finshTime,a.plan_sq planSq ,ROUND(IFNULL(c.join_money,0),2) investMoney,ROUND(IFNULL(actual_interest,0),2) totalIncome,ROUND(IFNULL(sign_actual_money,0),2) quitMoney  from zn_plan_total a,zn_plan_sign b,zn_plan_join c where b.user_id=? and a.plan_sq = b.plan_sq and b.status=1 and a.plan_sq = c.plan_sq and c.user_id=?   limit 0, 10]
+2017-01-15 12:52:47,169 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:52:47,172 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:52:53,899 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:52:54,770 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:52:54,770 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:52:54,770 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select a.plan_name planName,DATE_FORMAT(b.over_time,'%Y-%m-%d') finshTime,a.plan_sq planSq ,ROUND(IFNULL(c.join_money,0),2) investMoney,ROUND(IFNULL(actual_interest,0),2) totalIncome,ROUND(IFNULL(sign_actual_money,0),2) quitMoney  from zn_plan_total a,zn_plan_sign b,zn_plan_join c where b.user_id=? and a.plan_sq = b.plan_sq and b.status=1 and a.plan_sq = c.plan_sq and c.user_id=?   limit 0, 10]
+2017-01-15 12:52:54,770 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:52:54,773 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:52:54,774 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:52:54,775 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:52:54,775 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select a.plan_name planName,a.plan_sq planSq ,DATE_FORMAT(b.create_time,'%Y-%m-%d')  createTime,CONCAT(a.min_rate,'-',a.max_rate) rateRange ,ROUND(sum(join_money) ,2) investMoney,ROUND(sum(actual_interest) ,2)  totalIncome from zn_plan_total a,zn_plan_join b,zn_plan_sign c where b.user_id=? and a.plan_sq = b.plan_sq and a.plan_sq=c.plan_sq group by a.plan_sq limit 0, 10]
+2017-01-15 12:52:54,775 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:52:54,777 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:53:03,900 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:53:06,107 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:53:06,107 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:53:06,107 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select IFNULL(MAX(max_rate),0)maxRate ,IFNULL(min(min_rate)  ,0) minRate,IFNULL(SUM(surplus_money) ,0) money from zn_plan_total where status=?]
+2017-01-15 12:53:06,107 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:53:06,122 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:53:13,900 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:53:23,376 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:53:23,376 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:53:23,376 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select a.plan_name planName,a.plan_sq planSq ,DATE_FORMAT(b.create_time,'%Y-%m-%d')  createTime,CONCAT(a.min_rate,'-',a.max_rate) rateRange ,ROUND(sum(join_money) ,2) investMoney,ROUND(sum(actual_interest) ,2)  totalIncome from zn_plan_total a,zn_plan_join b,zn_plan_sign c where b.user_id=? and a.plan_sq = b.plan_sq and a.plan_sq=c.plan_sq group by a.plan_sq limit 0, 10]
+2017-01-15 12:53:23,377 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:53:23,379 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:53:23,403 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:53:23,403 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:53:23,403 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select a.plan_name planName,DATE_FORMAT(b.over_time,'%Y-%m-%d') finshTime,a.plan_sq planSq ,ROUND(IFNULL(c.join_money,0),2) investMoney,ROUND(IFNULL(actual_interest,0),2) totalIncome,ROUND(IFNULL(sign_actual_money,0),2) quitMoney  from zn_plan_total a,zn_plan_sign b,zn_plan_join c where b.user_id=? and a.plan_sq = b.plan_sq and b.status=1 and a.plan_sq = c.plan_sq and c.user_id=?   limit 0, 10]
+2017-01-15 12:53:23,403 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:53:23,405 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:53:23,901 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:53:33,902 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:53:43,903 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:53:53,903 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:54:03,904 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:54:13,904 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:54:23,906 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:54:28,666 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:54:28,668 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:54:33,907 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:54:43,907 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:54:53,907 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:55:03,907 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:55:13,907 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:55:23,909 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:55:28,668 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:55:28,674 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:55:33,909 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:55:43,909 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:55:53,910 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:56:03,910 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:56:13,911 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:56:23,912 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:56:28,669 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:56:28,671 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:56:33,912 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:56:43,913 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:56:53,913 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:57:03,915 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:57:13,915 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:57:23,915 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:57:28,672 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:57:28,673 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:57:33,917 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:57:43,917 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:57:53,917 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:58:03,918 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:58:13,919 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:58:23,920 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:58:28,673 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartBeatTask] -  [DUBBO] Send heartbeat to remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:58:28,675 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Receive heartbeat response in thread New I/O server worker #1-2, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:58:33,921 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:58:35,998 DEBUG [com.alibaba.dubbo.remoting.transport.DecodeHandler] -  [DUBBO] Decode decodeable message com.alibaba.dubbo.rpc.protocol.dubbo.DecodeableRpcInvocation, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:58:35,999 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2017-01-15 12:58:35,999 DEBUG [org.springframework.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [select IFNULL(MAX(max_rate),0)maxRate ,IFNULL(min(min_rate)  ,0) minRate,IFNULL(SUM(surplus_money) ,0) money from zn_plan_total where status=?]
+2017-01-15 12:58:35,999 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2017-01-15 12:58:36,015 DEBUG [org.springframework.jdbc.datasource.DataSourceUtils] - Returning JDBC Connection to DataSource
+2017-01-15 12:58:43,921 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:58:53,923 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:59:03,924 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:59:13,925 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:59:23,925 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:59:33,925 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms
+2017-01-15 12:59:43,925 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 0ms
+2017-01-15 12:59:47,013 DEBUG [com.alibaba.dubbo.remoting.exchange.support.header.HeartbeatHandler] -  [DUBBO] Received heartbeat from remote channel /192.168.10.31:42931, cause: The channel has no data-transmission exceeds a heartbeat period: 60000ms, dubbo version: 2.5.3, current host: 127.0.0.1
+2017-01-15 12:59:53,927 DEBUG [org.apache.zookeeper.ClientCnxn] - Got ping response for sessionid: 0x1589a88a6580030 after 1ms

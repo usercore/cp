@@ -1,0 +1,37 @@
+@rem:640/750/40rem;
+*{margin: 0;padding: 0;border: 0;box-sizing: border-box;}
+body{background: #f9f9f9;}
+body,input,button{font-family: "heiti cs,PingFangSC-Regular,microsoft yahei";font-size: 28*@rem; color: #272727;}
+a{text-decoration: none;}
+ul,li{list-style: none;}
+@red:#d81e06;
+@gray:#8a8a8a;
+@bule:#4A90E2;
+
+@line:#e4e4e4;
+
+
+input::-webkit-input-placeholder{
+    color:#ccc;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#ccc;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#ccc;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:#ccc;
+}
+
+.head{height: 89*@rem;width: 100%;background: #D91D37;position: relative;line-height: 89*@rem;
+    .back{position:absolute;left: 30*@rem;top: 22*@rem; width: 24*@rem;height: 42*@rem;background: url(../images/back.png);background-size: 100% 100%;}
+    h2{text-align: center;color: #fff;font-weight: normal;font-size: 40*@rem;}
+    .help{position: absolute;right: 30*@rem;top: 0;color: #fff;font-size: 32*@rem;}
+    .ico_help{position: absolute;right: 30*@rem;top: 0;background: url(../images/help.png);width: 42*@rem;height: 42*@rem;background-size: 100% 100%;top: 22*@rem;}
+}
+
+.btn{width: 100%;height: 100*@rem;border-radius: 4*@rem;text-align: center;line-height: 100*@rem;font-size: 40*@rem;background: #e72121;color:#fff; 
+    &:active{background: #b70f0f;}
+}
+.pd{padding: 60*@rem 30*@rem 0;width: 100%;display: inline-block;}
