@@ -55,21 +55,22 @@
 			<div class="np-ls2 np-mt28 np-mb20">和值</div>
 			<div class="suoZu-hz-con">
 				<ul class="suoZu-hz-ul">
-					<li id="hz0">4</li>
-					<li id="hz1">5</li>
-					<li id="hz2">6</li>
-					<li id="hz3">7</li>
-					<li id="hz4" class="np-border-none">8</li>
-					<li id="hz5">6</li>
+					<li id="hz0">3</li>
+					<li id="hz1">4</li>
+					<li id="hz2">5</li>
+					<li id="hz3">6</li>
+					<li id="hz4">7</li>
+					<li id="hz5">8</li>
 					<li id="hz6">9</li>
 					<li id="hz7">10</li>
 					<li id="hz8">11</li>
-					<li id="hz9" class="np-border-none">12</li>
+					<li id="hz9">12</li>
 					<li id="hz10">13</li>
-					<li id="hz11">6</li>
-					<li id="hz12">14</li>
-					<li id="hz13">15</li>
-					<li id="hz14" class="np-border-none">16</li>
+					<li id="hz11">14</li>
+					<li id="hz12">15</li>
+					<li id="hz13">16</li>
+					<li id="hz14">17</li>
+					<li id="hz15">18</li>
 				</ul>
 			</div>
 			<span class="myFangan-line"></span>
@@ -134,12 +135,6 @@
 <script>
 
 	$(function(){
-/* 	  $('.suoZu-tm-ul>li').each(function(index){
-	    $(this).on('click',function(){
-	    	assemblyFilter('你好','ni hao');
-	    })
-	  }) */
-	  
 	   $('.suoZu-tm-ul>li').each(function(index){
 	    $(this).on('click',function(){
 	    	choiceTuo(index);
@@ -163,8 +158,33 @@
 	    $(this).on('click',function(){
 	    	choiceOther(index,"span");
 	    })
-	  }) 
+	  })
+	  //和值
+	  $('.suoZu-hz-ul>li').each(function(index){
+	    $(this).on('click',function(){
+	    	choiceOther(index,"hz");
+	    })
+	  })
 	  
+	  //奇偶
+	  $('.suoZu-jo-ul>li').each(function(index){
+	    $(this).on('click',function(){
+	    	choiceOther(index,"jo");
+	    })
+	  })
+	  
+	  //012
+	  $('.suoZu-012-ul>li').each(function(index){
+	    $(this).on('click',function(){
+	    	choiceOther(index,"012");
+	    })
+	  })
+	   //大中小
+	  $('.suoZu-dzx-ul>li').each(function(index){
+	    $(this).on('click',function(){
+	    	choiceOther(index,"dzx");
+	    })
+	  })
 	  
 	
 </script>
