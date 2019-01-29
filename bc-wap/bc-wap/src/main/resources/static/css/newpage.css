@@ -299,6 +299,10 @@ body {
   box-sizing: border-box;
   border-right: 3px solid #E0E0E0;
 }
+.suoZu-tm-con {
+  margin-top: 19px;
+  margin-bottom: 14px;
+}
 .suoZu-tm-ul {
   width: 100%;
   line-height: 40px;
@@ -308,8 +312,8 @@ body {
   width: 15%;
   height: 40px;
   line-height: 40px;
-  color: #ffffff;
-  background: #979797;
+  /*color: #ffffff;
+  background: #979797*/;
   margin: 0 2px 0 7px;
   float: left;
   box-sizing: border-box;
@@ -327,6 +331,45 @@ body {
   box-sizing: border-box;
   border-right: 3px solid #E0E0E0;
 }
+.suoZu-jo-ul {
+  width: 100%;
+  line-height: 30px;
+  overflow: hidden;
+}
+.suoZu-jo-ul li {
+  width: 25%;
+  line-height: 40px;
+  float: left;
+  box-sizing: border-box;
+  border-right: 3px solid #E0E0E0;
+}
+
+.suoZu-012-ul {
+  width: 100%;
+  line-height: 29px;
+  overflow: hidden;
+}
+.suoZu-012-ul li {
+  width: 20%;
+  float: left;
+  margin-bottom: 17px;
+  box-sizing: border-box;
+  border-right: 3px solid #E0E0E0;
+}
+
+.suoZu-dzx-ul {
+  width: 100%;
+  line-height: 29px;
+  overflow: hidden;
+}
+.suoZu-dzx-ul li {
+  width: 20%;
+  float: left;
+  margin-bottom: 17px;
+  box-sizing: border-box;
+  border-right: 3px solid #E0E0E0;
+}
+
 .suoZu-hz-con {
   margin-top: 19px;
 }
@@ -345,6 +388,20 @@ body {
 .suoZu-tm-con {
   margin-top: 19px;
   margin-bottom: 14px;
+}
+.suoZu-kd-ul {
+  width: 100%;
+  line-height: 40px;
+  overflow: hidden;
+}
+.suoZu-kd-ul li {
+  width: 15%;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 2px 0 7px;
+  float: left;
+  box-sizing: border-box;
+  border: 3px;
 }
 .suoZu-lx-con {
   margin-top: 19px;

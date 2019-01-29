@@ -34,7 +34,7 @@ Class-Path: ./ lib/bc-api-1.0.jar lib/bc-boot-2.0.jar lib/spring-jdbc-
  st-3.15.0-GA.jar lib/netty-3.2.5.Final.jar lib/zkclient-0.1.jar lib/z
  ookeeper-3.3.6.jar lib/jline-0.9.94.jar lib/bc-util-1.0.jar lib/netty
  -all-5.0.0.Alpha1.jar
-Build-Jdk: 1.8.0_144
+Build-Jdk: 1.8.0_191
 Created-By: Maven Integration for Eclipse
 Main-Class: com.bc.boot.BCBoot
 

@@ -16,7 +16,7 @@
             <outputDirectory>/</outputDirectory>  
         </fileSet>  
         <fileSet>  
-            <directory>F:\\lottery\\svn\\bc\\code\\bc-service\\target</directory>  
+            <directory>F:\\lottery\\cp\\bc-service\\target</directory>  
             <outputDirectory>/</outputDirectory>  
             <includes>  
                 <include>*.jar</include>  

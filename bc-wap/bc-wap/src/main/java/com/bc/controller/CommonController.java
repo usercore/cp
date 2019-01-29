@@ -32,7 +32,7 @@ public class CommonController extends BaseController {
 		return "homePage";
 	}
 	/**
-	 * ÆÕÍ¨Ò³ÃæÌø×ª
+	 * æ™®é€šé¡µé¢è·³è½¬
 	 * @return
 	 */
 	@RequestMapping("/commonPage")
@@ -47,7 +47,7 @@ public class CommonController extends BaseController {
 	}
 
 	/**
-	 * Í¨ÓÃµÄ·µ»ØJsonÊı¾İµÄÄ£°å
+	 * é€šç”¨çš„è¿”å›Jsonæ•°æ®çš„æ¨¡æ¿
 	 *
 	 * @throws IOException
 	 */
@@ -71,7 +71,7 @@ public class CommonController extends BaseController {
 		if (!notLoginAction.contains(param.get("actina"))) {
 			if (userId == null) {
 				json.put("erorcd", "700002");
-				json.put("errmsg", "ÓÃ»§Î´µÇÂ¼»òµÇÂ¼×´Ì¬ÒÑÊ§Ğ§");
+				json.put("errmsg", "ç”¨æˆ·æœªç™»å½•æˆ–ç™»å½•çŠ¶æ€å·²å¤±æ•ˆ");
 				printObject(json);
 				return;
 			}else{
@@ -90,14 +90,14 @@ public class CommonController extends BaseController {
 				String txCode = param.get("txCode");
 				String code = (String) session.getAttribute("userlogin_checkCode");
 				if (txCode == null || txCode.equals("")) {
-					json.put("msg", "ÇëÊäÈëÍ¼ĞÎÑéÖ¤Âë");
-					json.put("errmsg", "ÇëÊäÈëÍ¼ĞÎÑéÖ¤Âë");
+					json.put("msg", "è¯·è¾“å…¥å›¾å½¢éªŒè¯ç ");
+					json.put("errmsg", "è¯·è¾“å…¥å›¾å½¢éªŒè¯ç ");
 					printObject(json);
 					return;
 				}
 				if (!txCode.equals(code)) {
-					json.put("msg", "Í¼ĞÎÑéÖ¤Âë´íÎó");
-					json.put("errmsg", "Í¼ĞÎÑéÖ¤Âë´íÎó");
+					json.put("msg", "å›¾å½¢éªŒè¯ç é”™è¯¯");
+					json.put("errmsg", "å›¾å½¢éªŒè¯ç é”™è¯¯");
 					printObject(json);
 					return;
 				}
@@ -113,7 +113,7 @@ public class CommonController extends BaseController {
 			e.printStackTrace();
 		}
 		json.put("erorcd", "9527");
-		json.put("errmsg", "Ìá½»Ê§°Ü");
+		json.put("errmsg", "æäº¤å¤±è´¥");
 		printObject(json);
 
 	}
@@ -141,11 +141,11 @@ public class CommonController extends BaseController {
 	}
 
 	/**
-	 * ÓÃ»§×¢²á
+	 * ç”¨æˆ·æ³¨å†Œ
 	 * 
 	 * @throws IOException
 	 */
-	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	@RequestMapping(value = "/userRegister", method = RequestMethod.POST)
 	@ResponseBody
 	public void register() throws IOException {
 
@@ -167,7 +167,7 @@ public class CommonController extends BaseController {
 	}
 	
 	/**
-	 * ÍË³öµÇÂ¼
+	 * é€€å‡ºç™»å½•
 	 * @throws IOException 
 	 */
 	@RequestMapping(value = "/loginOut", method = RequestMethod.POST)
@@ -177,7 +177,7 @@ public class CommonController extends BaseController {
 		HttpSession session = request.getSession();
 		session.removeAttribute("u");
 		json.put("erorcd", "000000");
-		json.put("errmsg", "ÍË³ö³É¹¦");
+		json.put("errmsg", "é€€å‡ºæˆåŠŸ");
 		printObject(json);
 	} 
 }
