@@ -6,6 +6,7 @@ document
 // 0未选中、1选中、2不可选
 // 胆码选择情况
 var danChoiceList = [ 0, 0, 0, 0, 0, 0 ];
+var danChoiceCount = 0;
 // 托码选择情况
 var tuoChoiceList = [ 0, 0, 0, 0, 0, 0 ];
 // 类型选择情况
@@ -24,6 +25,14 @@ var dzxChoiceList = [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ];
 var k3NumList = [];
 // 号码选择情况 -1 未选择 其他值对应数组下标。 第一位代表类型、第二位代表和值、以此类推跨度、奇偶、012、大中小
 var choiceDetail = [ -1, -1, -1, -1, -1, -1 ];
+//页面标识  0 初始页 1 提交选号页
+var pageFlag = 0;
+
+var count = 0;//注数
+
+var betCount = 0;
+var betNumList = [];
+var betTypeCount = [0,0,0,0];
 
 function choiceAction() {
 	K3CalDanTuoNum();
@@ -34,10 +43,16 @@ function choiceAction() {
 // 选择胆码
 function choiceDan(index) {
 	var danStatus = danChoiceList[index];
+	if(danChoiceCount >= 2){
+		alert("胆码最多只能选择两个");
+		return ;
+	}
 	if (danStatus == 0) {
+		danChoiceCount = danChoiceCount + 1;
 		danChoiceList[index] = 1;
 		tuoChoiceList[index] = 2;
 	} else if (danStatus == 1) {
+		danChoiceCount = danChoiceCount - 1;
 		danChoiceList[index] = 0;
 		tuoChoiceList[index] = 0;
 	}
@@ -234,18 +249,24 @@ function calOtherFilter() {
 	for (var i = 0; i < k3NumList.length; i++) {
 		var k3Num = k3NumList[i]
 		for(var j=0;j<filterCondition.length;j++){
-			var typeResult = filterCondition[j][2](k3Num, filterCondition[j][0]);
+			var typeResult = filterCondition[j][2](k3Num);
 			if (!removeK3Num(typeResult, filterCondition[j][0], i,filterCondition[j][1])) {
 				i--;
 				break;
 			}
 		}
 	}
+	
+	betTypeCount = [0,0,0,0];
+	betNumList.length = 0;
 	//根据过滤后的号码计算号码形态
 	for (var i = 0; i < k3NumList.length; i++) {
-		var k3Num = k3NumList[i]
+		var k3Num = k3NumList[i];
+		betNumList.push(new betNum(k3Num));
+		betTypeCount[k3Num.type] = betTypeCount[k3Num.type] +1;
+		
 		for(var j=0;j<filterCondition.length;j++){
-			var typeResult = filterCondition[j][2](k3Num, filterCondition[j][0]);
+			var typeResult = filterCondition[j][2](k3Num);
 			filterCondition[j][0][typeResult] = 0;
 		}
 	}
@@ -297,6 +318,8 @@ function drawPageAll() {
 	drawPage("012", lyeChoiceList);
 	// 画大中小
 	drawPage("dzx", dzxChoiceList);
+	//画注数
+	countBets();
 }
 function drawPage(tagName, choiceList) {
 	for (var i = 0; i < choiceList.length; i++) {
@@ -309,4 +332,179 @@ function drawPage(tagName, choiceList) {
 		}
 
 	}
+}
+//计算注数与填充页面
+function countBets() {
+	count = 0;
+	$(".zh-rs-tj").html("");
+	var typeName = ['二不同','三不同','三同号','三连号'];
+	
+	var type = "&nbsp;(";
+	for(var i=0;i<betTypeCount.length;i++){
+		if(betTypeCount[i] != 0){
+			count = betTypeCount[i] + count;
+			type = type + typeName[i] + "&nbsp;:&nbsp;<span>" + betTypeCount[i] + "</span>注，";
+		}
+	}
+	if(type.substring(type.length-1) == '，'){
+		type = type.substring(0,type.length-1) + ")";
+	}
+	
+	$(".zh-rs-tj").append('共<span>' + count + '</span>注<span>' + count*2 + '</span>元' + type);
+	
+	$("#bets").html(count);
+	$("#summoney").html(count * 2);
+	$("#bets1").html(count);
+	$("#summoney1").html(count * 2);
+}
+//组出号码
+function showFilterNum(){
+	$(".zh-rs-ul").html("");
+	getAwardInfo();
+	if(k3NumList.length == 0){
+		alert("您还未选择任何号码！");
+		return;
+	}
+	for(var i=0;i<k3NumList.length;i++){
+		var k3Num = k3NumList[i];
+		var $li = $('<li><div class="zh-rs-num-chose">' + k3Num.num + '</div></li>');
+		$(".zh-rs-ul").append($li);
+	}
+	
+	  $('#filterNum').hide();
+	  $('#choice').hide();
+	  $('#filterNumPage').show();
+	  $('#commitButton').show();
+	  countMoney();
+	  pageFlag = 1;
+}
+function backChoice(){
+	if(pageFlag == 1){
+		$('#filterNum').show();
+		$('#choice').show();
+		$('#filterNumPage').hide();
+		$('#commitButton').hide();
+		pageFlag = 0;
+	}else{
+		toPage('homePage');
+	}
+}
+function clearChoice(){
+	danChoiceList = [ 0, 0, 0, 0, 0, 0 ];
+	tuoChoiceList = [ 0, 0, 0, 0, 0, 0 ];
+	initChoiceList();
+	drawPageAll();
+}
+function countMoney(){
+	var repeat = $("#repeat").val();
+	var multiple = $("#multiple").val();
+	betCount = repeat * multiple * count;
+	console.log(repeat + "  " + multiple + "注数" + betCount);
+	$("#bets1").html(betCount);
+	$("#summoney1").html(betCount * 2);
+}
+
+var currentIssue = "";
+
+function bet() {
+	var schemeDetail = "";
+	for(var i=0;i<betNumList.length;i++){
+		var betNum = betNumList[i];
+		schemeDetail = schemeDetail + betNum.manner + "#" + betNum.num + "#1@" ;
+	}
+	
+	if(schemeDetail.substring(schemeDetail.length-1) == '@'){
+		schemeDetail = schemeDetail.substring(0,schemeDetail.length-1);
+	}
+	var data = {
+		schemeDetail:schemeDetail,
+		actina:"createFilterScheme",
+		issueNo:currentIssue,
+		lotteryType:301,
+		investMoney:betCount*2,
+		multiple:$("#multiple").val(),
+		continuousCount:$("#repeat").val()
+           /* <!-- 玩法 11:和值 12:三同号通选 13:三同号单选 14:二同号复选 15:二同号单选 16：三不同号 17：二不同号 18：三连号通选 -->
+            <!-- 投注号码格式  二同号单选 11/22/33$4/6  （复式） 二同号 复选 1/1,2/2  三不同号 1/2/3,1/5/6 三同号 1/1/1-->
+             <Field name="schemeDetail" title="方案详情以#分隔列，以@分隔行 玩法#号码#注数@玩法#号码#注数 如：11#04,05#1@13#1/1/1,2/2/2#1"  type="String" input="O" length="1000" default=""/>
+             */
+	};
+	var succCallBackFunc = function(res) {
+		if (res.erorcd == "000000") {
+			toPage('user/myInfo');
+		} else {
+			alert(res.errmsg);
+		}
+	}
+	//ajax提交数据
+	ajax_commit_commonData(data, succCallBackFunc, function() {
+	})
+}
+
+
+function getAwardInfo() {
+	var data = {
+		lotteryType : '301',
+		actina:'getCurrentIssue'
+	};
+	var succCallBackFunc = function(res) {
+		if (res.erorcd == "000000") {
+			var nums = res.record1[0].award_num.split('/');
+			$("#one").html(nums[0]);
+			$("#two").html(nums[1]);
+			$("#three").html(nums[2]);
+			$("#preIssue").html(res.record1[0].issue_no + "期开奖");
+			if(res.record2[0]){
+				currentIssue = res.record2[0].issue_no;
+				$("#currentIssue").html(currentIssue.substring(currentIssue.length-2,currentIssue.length));
+				
+				var residueTime = res.record2[0].residueTime;
+				var min = residueTime.split('-')[0];
+				var sec = residueTime.split('-')[1]; 
+				var awardTime = parseInt(min) * 60 + parseInt(sec);
+				
+				var endTime = res.record2[0].end_time;
+				var date = new Date();
+				var time = endTime - date.getTime();
+				countDown(parseInt(time/1000),awardTime,currentIssue.substring(currentIssue.length-2,currentIssue.length));
+			}else{
+				 $("#time").html("开奖中.....");
+			}
+			
+		} else {
+			requestError(res);
+		}
+	}
+	//ajax提交数据
+	ajax_commit_commonData(data, succCallBackFunc, function() {
+	})
+};
+function countDown(time,awardTime,issueNo){
+	var interval = window.setInterval(function(){
+		 time = time -1;
+		 awardTime = awardTime - 1;
+		 if(parseInt(time) <= 0 || awardTime<0){
+			 $("#time").html("开奖中.....");
+			 getAward();
+			 clearInterval(interval);
+			 return;
+		 }
+		 var min = Math.floor(time/60);
+		 var sec = time%60;
+		 if(min < 10){
+			 min = '0' + min;
+		 }
+		 if(sec < 10){
+			 sec = '0' + sec;
+		 }
+		 $("#time").html("距离" + issueNo + "期截止" + min + ":" + sec);
+		    }, 1000);
+}
+function getAward(){
+	var interval = window.setInterval(function(){
+		getAwardInfo();
+		if($("#time").text().indexOf("开奖中") == -1 ){
+			clearInterval(interval);
+		}
+	}, 10000);
 }

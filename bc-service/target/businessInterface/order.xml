@@ -15,7 +15,7 @@
         <Request>
             <Field name="userId" title="用户Id" type="String" input="O" length="50" default=""/>
              <!-- 玩法 11:和值 12:三同号通选 13:三同号单选 14:二同号复选 15:二同号单选 16：三不同号 17：二不同号 18：三连号通选 -->
-             <!-- 投注号码格式  二同号单选 11/22/33$4/6 二同号 复选 1/1,2/2  三不同号 1/2/3,1/5/6-->
+             <!-- 投注号码格式  二同号单选 11/22/33$4/6  （复式） 二同号 复选 1/1,2/2  三不同号 1/2/3,1/5/6 三同号 1/1/1-->
             <Field name="schemeDetail" title="方案详情以#分隔列，以@分隔行 玩法#号码#注数@玩法#号码#注数 如：11#04,05#1@13#1/1/1,2/2/2#1"  type="String" input="O" length="1000" default=""/>
            
             <Field name="issueNo" title="期号"  type="String" input="M" length="50" default=""/>

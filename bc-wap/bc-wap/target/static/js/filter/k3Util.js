@@ -1,7 +1,7 @@
 /**
  * 根据号码计算形态数组下标
  */
-function calculateType(k3Num,typeChoiceListTemp){
+function calculateType(k3Num){
 		if(k3Num.one - k3Num.three == 0){// 三同号
 			return 2;
 	    } else if(k3Num.two - k3Num.three == 0 || k3Num.two - k3Num.one == 0){// 二不同
@@ -18,7 +18,7 @@ function calculateType(k3Num,typeChoiceListTemp){
 /**
  * 计算和值数组下标
  */
-function calculateSum(k3Num,sumChoiceListTemp){
+function calculateSum(k3Num){
 	return k3Num.one + k3Num.two + k3Num.three - 3;
 }
 

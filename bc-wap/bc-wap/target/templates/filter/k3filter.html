@@ -13,10 +13,10 @@
 </head>
 <body>
 	<header class="head nav-back">
-		<a href="#" class="back"></a>
+		<a href="javascript:backChoice()" class="back"></a>
 		<h2>缩水组号</h2>
 	</header>
-	<div class="zh-content">
+	<div class="zh-content" id="filterNum">
 		<div class="suoZu">
 			<div class="np-ls2">胆码</div>
 			<div class="suoZu-dm-con">
@@ -130,6 +130,42 @@
 			<span class="myFangan-line"></span>
 		</div>
 	</div>
+	
+	<div class="zh-content" id="filterNumPage">
+		<div class="zh-kjqi">
+			<div class="zh-tishileft">
+				<span id="preIssue"></span>&nbsp;&nbsp; <span id="one" class="zh-kjnum"></span>
+				<span id="two" class="zh-kjnum"></span> <span id="three" class="zh-kjnum"2</span> </span>
+			</div>
+			<div id="time" class="zh-tishiright">
+				距离 <span id="currentIssue">29</span>期截止 <span id="countDown">06:05</span> </span>
+			</div>
+		</div>
+		<div class="zh-result">
+			<ul class="zh-rs-ul">
+			</ul>
+			<div class="zh-rs-tj">
+			</div>
+		</div>
+		<div class="zh-bt_zh">
+			<div class="zh-bt">
+				倍投&nbsp;:&nbsp <input class="zh-input" type="text" id="multiple" onChange="countMoney()" value="1"/>&nbsp;倍
+			</div>
+			<div class="zh-zh">
+				追号&nbsp;:&nbsp <input class="zh-input" type="text" id="repeat" onChange="countMoney()" value="1"/>&nbsp;期
+			</div>
+		</div>
+	</div>
+
+	<div id="choice" class="zh-btjs">
+		<input type="button" class="zh-btn-qk" onclick="clearChoice()" value="清空" /> <span> 共 <span id='bets'>0</span>注<span id='summoney'>0</span>元
+		</span> <input type="button" class="zh-btn-qd" onclick="showFilterNum()" value="组出号码" />
+	</div>
+	
+	<div id="commitButton" class="zh-btjs">
+		<input type="button" class="zh-btn-qk" onclick="clearNum()" value="清空" /> <span> 共 <span id='bets1'>0</span>注<span id='summoney1'>0</span>元
+		</span> <input type="button" class="zh-btn-qd" onclick="bet()" value="确定" />
+	</div>
 </body>
 </html>
 <script>
@@ -185,6 +221,10 @@
 	    	choiceOther(index,"dzx");
 	    })
 	  })
+	 
+	  $('#filterNumPage').hide();
+	  $('#commitButton').hide();
 	  
-	
+	  
+	  
 </script>
