@@ -134,6 +134,21 @@ input:-ms-input-placeholder {
   padding-left: 0.64rem;
   font-size: 0.68266667rem;
 }
+.login-form li input[type=password] {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  padding-left: 0.64rem;
+  font-size: 0.68266667rem;
+}
+.login-form li input[type=password].pl178 {
+  padding-left: 3.79733333rem;
+}
+.login-form li input[type=password].pl244 {
+  padding-left: 5.20533333rem;
+}
 .login-form li input[type=text].pl178 {
   padding-left: 3.79733333rem;
 }
