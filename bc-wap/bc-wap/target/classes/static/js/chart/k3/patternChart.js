@@ -2,7 +2,7 @@ function getPatternsChartData() {
     var data = {
         actina: 'getPatternsChartData',
         pageNo: 1,
-        pageSize: 30
+        pageSize:45
     };
     var succCallBackFunc = function (res) {
         if (res.erorcd == "000000") {

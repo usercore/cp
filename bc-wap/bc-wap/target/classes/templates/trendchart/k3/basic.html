@@ -351,7 +351,10 @@
     sliderHeight();
 
     function sliderHeight() {
+    	console.log(document.body.clientHeight);
+    	
         var wHeight = $(window).height();
+        console.log(wHeight);
         var sliderHeight = wHeight - $('.trend_heard').height()
 
         $(".swipe li").height($(document).height());

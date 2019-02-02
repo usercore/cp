@@ -2,7 +2,7 @@ function getBasicData() {
     var data = {
         actina: 'getBasicPlotData',
         pageNo: 1,
-        pageSize: 30
+        pageSize: 45
     };
     var succCallBackFunc = function (res) {
         if (res.erorcd == "000000") {
