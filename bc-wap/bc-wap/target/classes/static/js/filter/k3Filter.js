@@ -23,8 +23,9 @@ var lyeChoiceList = [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ];
 var dzxChoiceList = [ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 ];
 // 组出开奖号码
 var k3NumList = [];
-// 号码选择情况 -1 未选择 其他值对应数组下标。 第一位代表类型、第二位代表和值、以此类推跨度、奇偶、012、大中小
-var choiceDetail = [ -1, -1, -1, -1, -1, -1 ];
+var k3NumListChoice = [];//号码选择情况
+// 号码类型选择情况 -1 未选择 其他值对应数组下标。 第一位代表类型、第二位代表和值、以此类推跨度、奇偶、012、大中小
+var choiceDetail = [ -1, -1, -1, -1, -1, -1 ]; 
 //页面标识  0 初始页 1 提交选号页
 var pageFlag = 0;
 
@@ -348,6 +349,8 @@ function countBets() {
 	}
 	if(type.substring(type.length-1) == '，'){
 		type = type.substring(0,type.length-1) + ")";
+	}else if(type.substring(type.length-1) == '('){
+		type = type.substring(0,type.length-1);
 	}
 	
 	$(".zh-rs-tj").append('共<span>' + count + '</span>注<span>' + count*2 + '</span>元' + type);
@@ -366,8 +369,9 @@ function showFilterNum(){
 		return;
 	}
 	for(var i=0;i<k3NumList.length;i++){
+		k3NumListChoice[i] = 1;
 		var k3Num = k3NumList[i];
-		var $li = $('<li><div class="zh-rs-num-chose">' + k3Num.num + '</div></li>');
+		var $li = $('<li><div class="zh-rs-num-chose" id="' + i + '"' + 'onclick="removeNum(this)">' + k3Num.num + '</div></li>');
 		$(".zh-rs-ul").append($li);
 	}
 	
@@ -377,6 +381,24 @@ function showFilterNum(){
 	  $('#commitButton').show();
 	  countMoney();
 	  pageFlag = 1;
+}
+function removeNum(dom){
+	var choiceK3Num = $(dom).html();
+	var index = $(dom).attr('id');
+	
+	k3Num = new K3Num(choiceK3Num.substring(0,1),choiceK3Num.substring(1,2),choiceK3Num.substring(2,3));
+	
+	if(k3NumListChoice[index] == 0 ){
+		betTypeCount[k3Num.type] = betTypeCount[k3Num.type] + 1;
+		k3NumListChoice[$(dom).attr('id')] = 1;
+		$(dom).attr("class", "zh-rs-num-chose");
+	}else{
+		betTypeCount[k3Num.type] = betTypeCount[k3Num.type] - 1;
+		$(dom).attr("class", "zh-rs-num-none");
+		k3NumListChoice[index] = 0;
+	}
+	//重新计算注数
+	countBets();
 }
 function backChoice(){
 	if(pageFlag == 1){
@@ -388,6 +410,14 @@ function backChoice(){
 	}else{
 		toPage('homePage');
 	}
+}
+function clearNum(){
+	betTypeCount = [ 0, 0, 0, 0];
+	for(var i=0;i<k3NumListChoice.length;i++){
+		k3NumListChoice[i] = 0;
+	}
+	$(".zh-rs-num-chose").attr("class", "zh-rs-num-none");
+	countBets();
 }
 function clearChoice(){
 	danChoiceList = [ 0, 0, 0, 0, 0, 0 ];
@@ -409,12 +439,17 @@ var currentIssue = "";
 function bet() {
 	var schemeDetail = "";
 	for(var i=0;i<betNumList.length;i++){
-		var betNum = betNumList[i];
-		schemeDetail = schemeDetail + betNum.manner + "#" + betNum.num + "#1@" ;
+		if(k3NumListChoice[i] == 1){
+			var betNum = betNumList[i];
+			schemeDetail = schemeDetail + betNum.manner + "#" + betNum.num + "#1@" ;
+		}
 	}
-	
 	if(schemeDetail.substring(schemeDetail.length-1) == '@'){
 		schemeDetail = schemeDetail.substring(0,schemeDetail.length-1);
+	}
+	if(!schemeDetail){
+		alert("请至少选择一注号码");
+		return;
 	}
 	var data = {
 		schemeDetail:schemeDetail,
