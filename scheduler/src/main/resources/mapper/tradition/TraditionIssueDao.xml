@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qbb.jobs.tradition.dao.TraditionIssueDao">
+    <resultMap id="BaseResultMap" type="com.qbb.jobs.tradition.model.TraditionIssue">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="issue_no" property="issueNo" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="sell_status" property="sellStatus" jdbcType="INTEGER"/>
+        <result column="lottery_type" property="lotteryType" jdbcType="VARCHAR"/>
+        <result column="start_time" property="startTime" jdbcType="TIMESTAMP"/>
+        <result column="end_time" property="endTime" jdbcType="TIMESTAMP"/>
+        <result column="award_time" property="awardTime" jdbcType="TIMESTAMP"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, issue_no, status, sell_status, lottery_type, start_time, end_time, award_time, 
+    create_time, update_time
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from tradition_issue
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tradition_issue
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.qbb.jobs.tradition.model.TraditionIssue">
+    insert into tradition_issue ( issue_no, status, 
+      sell_status, lottery_type, start_time, 
+      end_time, award_time, create_time, 
+      update_time)
+    values ( #{issueNo,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, 
+      #{sellStatus,jdbcType=INTEGER}, #{lotteryType,jdbcType=VARCHAR}, #{startTime,jdbcType=TIMESTAMP}, 
+      #{endTime,jdbcType=TIMESTAMP}, #{awardTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+    <insert id="insertSelective" parameterType="com.qbb.jobs.tradition.model.TraditionIssue">
+        insert into tradition_issue
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="issueNo != null">
+                issue_no,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="sellStatus != null">
+                sell_status,
+            </if>
+            <if test="lotteryType != null">
+                lottery_type,
+            </if>
+            <if test="startTime != null">
+                start_time,
+            </if>
+            <if test="endTime != null">
+                end_time,
+            </if>
+            <if test="awardTime != null">
+                award_time,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="issueNo != null">
+                #{issueNo,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="sellStatus != null">
+                #{sellStatus,jdbcType=INTEGER},
+            </if>
+            <if test="lotteryType != null">
+                #{lotteryType,jdbcType=VARCHAR},
+            </if>
+            <if test="startTime != null">
+                #{startTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endTime != null">
+                #{endTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="awardTime != null">
+                #{awardTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.qbb.jobs.tradition.model.TraditionIssue">
+        update tradition_issue
+        <set>
+            <if test="issueNo != null">
+                issue_no = #{issueNo,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="sellStatus != null">
+                sell_status = #{sellStatus,jdbcType=INTEGER},
+            </if>
+            <if test="lotteryType != null">
+                lottery_type = #{lotteryType,jdbcType=VARCHAR},
+            </if>
+            <if test="startTime != null">
+                start_time = #{startTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endTime != null">
+                end_time = #{endTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="awardTime != null">
+                award_time = #{awardTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.qbb.jobs.tradition.model.TraditionIssue">
+    update tradition_issue
+    set issue_no = #{issueNo,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      sell_status = #{sellStatus,jdbcType=INTEGER},
+      lottery_type = #{lotteryType,jdbcType=VARCHAR},
+      start_time = #{startTime,jdbcType=TIMESTAMP},
+      end_time = #{endTime,jdbcType=TIMESTAMP},
+      award_time = #{awardTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+    <select id="selectByIssueAndLotteryType" resultMap="BaseResultMap" parameterType="com.qbb.jobs.tradition.model.TraditionIssue">
+        select
+        <include refid="Base_Column_List"/>
+        from tradition_issue where lottery_type = #{lotteryType} and issue_no = #{issueNo}
+    </select>
+
+    <select id="getNextIssueToOpen" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        FROM tradition_issue
+        WHERE issue_no > (
+          SELECT issue_no FROM tradition_award ORDER BY issue_no DESC LIMIT 1
+        ) LIMIT 1
+    </select>
+</mapper>

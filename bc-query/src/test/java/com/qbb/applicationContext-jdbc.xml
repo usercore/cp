@@ -18,7 +18,7 @@
 
 	<context:property-placeholder location="classpath:conf/*.properties" />
     <context:component-scan base-package="com.qbb"/>
-	<!-- <dubbo:application name="qbb-data" />
+	<!-- <dubbo:application name="bc-query" />
 	本机 伪集群 测试     
     <dubbo:registry  protocol="zookeeper"  address="${address}"  />
    	<dubbo:protocol name="dubbo" port="${dubboPort}" />   

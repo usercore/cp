@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qbb.jobs.tradition.dao.TraditionLostDao">
+    <resultMap id="BaseResultMap" type="com.qbb.jobs.tradition.model.TraditionLost">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="issue_no" property="issueNo" jdbcType="VARCHAR"/>
+        <result column="num" property="num" jdbcType="VARCHAR"/>
+        <result column="count_type" property="countType" jdbcType="VARCHAR"/>
+        <result column="lottery_type" property="lotteryType" jdbcType="VARCHAR"/>
+        <result column="lost_type" property="lostType" jdbcType="VARCHAR"/>
+        <result column="now_lost_count" property="nowLostCount" jdbcType="INTEGER"/>
+        <result column="max_lost_count" property="maxLostCount" jdbcType="INTEGER"/>
+        <result column="avg_lost_count" property="avgLostCount" jdbcType="INTEGER"/>
+        <result column="last_lost_count" property="lastLostCount" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, issue_no, num, count_type, lottery_type, lost_type, now_lost_count, max_lost_count,
+        avg_lost_count, last_lost_count, create_time, update_time
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from tradition_lost
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from tradition_lost
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <insert id="insert" parameterType="com.qbb.jobs.tradition.model.TraditionLost">
+        insert into tradition_lost (id, issue_no, num,
+          count_type, lottery_type, lost_type,
+          now_lost_count, max_lost_count, avg_lost_count,
+          last_lost_count, create_time, update_time)
+        values (#{id,jdbcType=INTEGER}, #{issueNo,jdbcType=VARCHAR}, #{num,jdbcType=VARCHAR},
+          #{countType,jdbcType=VARCHAR}, #{lotteryType,jdbcType=VARCHAR}, #{lostType,jdbcType=VARCHAR},
+          #{nowLostCount,jdbcType=INTEGER}, #{maxLostCount,jdbcType=INTEGER}, #{avgLostCount,jdbcType=INTEGER},
+          #{lastLostCount,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.qbb.jobs.tradition.model.TraditionLost">
+        insert into tradition_lost
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="issueNo != null">
+                issue_no,
+            </if>
+            <if test="num != null">
+                num,
+            </if>
+            <if test="countType != null">
+                count_type,
+            </if>
+            <if test="lotteryType != null">
+                lottery_type,
+            </if>
+            <if test="lostType != null">
+                lost_type,
+            </if>
+            <if test="nowLostCount != null">
+                now_lost_count,
+            </if>
+            <if test="maxLostCount != null">
+                max_lost_count,
+            </if>
+            <if test="avgLostCount != null">
+                avg_lost_count,
+            </if>
+            <if test="lastLostCount != null">
+                last_lost_count,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="issueNo != null">
+                #{issueNo,jdbcType=VARCHAR},
+            </if>
+            <if test="num != null">
+                #{num,jdbcType=VARCHAR},
+            </if>
+            <if test="countType != null">
+                #{countType,jdbcType=VARCHAR},
+            </if>
+            <if test="lotteryType != null">
+                #{lotteryType,jdbcType=VARCHAR},
+            </if>
+            <if test="lostType != null">
+                #{lostType,jdbcType=VARCHAR},
+            </if>
+            <if test="nowLostCount != null">
+                #{nowLostCount,jdbcType=INTEGER},
+            </if>
+            <if test="maxLostCount != null">
+                #{maxLostCount,jdbcType=INTEGER},
+            </if>
+            <if test="avgLostCount != null">
+                #{avgLostCount,jdbcType=INTEGER},
+            </if>
+            <if test="lastLostCount != null">
+                #{lastLostCount,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.qbb.jobs.tradition.model.TraditionLost">
+        update tradition_lost
+        <set>
+            <if test="issueNo != null">
+                issue_no = #{issueNo,jdbcType=VARCHAR},
+            </if>
+            <if test="num != null">
+                num = #{num,jdbcType=VARCHAR},
+            </if>
+            <if test="countType != null">
+                count_type = #{countType,jdbcType=VARCHAR},
+            </if>
+            <if test="lotteryType != null">
+                lottery_type = #{lotteryType,jdbcType=VARCHAR},
+            </if>
+            <if test="lostType != null">
+                lost_type = #{lostType,jdbcType=VARCHAR},
+            </if>
+            <if test="nowLostCount != null">
+                now_lost_count = #{nowLostCount,jdbcType=INTEGER},
+            </if>
+            <if test="maxLostCount != null">
+                max_lost_count = #{maxLostCount,jdbcType=INTEGER},
+            </if>
+            <if test="maxLostCount != null">
+                avg_lost_count = #{avgLostCount,jdbcType=INTEGER},
+            </if>
+            <if test="lastLostCount != null">
+                last_lost_count = #{lastLostCount,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.qbb.jobs.tradition.model.TraditionLost">
+        update tradition_lost
+        set issue_no = #{issueNo,jdbcType=VARCHAR},
+          num = #{num,jdbcType=VARCHAR},
+          count_type = #{countType,jdbcType=VARCHAR},
+          lottery_type = #{lotteryType,jdbcType=VARCHAR},
+          lost_type = #{lostType,jdbcType=VARCHAR},
+          now_lost_count = #{nowLostCount,jdbcType=INTEGER},
+          max_lost_count = #{maxLostCount,jdbcType=INTEGER},
+          avg_lost_count = #{avgLostCount,jdbcType=INTEGER},
+          last_lost_count = #{lastLostCount,jdbcType=INTEGER},
+          create_time = #{createTime,jdbcType=TIMESTAMP},
+          update_time = #{updateTime,jdbcType=TIMESTAMP}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="getLostInfoByParam" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tradition_lost
+        <where>
+            <if test="lottery_type != null">
+                and lottery_type = #{lottery_type}
+            </if>
+            <if test="count_type != null">
+                and count_type = #{count_type}
+            </if>
+            <if test="lost_type != null">
+                and lost_type = #{lost_type}
+            </if>
+        </where>
+        order by issue_no desc limit 1
+    </select>
+
+
+    <select id="getLostInfo" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tradition_lost
+        <where>
+            <if test="num != null">
+                and num = #{num}
+            </if>
+            <if test="countType != null">
+                and count_type = #{countType}
+            </if>
+            <if test="lotteryType != null">
+                and lottery_type = #{lotteryType}
+            </if>
+            <if test="lostType != null">
+                and lost_type = #{lostType}
+            </if>
+        </where>
+    </select>
+
+    <update id="updateTraditionLost" parameterType="com.qbb.jobs.tradition.model.TraditionLost">
+        update tradition_lost
+        <set>
+            <if test="issueNo != null">
+                issue_no = #{issueNo,jdbcType=VARCHAR},
+            </if>
+            <if test="num != null">
+                num = #{num,jdbcType=VARCHAR},
+            </if>
+            <if test="countType != null">
+                count_type = #{countType,jdbcType=VARCHAR},
+            </if>
+            <if test="lotteryType != null">
+                lottery_type = #{lotteryType,jdbcType=VARCHAR},
+            </if>
+            <if test="lostType != null">
+                lost_type = #{lostType,jdbcType=VARCHAR},
+            </if>
+            <if test="nowLostCount != null">
+                now_lost_count = #{nowLostCount,jdbcType=INTEGER},
+            </if>
+            <if test="maxLostCount != null">
+                max_lost_count = #{maxLostCount,jdbcType=INTEGER},
+            </if>
+            <if test="avgLostCount != null">
+                avg_lost_count = #{avgLostCount,jdbcType=INTEGER},
+            </if>
+            <if test="lastLostCount != null">
+                last_lost_count = #{lastLostCount,jdbcType=INTEGER},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where num = #{num}
+        and lottery_type = #{lotteryType}
+        and count_type = #{countType}
+        and lost_type = #{lostType}
+    </update>
+
+    <select id="getLastAwardLostInfo" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM tradition_lost
+        WHERE issue_no >= (
+         SELECT issue_no FROM tradition_award ORDER BY issue_no DESC LIMIT 1
+        ) LIMIT 1
+    </select>
+
+
+    <select id="getLostInfoList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tradition_lost
+        <where>
+            <if test="num != null">
+                and num = #{num}
+            </if>
+            <if test="countType != null">
+                and count_type = #{countType}
+            </if>
+            <if test="lotteryType != null">
+                and lottery_type = #{lotteryType}
+            </if>
+            <if test="lostType != null">
+                and lost_type = #{lostType}
+            </if>
+        </where>
+    </select>
+
+</mapper>
