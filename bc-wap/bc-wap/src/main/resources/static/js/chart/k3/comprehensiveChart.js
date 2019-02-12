@@ -18,7 +18,7 @@ function getComprehensiveData() {
                         <Field name="hundreds_value" title="百位" type="String" default=""/>*/
                 fillHundreds(value.hundreds_value, $tr);
                 fillHundreds(value.ten_value, $tr);
-                fillHundreds(value.span_value, $tr);
+                fillHundreds(value.unit_value, $tr);
 
 
                 //fillSum1(value.sum_value, $tr, index);

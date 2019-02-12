@@ -27,11 +27,11 @@ function getM3PlotData() {
             res.record2.forEach(function (value, key, map) {
                 initLost2(value);
             });
-
+            // 当前遗漏
             fillCurrentLost2($tr1);
-
             var $tr2 = $('<tr class="omission">');
             $("#chart2").append($tr2);
+            // 冷热号码
             fillHotCold2($tr2, res.record3);
             drawPage3();
             $("#chart2").append('<tr class="">');
@@ -97,7 +97,7 @@ function fillSum2(sum, tr, index) {
 
 // 填充和尾
 function fillSumTail2(sum_tail, tr, index) {
-    for (var i = 0; i <= 10; i++) {
+    for (var i = 0; i < 10; i++) {
         if (i == sum_tail) {
             tr.append('<td class="chart-bg-c6 blank-c6" id="a' + index + '">' + i + '</td>');
         } else {
