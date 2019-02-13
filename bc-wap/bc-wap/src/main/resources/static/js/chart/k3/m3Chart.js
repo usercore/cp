@@ -15,7 +15,7 @@ function getM3PlotData() {
                 fillSpan2(value.span_value, $tr);
                 fillM3(value.span_m3_value, $tr, index, "span_m3_");
                 fillSum2(value.sum_value, $tr, index);
-                fillM3(value.span_m3_value, $tr, index, ',"sum_m3_"');
+                fillM3(value.sum_m3_value, $tr, index, ',"sum_m3_"');
                 fillSumTail2(value.sum_tail_value, $tr, index);
                 fillM3(value.sum_tail_m3_value, $tr, index, "sum_tail_m3_");
                 index = index + 1;
@@ -120,31 +120,31 @@ function fillM3(value, tr, index, descr) {
 // 填充遗漏
 function fillCurrentLost2(tr) {
     numLost2.sort(sortLostNum2);
-    sumLost2.sort(sortLostNum2);
-    sumTailLost2.sort(sortLostNum2);
-    spanLost2.sort(sortLostNum2);
-    sumM3Lost2.sort(sortLostNum2);
-    sumTailM3Lost2.sort(sortLostNum2);
-    spanM3Lost2.sort(sortLostNum2);
     tr.append('<td class="chart-bg-qh" colspan="4">当前遗漏</td>');
     numLost2.forEach(function (value, key, map) {
         tr.append('<td class="chart-bg-hmfb" id=num' + value.lost_num + '>' + value.lost_value + '</td>');
     });
+    spanLost2.sort(sortLostNum2);
     spanLost2.forEach(function (value, key, map) {
         tr.append('<td class="chart-bg-c6 k3even" id=span' + value.lost_num + '>' + value.lost_value + '</td>');
     });
+    spanM3Lost2.sort(sortLostNum2);
     spanM3Lost2.forEach(function (value, key, map) {
         tr.append('<td class="chart-bg-c6 k3even" id=spanM3' + value.lost_num + '>' + value.lost_value + '</td>');
     });
+    sumLost2.sort(sortLostNum2);
     sumLost2.forEach(function (value, key, map) {
         tr.append('<td class="chart-bg-c6" id=sum' + value.lost_num + '>' + value.lost_value + '</td>');
     });
+    sumM3Lost2.sort(sortLostNum2);
     sumM3Lost2.forEach(function (value, key, map) {
         tr.append('<td class="chart-bg-c6" id=sumM3' + value.lost_num + '>' + value.lost_value + '</td>');
     });
+    sumTailLost2.sort(sortLostNum2);
     sumTailLost2.forEach(function (value, key, map) {
         tr.append('<td class="chart-bg-c6" id=sumTail' + value.lost_num + '>' + value.lost_value + '</td>');
     });
+    sumTailM3Lost2.sort(sortLostNum2);
     sumTailM3Lost2.forEach(function (value, key, map) {
         tr.append('<td class="chart-bg-c6" id=sumTailM3' + value.lost_num + '>' + value.lost_value + '</td>');
     });
@@ -153,7 +153,7 @@ function fillCurrentLost2(tr) {
 // 填充冷热号
 function fillHotCold2(tr, value) {
     tr.append('<td class="chart-bg-qh" colspan="4">冷热号码</td>');
-    for (var i = 0; i < 43; i++) {
+    for (var i = 0; i <= 46; i++) {
         tr.append('<td class="chart-bg-c6" id=hot_2_' + i + '></td>');
     }
     // {"num":"10","lost_type":"0","show_type":"1"}
