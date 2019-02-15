@@ -3,16 +3,16 @@ package com.qbb.jobs.ms.service.impl;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.quartz.SchedulerException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.qbb.jobs.ms.dao.MonitorSystemDao;
 import com.qbb.jobs.ms.service.IMonitorSystemService;
 import com.qbb.jobs.pub.service.ISyscService;
 import com.qbb.scheduler.model.JobModel;
+import com.qian88.message.client.MessageHelper;
+import com.qian88.message.client.model.SmsEntity;
 
 @Service
 public class MonitorSystemImpl implements IMonitorSystemService {
@@ -76,8 +76,8 @@ public class MonitorSystemImpl implements IMonitorSystemService {
 			}
 
 			try {
-				/*SmsEntity entity = new SmsEntity("999", jobModel.getPhone(), message.toString());
-				MessageHelper.OTHER().sendSMS(entity, true);*/
+				SmsEntity entity = new SmsEntity("999", jobModel.getPhone(), message.toString());
+				MessageHelper.OTHER().sendSMS(entity, true);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -225,8 +225,8 @@ public class MonitorSystemImpl implements IMonitorSystemService {
 			}
 
 			try {
-				/*SmsEntity entity = new SmsEntity("999", jobModel.getPhone(), message.toString());
-				MessageHelper.OTHER().sendSMS(entity, true);*/
+				SmsEntity entity = new SmsEntity("999", jobModel.getPhone(), message.toString());
+				MessageHelper.OTHER().sendSMS(entity, true);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -247,8 +247,8 @@ public class MonitorSystemImpl implements IMonitorSystemService {
 			}
 
 			try {
-				/*SmsEntity entity = new SmsEntity("999", jobModel.getPhone(), message.toString());
-				MessageHelper.OTHER().sendSMS(entity);*/
+				SmsEntity entity = new SmsEntity("999", jobModel.getPhone(), message.toString());
+				MessageHelper.OTHER().sendSMS(entity);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bc.user.info.dao.UserInfoMapper">
+
+ <resultMap id="BaseResultMap" type="com.bc.user.info.domain.UserInfo" >
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="user_id" property="userId" jdbcType="VARCHAR" />
+		<result column="user_type" property="userType" jdbcType="CHAR" />
+		<result column="user_name" property="userName" jdbcType="VARCHAR" />
+		<result column="user_rename" property="userRename" jdbcType="CHAR" />
+		<result column="register_time" property="registerTime" jdbcType="TIMESTAMP" />
+		<result column="register_ip" property="registerIp" jdbcType="VARCHAR" />
+		<result column="head_path" property="headPath" jdbcType="VARCHAR" />
+		<result column="login_pwd" property="loginPwd" jdbcType="VARCHAR" />
+		<result column="tran_pwd" property="tranPwd" jdbcType="VARCHAR" />
+		<result column="user_phone" property="userPhone" jdbcType="VARCHAR" />
+		<result column="enable" property="enable" jdbcType="CHAR" />
+		<result column="channel" property="channel" jdbcType="VARCHAR" />
+		<result column="pwrt_count" property="pwrtCount" jdbcType="INTEGER" />
+		<result column="locktime" property="locktime" jdbcType="TIMESTAMP" />
+		<result column="last_login_time" property="lastLoginTime" jdbcType="TIMESTAMP" />
+		<result column="login_ime" property="loginIme" jdbcType="TIMESTAMP" />
+ </resultMap>
+	
+	<insert id="insert" parameterType="com.bc.user.info.domain.UserInfo">
+		insert into user_info (user_id, user_type, user_name, register_time, register_ip, head_path, login_pwd, tran_pwd, user_phone, enable, channel, locktime, last_login_time, login_ime)
+		values (#{userId}, #{userType}, #{userName}, #{registerTime}, #{registerIp}, #{headPath}, #{loginPwd}, #{tranPwd}, #{userPhone}, #{enable}, #{channel}, #{locktime}, #{lastLoginTime}, #{loginIme})
+	</insert>
+
+  <select id="selectByPk" resultMap="BaseResultMap" parameterType="java.util.Map" >
+    select  * from user_info where user_id = #{pk}
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.bc.user.info.domain.UserInfo" >
+      select * from user_info 
+    	<trim prefix="WHERE" prefixOverrides="AND|OR">
+					<if test="id!=null and id!=''"> 
+						and id = #{id}
+					</if>
+					<if test="userId!=null and userId!=''"> 
+						and user_id = #{userId}
+					</if>
+					<if test="userType!=null and userType!=''"> 
+						and user_type = #{userType}
+					</if>
+					<if test="userName!=null and userName!=''"> 
+						and user_name = #{userName}
+					</if>
+					<if test="userRename!=null and userRename!=''"> 
+						and user_rename = #{userRename}
+					</if>
+					<if test="registerTime!=null and registerTime!=''"> 
+						and register_time = #{registerTime}
+					</if>
+					<if test="registerIp!=null and registerIp!=''"> 
+						and register_ip = #{registerIp}
+					</if>
+					<if test="headPath!=null and headPath!=''"> 
+						and head_path = #{headPath}
+					</if>
+					<if test="loginPwd!=null and loginPwd!=''"> 
+						and login_pwd = #{loginPwd}
+					</if>
+					<if test="tranPwd!=null and tranPwd!=''"> 
+						and tran_pwd = #{tranPwd}
+					</if>
+					<if test="userPhone!=null and userPhone!=''"> 
+						and user_phone = #{userPhone}
+					</if>
+					<if test="enable!=null and enable!=''"> 
+						and enable = #{enable}
+					</if>
+					<if test="channel!=null and channel!=''"> 
+						and channel = #{channel}
+					</if>
+					<if test="pwrtCount!=null and pwrtCount!=''"> 
+						and pwrt_count = #{pwrtCount}
+					</if>
+					<if test="locktime!=null and locktime!=''"> 
+						and locktime = #{locktime}
+					</if>
+					<if test="lastLoginTime!=null and lastLoginTime!=''"> 
+						and last_login_time = #{lastLoginTime}
+					</if>
+					<if test="loginIme!=null and loginIme!=''"> 
+						and login_ime = #{loginIme}
+					</if>
+		</trim>
+		<if test="orderBy != null and orderBy !=''" >
+      			order by ${orderBy}
+    	</if>
+		<if test="startRecord != -1" >
+      			limit  #{startRecord},  #{pageSize}
+    	</if>
+  </select>
+  <select id="countByExample" parameterType="com.bc.user.info.domain.UserInfo" resultType="java.lang.Integer" >
+    select count(*) from user_info 
+    <trim prefix="WHERE" prefixOverrides="AND|OR">
+					<if test="id!=null and id!=''"> 
+						and id = #{id}
+					</if>
+					<if test="userId!=null and userId!=''"> 
+						and user_id = #{userId}
+					</if>
+					<if test="userType!=null and userType!=''"> 
+						and user_type = #{userType}
+					</if>
+					<if test="userName!=null and userName!=''"> 
+						and user_name = #{userName}
+					</if>
+					<if test="userRename!=null and userRename!=''"> 
+						and user_rename = #{userRename}
+					</if>
+					<if test="registerTime!=null and registerTime!=''"> 
+						and register_time = #{registerTime}
+					</if>
+					<if test="registerIp!=null and registerIp!=''"> 
+						and register_ip = #{registerIp}
+					</if>
+					<if test="headPath!=null and headPath!=''"> 
+						and head_path = #{headPath}
+					</if>
+					<if test="loginPwd!=null and loginPwd!=''"> 
+						and login_pwd = #{loginPwd}
+					</if>
+					<if test="tranPwd!=null and tranPwd!=''"> 
+						and tran_pwd = #{tranPwd}
+					</if>
+					<if test="userPhone!=null and userPhone!=''"> 
+						and user_phone = #{userPhone}
+					</if>
+					<if test="enable!=null and enable!=''"> 
+						and enable = #{enable}
+					</if>
+					<if test="channel!=null and channel!=''"> 
+						and channel = #{channel}
+					</if>
+					<if test="pwrtCount!=null and pwrtCount!=''"> 
+						and pwrt_count = #{pwrtCount}
+					</if>
+					<if test="locktime!=null and locktime!=''"> 
+						and locktime = #{locktime}
+					</if>
+					<if test="lastLoginTime!=null and lastLoginTime!=''"> 
+						and last_login_time = #{lastLoginTime}
+					</if>
+					<if test="loginIme!=null and loginIme!=''"> 
+						and login_ime = #{loginIme}
+					</if>
+		</trim>
+  	</select>
+	
+	<update id="updateByExample" parameterType="map" >
+    update user_info
+    <set >
+ 				 <if test="record.id!=null and record.id!=''"> 
+						id = #{record.id},
+					</if>
+ 				 <if test="record.userId!=null and record.userId!=''"> 
+						user_id = #{record.userId},
+					</if>
+ 				 <if test="record.userType!=null and record.userType!=''"> 
+						user_type = #{record.userType},
+					</if>
+ 				 <if test="record.userName!=null and record.userName!=''"> 
+						user_name = #{record.userName},
+					</if>
+ 				 <if test="record.userRename!=null and record.userRename!=''"> 
+						user_rename = #{record.userRename},
+					</if>
+ 				 <if test="record.registerTime!=null and record.registerTime!=''"> 
+						register_time = #{record.registerTime},
+					</if>
+ 				 <if test="record.registerIp!=null and record.registerIp!=''"> 
+						register_ip = #{record.registerIp},
+					</if>
+ 				 <if test="record.headPath!=null and record.headPath!=''"> 
+						head_path = #{record.headPath},
+					</if>
+ 				 <if test="record.loginPwd!=null and record.loginPwd!=''"> 
+						login_pwd = #{record.loginPwd},
+					</if>
+ 				 <if test="record.tranPwd!=null and record.tranPwd!=''"> 
+						tran_pwd = #{record.tranPwd},
+					</if>
+ 				 <if test="record.userPhone!=null and record.userPhone!=''"> 
+						user_phone = #{record.userPhone},
+					</if>
+ 				 <if test="record.enable!=null and record.enable!=''"> 
+						enable = #{record.enable},
+					</if>
+ 				 <if test="record.channel!=null and record.channel!=''"> 
+						channel = #{record.channel},
+					</if>
+ 				 <if test="record.pwrtCount!=null and record.pwrtCount!=''"> 
+						pwrt_count = #{record.pwrtCount},
+					</if>
+ 				 <if test="record.locktime!=null and record.locktime!=''"> 
+						locktime = #{record.locktime},
+					</if>
+ 				 <if test="record.lastLoginTime!=null and record.lastLoginTime!=''"> 
+						last_login_time = #{record.lastLoginTime},
+					</if>
+ 				 <if test="record.loginIme!=null and record.loginIme!=''"> 
+						login_ime = #{record.loginIme},
+					</if>
+    </set>
+    <trim prefix="WHERE" prefixOverrides="AND|OR"> 
+ 			<if test="example.id!=null and example.id!=''">
+			   and id = #{example.id}
+			</if>
+			
+ 			<if test="example.userId!=null and example.userId!=''">
+			   and user_id = #{example.userId}
+			</if>
+			
+ 			<if test="example.userType!=null and example.userType!=''">
+			   and user_type = #{example.userType}
+			</if>
+			
+ 			<if test="example.userName!=null and example.userName!=''">
+			   and user_name = #{example.userName}
+			</if>
+			
+ 			<if test="example.userRename!=null and example.userRename!=''">
+			   and user_rename = #{example.userRename}
+			</if>
+			
+			
+ 			<if test="example.registerIp!=null and example.registerIp!=''">
+			   and register_ip = #{example.registerIp}
+			</if>
+			
+ 			<if test="example.headPath!=null and example.headPath!=''">
+			   and head_path = #{example.headPath}
+			</if>
+			
+ 			<if test="example.loginPwd!=null and example.loginPwd!=''">
+			   and login_pwd = #{example.loginPwd}
+			</if>
+			
+ 			<if test="example.tranPwd!=null and example.tranPwd!=''">
+			   and tran_pwd = #{example.tranPwd}
+			</if>
+			
+ 			<if test="example.userPhone!=null and example.userPhone!=''">
+			   and user_phone = #{example.userPhone}
+			</if>
+			
+ 			<if test="example.enable!=null and example.enable!=''">
+			   and enable = #{example.enable}
+			</if>
+			
+ 			<if test="example.channel!=null and example.channel!=''">
+			   and channel = #{example.channel}
+			</if>
+			
+ 			<if test="example.pwrtCount!=null and example.pwrtCount!=''">
+			   and pwrt_count = #{example.pwrtCount}
+			</if>
+			
+			
+			
+			
+	</trim>
+  </update>
+
+<update id="updateByPk" parameterType="com.bc.user.info.domain.UserInfo" >
+    update user_info
+    <set >
+					<if test="userType!=null and userType!=''"> 
+						user_type = #{userType},
+					</if>
+					<if test="userName!=null and userName!=''"> 
+						user_name = #{userName},
+					</if>
+					<if test="userRename!=null and userRename!=''"> 
+						user_rename = #{userRename},
+					</if>
+					<if test="registerTime!=null and registerTime!=''"> 
+						register_time = #{registerTime},
+					</if>
+					<if test="registerIp!=null and registerIp!=''"> 
+						register_ip = #{registerIp},
+					</if>
+					<if test="headPath!=null and headPath!=''"> 
+						head_path = #{headPath},
+					</if>
+					<if test="loginPwd!=null and loginPwd!=''"> 
+						login_pwd = #{loginPwd},
+					</if>
+					<if test="tranPwd!=null and tranPwd!=''"> 
+						tran_pwd = #{tranPwd},
+					</if>
+					<if test="userPhone!=null and userPhone!=''"> 
+						user_phone = #{userPhone},
+					</if>
+					<if test="enable!=null and enable!=''"> 
+						enable = #{enable},
+					</if>
+					<if test="channel!=null and channel!=''"> 
+						channel = #{channel},
+					</if>
+					<if test="pwrtCount!=null and pwrtCount!='' or pwrtCount == 0"> 
+						pwrt_count = #{pwrtCount},
+					</if>
+					<if test="locktime!=null and locktime!=''"> 
+						locktime = #{locktime},
+					</if>
+					<if test="lastLoginTime!=null and lastLoginTime!=''"> 
+						last_login_time = #{lastLoginTime},
+					</if>
+					<if test="loginIme!=null and loginIme!=''"> 
+						login_ime = #{loginIme},
+					</if>
+    </set>
+    where user_id = #{userId};
+  </update>
+  <delete id="deleteByPk" parameterType="map" >
+    delete from user_info  where user_id =  #{pk}
+  </delete>
+  
+  <update id="modifyUserLoginPassword" parameterType="com.bc.user.info.domain.UserInfo">
+	update user_info set login_pwd = #{loginPwd}  where user_id = #{userId};
+  </update>
+</mapper>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 请求参数的编码方式 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- 指定被struts2处理的请求后缀类型。多个用逗号隔开 -->
+	<constant name="struts.action.extension" value="action" />
+	<!-- 当struts.xml改动后，是否重新加载。默认值为false(生产环境下使用),开发阶段最好打开 -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<!-- 是否使用struts的开发模式。开发模式会有更多的调试信息。默认值为false(生产环境下使用),开发阶段最好打开 -->
+	<constant name="struts.devMode" value="false" />
+	<!-- 设置浏览器是否缓存静态内容。默认值为true(生产环境下使用),开发阶段最好关闭 -->
+	<constant name="struts.serve.static.browserCache" value="false" />
+	<!-- 指定由spring负责action对象的创建 -->
+	<constant name="struts.objectFactory" value="spring" />
+	<!-- 是否开启动态方法调用 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<!-- <constant name="struts.custom.i18n.resources" value="resource"></constant> -->
+	<!-- 修改上传的最大文件大小：100MB -->
+	<constant name="struts.multipart.maxSize" value="104857600" />
+
+	<package name="qbb-struts-default" extends="struts-default,json-default" namespace="/">
+		<global-results>
+			<result name="input" type="json">
+				<param name="includeProperties">func, args</param>
+				<param name="contentType">text/plain</param>
+			</result>
+			<result name="AJAX" type="json">
+				<param name="root">ajaxVO</param>
+				<param name="ignoreHierarchy">false</param>
+				<param name="contentType">text/plain</param>
+			</result>
+			<result name="AJAX_PAGELIST" type="json">
+				<param name="root">resultList</param>
+				<param name="ignoreHierarchy">false</param>
+				<param name="contentType">text/plain</param>
+			</result>
+			<result name="DEFINED">${definedURL}</result>
+			<result name="REDIRECT" type="redirect">${definedURL}</result>
+		</global-results>
+	</package>
+</struts>
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+	<head>
+		<meta charset="UTF-8">
+		<title>我的方案</title>
+		<script type="text/javascript" th:src="@{/js/viewprort.js}"></script>
+		<script type="text/javascript" th:src="@{/js/form-submit.js}"></script>
+		<script type="text/javascript" th:src="@{/js/order/myScheme.js}"></script>
+		<script th:src="@{/js/jquery-3.1.1.min.js}"></script>
+		<link rel="stylesheet" th:href="@{css/newpage.css}" />
+	</head>
+	<body>
+		<header class="head nav-back">
+			<a onclick="toPage('homePage')" class="back"></a>
+			<h2>我的方案</h2>
+		</header>
+		<div class="zh-content">
+			<!-- <div class="myFangan">
+				<div class="myFangan-text np-mb20">形态投注</div>
+				<span class="myFangan-line"></span>
+				<div class="myFangan-text">
+					<div class="np-mt12"><span>[和值]</span>&nbsp;<span>04,05</span>&nbsp;[<span>2</span>注&nbsp;<span>4</span>元]</div>
+					<div class="np-mt12">[三同号单选]&nbsp;<span>111</span>&nbsp;[<span>1</span>注&nbsp;<span>2</span>元]</div>
+					<div class="np-mt46 np-mb20">期号&nbsp;:&nbsp;<span id="start_issue_no"></span>2018020332期</div>
+					<div class="np-mb20">
+						<span class="myFangan-text-l">倍投&nbsp;:&nbsp;<span id="multiple"></span>1倍</span>
+						<span class="myFangan-text-r">追号&nbsp;:&nbsp;<span id="continuous_count"></span>1期</span>
+					</div>
+					<div class="np-mb20">
+						<span class="myFangan-text-l">花费&nbsp;:&nbsp;<span id="invest_money"></span>元</span>
+						<span class="myFangan-text-r">组合数&nbsp;:&nbsp;<span>1</span></span>
+					</div>
+					<div class="np-mb20">单注可能中<span>240</span>元</div>
+				</div>
+				<span class="myFangan-line"></span>
+				<div class="myFangan-time">
+					<span>2018-07-16</span>&nbsp;
+					<span>20</span>&nbsp;:
+					<span>58</span>
+				</div>
+			</div>
+			
+			
+			<div class="myFangan">
+				<div class="myFangan-text np-mb20">形态投注</div>
+				<span class="myFangan-line"></span>
+				<div class="myFangan-text">
+					<div class="np-mt12"><span>[和值]</span>&nbsp;<span>04,05</span>&nbsp;[<span>2</span>注&nbsp;<span>4</span>元]</div>
+					<div class="np-mt12">[三同号单选]&nbsp;<span>111</span>&nbsp;[<span>1</span>注&nbsp;<span>2</span>元]</div>
+					<div class="np-mt46 np-mb20">期号&nbsp;:&nbsp;<span id="start_issue_no"></span>期</div>
+					<div class="np-mb20">
+						<span class="myFangan-text-l">倍投&nbsp;:&nbsp;<span id="multiple"></span>倍</span>
+						<span class="myFangan-text-r">追号&nbsp;:&nbsp;<span id="continuous_count"></span>期</span>
+					</div>
+					<div class="np-mb20">
+						<span class="myFangan-text-l">花费&nbsp;:&nbsp;<span id="invest_money"></span>元</span>
+						<span class="myFangan-text-r">组合数&nbsp;:&nbsp;<span>1</span></span>
+					</div>
+					<div class="np-mb20">单注可能中<span>240</span>元</div>
+				</div>
+				<span class="myFangan-line"></span>
+				<div class="myFangan-time">
+					<span>2018-07-16</span>&nbsp;
+					<span>20</span>&nbsp;:
+					<span>58</span>
+				</div>
+			</div> -->
+			
+			
+		</div>
+		<!-- <div class="zh-btjs">
+			<input type="button" class="zh-btn-qk" value="清空"/>
+			<span>
+				共 <span>3</span>注<span>6</span>元
+			</span>
+			<input type="button" class="zh-btn-qd" value="确定"/>
+		</div> -->
+	</body>
+</html>
+<script>
+$(function() {
+	getMyScheme();
+})
+</script>

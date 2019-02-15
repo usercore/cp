@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<communication>
+    <!--默认字段 <Field name="termno" title="终端号" type="String" input="O" length="32"
+        default="" /> <Field name="channel" title="渠道" type="String" input="O" length="10"
+        default="" /> <Field name="app_version" title="版本号" type="String" input="O"
+        length="20" default="" /> -->
+    <!-- 如Field带有multi属性，则标识此处为多条记录，则叶子节点必须带有<Record></Record>用以标识多行记录的格式
+        且name属性的值，必须与当前交易请求参数Map中多条记录存放的Key值一致 usernull:用户需进行登录操作才能调用的接口 校验为空校验 不为空
+        false 可为空 true -->
+    <!--默认返回字段 -->
+    <!-- <Erorcd>erorcd</Erorcd> <Errmsg>errmsg</Errmsg> -->
+
+    <packet actina="userLogin" desc="用户登录">
+        <!-- 请求报文主体的格式 -->
+        <Request>
+            <Field name="userPhone" title="用户名" type="String" input="M" length="20" default=""/>
+            <Field name="password" title="密码" isNeedDecrypt="true" type="String" input="M" length="100" default=""/>
+            <Field name="deviceNo" title="设备号" type="String" input="O" length="100" default=""/>
+            <Field name="app_version" title="版本号" type="String" input="O" length="20" default=""/>
+            <Field name="channel" title="来源" type="String" input="O" length="20" default=""/>
+        </Request>
+        <Response>
+        	<Field name="userId" title="用戶ID" type="String" default=""/>
+        </Response>
+        <!-- 交易错误码标识 成功默认为000000 -->
+        <Erorcd>erorcd</Erorcd>
+        <!-- 交易错误信息标识 成功表示 -->
+        <Errmsg>errmsg</Errmsg>
+    </packet>
+    <packet actina="getUserInfo" desc="获取用户信息">
+        <!-- 请求报文主体的格式 -->
+        <Request>
+            <Field name="userId" title="用户ID" type="String" input="M" length="50" default=""/>
+        </Request>
+        <Response>
+        </Response>
+        <!-- 交易错误码标识 成功默认为000000 -->
+        <Erorcd>erorcd</Erorcd>
+        <!-- 交易错误信息标识 成功表示 -->
+        <Errmsg>errmsg</Errmsg>
+    </packet>
+	<packet actina="userRegister" desc="用户注册">
+        <!-- 请求报文主体的格式 -->
+        <Request>
+            <Field name="userPhone" title="手机号" type="String" input="M" length="20" default=""/>
+            <Field name="password" title="密码" isNeedDecrypt="true" type="String" input="M" length="100" default=""/>
+            <Field name="nickName" title="昵称" type="String" input="M" length="100" default=""/>
+            <Field name="deviceNo" title="设备号" type="String" input="O" length="100" default=""/>
+            <Field name="app_version" title="版本号" type="String" input="O" length="20" default=""/>
+            <Field name="channel" title="来源" type="String" input="O" length="20" default=""/>
+        </Request>
+        <Response>
+        </Response>
+        <!-- 交易错误码标识 成功默认为000000 -->
+        <Erorcd>erorcd</Erorcd>
+        <!-- 交易错误信息标识 成功表示 -->
+        <Errmsg>errmsg</Errmsg>
+    </packet>
+
+    <packet actina="modifyUserLoginPassword" desc="用户修改密码">
+        <!-- 请求报文主体的格式 -->
+        <Request>
+         	<Field name="userId" title="用户ID" type="String" input="M" length="50" default=""/>
+            <Field name="oldPassword" title="原密码" type="String" input="M" length="50" default=""/>
+            <Field name="newPassword" title="新密码" isNeedDecrypt="true" type="String" input="M" length="100" default=""/>
+            <Field name="deviceNo" title="设备号" type="String" input="O" length="100" default=""/>
+            <Field name="app_version" title="版本号" type="String" input="O" length="20" default=""/>
+            <Field name="channel" title="来源" type="String" input="O" length="20" default=""/>
+        </Request>
+        <Response>
+        </Response>
+        <!-- 交易错误码标识 成功默认为000000 -->
+        <Erorcd>erorcd</Erorcd>
+        <!-- 交易错误信息标识 成功表示 -->
+        <Errmsg>errmsg</Errmsg>
+    </packet>
+</communication>

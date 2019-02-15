@@ -66,7 +66,7 @@ public class MyHttpUtil {
             JSONObject jsonObject = JSONObject.fromObject(result);
             return jsonObject;
         } catch (Exception e) {
-            System.out.println("æœåŠ¡å™¨å¿™"+e);
+            System.out.println("·şÎñÆ÷Ã¦"+e);
             e.printStackTrace();
         }
         finally{

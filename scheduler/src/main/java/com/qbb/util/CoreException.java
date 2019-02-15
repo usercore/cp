@@ -1,14 +1,12 @@
 package com.qbb.util;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import com.qian88.message.client.MessageHelper;
+import com.qian88.message.client.model.EmailEntity;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import java.util.*;
 
 /**
  * Created by chen on 2017/2/15.
@@ -47,14 +45,14 @@ public class CoreException {
             String to = StringUtils.join(tomail.iterator(), ",");
             String cc = StringUtils.join(ccmail.iterator(), ",");
 
-//            EmailEntity entity = new EmailEntity("999", to, "scheduler异常");
-//            entity.setCc(cc);
+            EmailEntity entity = new EmailEntity("999", to, "scheduler异常");
+            entity.setCc(cc);
 
             String datestr = DateUtil.dateToString(new Date());
             content = MethodUtil.converToStr(content).concat("====执行时间:[" + datestr + "]");
 
-//            entity.setContent(content);
-//            MessageHelper.OTHER().sendEmail(entity);
+            entity.setContent(content);
+            MessageHelper.OTHER().sendEmail(entity);
         } catch (Exception e) {
             e.printStackTrace();
         }

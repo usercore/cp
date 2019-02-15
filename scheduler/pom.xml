@@ -54,7 +54,7 @@
 			<artifactId>poi</artifactId>
 			<version>${version.poi}</version>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>com.qian88</groupId>
 			<artifactId>qian88-message-client</artifactId>
 			<version>${version.qian88-message-client}</version>
@@ -63,7 +63,7 @@
 			<groupId>com.qian88</groupId>
 			<artifactId>qian88-depository-client</artifactId>
 			<version>${version.qian88-depository-client}</version>
-		</dependency> -->
+		</dependency>
 		<!-- junit -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -278,14 +278,9 @@
 			<artifactId>guava</artifactId>
 			<version>20.0</version>
 		</dependency>
-        <dependency>
-            <groupId>org.jsoup</groupId>
-            <artifactId>jsoup</artifactId>
-            <version>1.11.3</version>
-        </dependency>
 	</dependencies>
 	<build>
-        <finalName>scheduler</finalName>
+		<finalName>qian88_scheduler</finalName>
 		<defaultGoal>compile</defaultGoal>
 		<resources>
 			<resource>
@@ -294,14 +289,7 @@
 			</resource>
 		</resources>
 		<plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
@@ -325,7 +313,7 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-                    <path>/scheduler</path>
+					<path>/qian88_scheduler</path>
 					<port>8078</port>
 					<uriEncoding>utf-8</uriEncoding>
 					<server>tomcat</server>

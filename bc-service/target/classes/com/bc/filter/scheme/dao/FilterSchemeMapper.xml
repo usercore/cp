@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bc.filter.scheme.dao.FilterSchemeMapper">
+
+ <resultMap id="BaseResultMap" type="com.bc.filter.scheme.domain.FilterScheme" >
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="scheme_id" property="schemeId" jdbcType="VARCHAR" />
+		<result column="user_id" property="userId" jdbcType="VARCHAR" />
+		<result column="scheme_detail" property="schemeDetail" jdbcType="VARCHAR" />
+		<result column="multiple" property="multiple" jdbcType="INTEGER" />
+		<result column="start_issue_no" property="startIssueNo" jdbcType="VARCHAR" />
+		<result column="lottery_type" property="lotteryType" jdbcType="VARCHAR" />
+		<result column="continuous_count" property="continuousCount" jdbcType="TINYINT" />
+		<result column="invest_money" property="investMoney" jdbcType="DECIMAL" />
+		<result column="award_stop" property="awardStop" jdbcType="INTEGER" />
+		<result column="award_status" property="awardStatus" jdbcType="INTEGER" />
+		<result column="award_detail" property="awardDetail" jdbcType="VARCHAR" />
+		<result column="award_money" property="awardMoney" jdbcType="DECIMAL" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+ </resultMap>
+	
+	<insert id="insert" parameterType="com.bc.filter.scheme.domain.FilterScheme">
+		insert into filter_scheme (scheme_id, user_id, scheme_detail, multiple, start_issue_no, lottery_type, continuous_count, invest_money, award_stop, award_status, award_detail, award_money, update_time)
+		values (#{schemeId}, #{userId}, #{schemeDetail}, #{multiple}, #{startIssueNo}, #{lotteryType}, #{continuousCount}, #{investMoney}, #{awardStop}, #{awardStatus}, #{awardDetail}, #{awardMoney},#{updateTime})
+	</insert>
+
+  <select id="selectByPk" resultMap="BaseResultMap" parameterType="java.util.Map" >
+    select  * from filter_scheme where scheme_id = #{pk}
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.bc.filter.scheme.domain.FilterScheme" >
+      select * from filter_scheme 
+    	<trim prefix="WHERE" prefixOverrides="AND|OR">
+					<if test="id!=null and id!=''"> 
+						and id = #{id}
+					</if>
+					<if test="schemeId!=null and schemeId!=''"> 
+						and scheme_id = #{schemeId}
+					</if>
+					<if test="userId!=null and userId!=''"> 
+						and user_id = #{userId}
+					</if>
+					<if test="schemeDetail!=null and schemeDetail!=''"> 
+						and scheme_detail = #{schemeDetail}
+					</if>
+					<if test="multiple!=null and multiple!=''"> 
+						and multiple = #{multiple}
+					</if>
+					<if test="startIssueNo!=null and startIssueNo!=''"> 
+						and start_issue_no = #{startIssueNo}
+					</if>
+					<if test="lotteryType!=null and lotteryType!=''"> 
+						and lottery_type = #{lotteryType}
+					</if>
+					<if test="continuousCount!=null and continuousCount!=''"> 
+						and continuous_count = #{continuousCount}
+					</if>
+					<if test="investMoney!=null and investMoney!=''"> 
+						and invest_money = #{investMoney}
+					</if>
+					<if test="awardStop!=null and awardStop!=''"> 
+						and award_stop = #{awardStop}
+					</if>
+					<if test="awardStatus!=null and awardStatus!=''"> 
+						and award_status = #{awardStatus}
+					</if>
+					<if test="awardDetail!=null and awardDetail!=''"> 
+						and award_detail = #{awardDetail}
+					</if>
+					<if test="awardMoney!=null and awardMoney!=''"> 
+						and award_money = #{awardMoney}
+					</if>
+					<if test="createTime!=null and createTime!=''"> 
+						and create_time = #{createTime}
+					</if>
+					<if test="updateTime!=null and updateTime!=''"> 
+						and update_time = #{updateTime}
+					</if>
+		</trim>
+		<if test="orderBy != null and orderBy !=''" >
+      			order by ${orderBy}
+    	</if>
+		<if test="startRecord != -1" >
+      			limit  #{startRecord},  #{pageSize}
+    	</if>
+  </select>
+  <select id="countByExample" parameterType="com.bc.filter.scheme.domain.FilterScheme" resultType="java.lang.Integer" >
+    select count(*) from filter_scheme 
+    <trim prefix="WHERE" prefixOverrides="AND|OR">
+					<if test="id!=null and id!=''"> 
+						and id = #{id}
+					</if>
+					<if test="schemeId!=null and schemeId!=''"> 
+						and scheme_id = #{schemeId}
+					</if>
+					<if test="userId!=null and userId!=''"> 
+						and user_id = #{userId}
+					</if>
+					<if test="schemeDetail!=null and schemeDetail!=''"> 
+						and scheme_detail = #{schemeDetail}
+					</if>
+					<if test="multiple!=null and multiple!=''"> 
+						and multiple = #{multiple}
+					</if>
+					<if test="startIssueNo!=null and startIssueNo!=''"> 
+						and start_issue_no = #{startIssueNo}
+					</if>
+					<if test="lotteryType!=null and lotteryType!=''"> 
+						and lottery_type = #{lotteryType}
+					</if>
+					<if test="continuousCount!=null and continuousCount!=''"> 
+						and continuous_count = #{continuousCount}
+					</if>
+					<if test="investMoney!=null and investMoney!=''"> 
+						and invest_money = #{investMoney}
+					</if>
+					<if test="awardStop!=null and awardStop!=''"> 
+						and award_stop = #{awardStop}
+					</if>
+					<if test="awardStatus!=null and awardStatus!=''"> 
+						and award_status = #{awardStatus}
+					</if>
+					<if test="awardDetail!=null and awardDetail!=''"> 
+						and award_detail = #{awardDetail}
+					</if>
+					<if test="awardMoney!=null and awardMoney!=''"> 
+						and award_money = #{awardMoney}
+					</if>
+					<if test="createTime!=null and createTime!=''"> 
+						and create_time = #{createTime}
+					</if>
+					<if test="updateTime!=null and updateTime!=''"> 
+						and update_time = #{updateTime}
+					</if>
+		</trim>
+  	</select>
+	
+	<update id="updateByExample" parameterType="map" >
+    update filter_scheme
+    <set >
+ 				 <if test="record.id!=null and record.id!=''"> 
+						id = #{record.id},
+					</if>
+ 				 <if test="record.schemeId!=null and record.schemeId!=''"> 
+						scheme_id = #{record.schemeId},
+					</if>
+ 				 <if test="record.userId!=null and record.userId!=''"> 
+						user_id = #{record.userId},
+					</if>
+ 				 <if test="record.schemeDetail!=null and record.schemeDetail!=''"> 
+						scheme_detail = #{record.schemeDetail},
+					</if>
+ 				 <if test="record.multiple!=null and record.multiple!=''"> 
+						multiple = #{record.multiple},
+					</if>
+ 				 <if test="record.startIssueNo!=null and record.startIssueNo!=''"> 
+						start_issue_no = #{record.startIssueNo},
+					</if>
+ 				 <if test="record.lotteryType!=null and record.lotteryType!=''"> 
+						lottery_type = #{record.lotteryType},
+					</if>
+ 				 <if test="record.continuousCount!=null and record.continuousCount!=''"> 
+						continuous_count = #{record.continuousCount},
+					</if>
+ 				 <if test="record.investMoney!=null and record.investMoney!=''"> 
+						invest_money = #{record.investMoney},
+					</if>
+ 				 <if test="record.awardStop!=null and record.awardStop!=''"> 
+						award_stop = #{record.awardStop},
+					</if>
+ 				 <if test="record.awardStatus!=null and record.awardStatus!=''"> 
+						award_status = #{record.awardStatus},
+					</if>
+ 				 <if test="record.awardDetail!=null and record.awardDetail!=''"> 
+						award_detail = #{record.awardDetail},
+					</if>
+ 				 <if test="record.awardMoney!=null and record.awardMoney!=''"> 
+						award_money = #{record.awardMoney},
+					</if>
+ 				 <if test="record.createTime!=null and record.createTime!=''"> 
+						create_time = #{record.createTime},
+					</if>
+ 				 <if test="record.updateTime!=null and record.updateTime!=''"> 
+						update_time = #{record.updateTime},
+					</if>
+    </set>
+    <trim prefix="WHERE" prefixOverrides="AND|OR"> 
+ 			<if test="example.id!=null and example.id!=''">
+			   and id = #{example.id}
+			</if>
+			
+ 			<if test="example.schemeId!=null and example.schemeId!=''">
+			   and scheme_id = #{example.schemeId}
+			</if>
+			
+ 			<if test="example.userId!=null and example.userId!=''">
+			   and user_id = #{example.userId}
+			</if>
+			
+ 			<if test="example.schemeDetail!=null and example.schemeDetail!=''">
+			   and scheme_detail = #{example.schemeDetail}
+			</if>
+			
+ 			<if test="example.multiple!=null and example.multiple!=''">
+			   and multiple = #{example.multiple}
+			</if>
+			
+ 			<if test="example.startIssueNo!=null and example.startIssueNo!=''">
+			   and start_issue_no = #{example.startIssueNo}
+			</if>
+			
+ 			<if test="example.lotteryType!=null and example.lotteryType!=''">
+			   and lottery_type = #{example.lotteryType}
+			</if>
+			
+ 			<if test="example.continuousCount!=null and example.continuousCount!=''">
+			   and continuous_count = #{example.continuousCount}
+			</if>
+			
+ 			<if test="example.investMoney!=null and example.investMoney!=''">
+			   and invest_money = #{example.investMoney}
+			</if>
+			
+ 			<if test="example.awardStop!=null and example.awardStop!=''">
+			   and award_stop = #{example.awardStop}
+			</if>
+			
+ 			<if test="example.awardStatus!=null and example.awardStatus!=''">
+			   and award_status = #{example.awardStatus}
+			</if>
+			
+ 			<if test="example.awardDetail!=null and example.awardDetail!=''">
+			   and award_detail = #{example.awardDetail}
+			</if>
+			
+ 			<if test="example.awardMoney!=null and example.awardMoney!=''">
+			   and award_money = #{example.awardMoney}
+			</if>
+			
+			
+			
+	</trim>
+  </update>
+
+<update id="updateByPk" parameterType="com.bc.filter.scheme.domain.FilterScheme" >
+    update filter_scheme
+    <set >
+					<if test="id!=null and id!=''"> 
+						id = #{id},
+					</if>
+					<if test="schemeId!=null and schemeId!=''"> 
+						scheme_id = #{schemeId},
+					</if>
+					<if test="userId!=null and userId!=''"> 
+						user_id = #{userId},
+					</if>
+					<if test="schemeDetail!=null and schemeDetail!=''"> 
+						scheme_detail = #{schemeDetail},
+					</if>
+					<if test="multiple!=null and multiple!=''"> 
+						multiple = #{multiple},
+					</if>
+					<if test="startIssueNo!=null and startIssueNo!=''"> 
+						start_issue_no = #{startIssueNo},
+					</if>
+					<if test="lotteryType!=null and lotteryType!=''"> 
+						lottery_type = #{lotteryType},
+					</if>
+					<if test="continuousCount!=null and continuousCount!=''"> 
+						continuous_count = #{continuousCount},
+					</if>
+					<if test="investMoney!=null and investMoney!=''"> 
+						invest_money = #{investMoney},
+					</if>
+					<if test="awardStop!=null and awardStop!=''"> 
+						award_stop = #{awardStop},
+					</if>
+					<if test="awardStatus!=null and awardStatus!=''"> 
+						award_status = #{awardStatus},
+					</if>
+					<if test="awardDetail!=null and awardDetail!=''"> 
+						award_detail = #{awardDetail},
+					</if>
+					<if test="awardMoney!=null and awardMoney!=''"> 
+						award_money = #{awardMoney},
+					</if>
+					<if test="createTime!=null and createTime!=''"> 
+						create_time = #{createTime},
+					</if>
+					<if test="updateTime!=null and updateTime!=''"> 
+						update_time = #{updateTime},
+					</if>
+    </set>
+    where scheme_id = #{schemeId};
+  </update>
+  <delete id="deleteByPk" parameterType="map" >
+    delete from filter_scheme  where scheme_id =  #{pk}
+  </delete>
+</mapper>

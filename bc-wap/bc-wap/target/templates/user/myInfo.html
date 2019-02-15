@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<script th:src="@{/js/jquery-3.1.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/form-submit.js}"></script>
+<script type="text/javascript" th:src="@{/js/viewprort.js}"></script>
+<link rel="stylesheet" th:href="@{/css/my.css}" />
+<link rel="stylesheet" th:href="@{/css/chart.css}" />
+<meta charset="UTF-8" />
+<title>Title</title>
+</head>
+<body>
+
+	<header class="head">
+		<a onclick="toPage('homePage')" class="back"></a>
+		<h2>我的资料</h2>
+	</header>
+	<div class="pd tog">
+		<button class="btn" onclick='loginOut()'>退出登录</button>
+	</div>
+	<div class="list-info first">
+		<ul>
+			<li><span>头像</span> <span><div class="userimg">
+						<img src="images/user2.png" />
+					</div>
+					<!-- <div class="ico_join"></div> --></span></li>
+			<li><span>昵称</span> <span id="nickName">昵称</span></li>
+			<li><span>密码</span> <span onclick="toPage('user/modifyPassword')"><div class="level"></div>修改
+					<div class="ico_join" ></div></span></li>
+		</ul>
+	</div>
+	<footer class="trend_footer">
+			<a onclick="toPage('homePage')" >首页</a>
+			<a onclick="toPage('trendchart/k3/basic')">走势图</a>
+			<a onclick="toPage('user/myInfo')" class="active">我的</a>
+	</footer>
+	
+</body>
+<script type="text/javascript">
+	$(function() {
+		var data = {
+			actina : 'getUserInfo'
+		};
+		var succCallBackFunc = function(res) {
+			if (res.erorcd == "000000") {
+				var userName = res.record1[0].user_name;
+				$("#nickName").html(userName);
+			} else {
+				requestError(res);
+			}
+		}
+
+		//ajax提交数据
+		ajax_commit_commonData(data, succCallBackFunc,ajaxError)
+	});
+	function loginOut(){
+			var succCallBackFunc = function(res) {
+				if (res.erorcd == "000000") {
+					toPage('login');
+				} else {
+					requestError(res);
+				}
+			}
+
+			//ajax提交数据
+			ajax_commit('loginOut',{}, succCallBackFunc, function() {
+			})
+	}
+</script>
+</html>

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qbb.jobs.ms.dao.MonitorSystemDao">
+
+<!--  检查当天未核保完成的标的  -->
+	<select id="getNotJobcorecount" resultType = "java.lang.Integer" >
+		select count(*) as jobcorecount
+			from job_core 
+				where 
+				<![CDATA[ 
+					loop_time <= DATE_SUB(SYSDATE(),INTERVAL 30 MINUTE)
+				  	and  `status`<>'15' 
+		   ]]>
+	</select>
+	
+	
+	
+	<select id="getNotJobcorecountFalse" resultType = "java.lang.Integer" >
+		select count(*) as jobcorecount
+			from job_core 
+				where 
+				<![CDATA[ 
+					loop_time <= DATE_SUB(SYSDATE(),INTERVAL 40 MINUTE)
+				  	and  `status`in ('13','19') 
+		   ]]>
+	</select>
+	
+	
+	
+	<!--  检查当天财务审批未通过的数据  -->
+	<select id="getNotRepcount" resultType = "java.lang.Integer" >
+	select count(*) as rep_count from 
+		bid_repayment left join bid_borrow on (bid_borrow.borrow_sq=bid_repayment.borrow_sq)
+		where bid_repayment.borrow_sq= bid_borrow.borrow_sq and 
+		 DATE_FORMAT(bid_repayment.repayment_time,'%Y-%m-%d')=DATE_FORMAT(SYSDATE(),'%Y-%m-%d') 
+		 <![CDATA[  and bid_repayment.`status`<38 and bid_repayment.repayment_sq>0 and bid_borrow.allchips_money = bid_borrow.borrow_money ]]>   
+		 and bid_borrow.status=15
+	</select>
+	
+	
+	<!--  检查当天系统未还款数据  -->
+	<select id="getNotRepjobcount" resultType = "java.lang.Integer" >
+	    select count(*) rowcount from bid_repayment
+		where status='15'  and repayment_sq > 0
+		and CURDATE()=repayment_time
+	</select>
+	
+	
+	
+	
+	<!-- 检查还款记录与资金流水流水匹配数据，还款后未给投资人款项的 -->
+	<select id="getNotFundMoney1" resultType = "java.math.BigDecimal" >
+	
+			select IFNULL(SUM(repay_detail_money+if(`status`=50,0,detail_interest+detail_expinterest)+default_interest+IFNULL(imcome_money,0)),0)  as money1
+			from bid_repayment_detail t1 
+			where t1.`status` in (40,50)  	
+			<![CDATA[ 	 
+				and t1.investor_id>0 and t1.repayment_sq>0   
+				and date_format(t1.actual_time,'%Y-%m-%d')=date_format(SYSDATE(),'%Y-%m-%d') 
+			]]> 
+	</select>
+	
+	
+	<select id="getNotFundMoney2" resultType = "java.math.BigDecimal" >
+			select IFNULL(SUM(repay_detail_money+if(`status`=50,0,detail_interest+detail_expinterest)+default_interest+IFNULL(imcome_money,0)),0)   as money2
+			from bid_repayment_detail_hist t1 
+			where t1.`status` in (40,50) 
+			<![CDATA[  and t1.investor_id>0 and t1.repayment_sq>0
+					and date_format(t1.actual_time,'%Y-%m-%d')=date_format(SYSDATE(),'%Y-%m-%d') 
+			]]> 
+	</select>
+	
+	
+	<select id="getNotFundMoney3" resultType = "java.math.BigDecimal" >
+			select IFNULL(SUM(d_money),0) as money3 
+				from bid_fund_records 
+				where 
+				<![CDATA[ 
+					DATE_FORMAT(create_time, '%Y-%m-%d')  = DATE_FORMAT(SYSDATE(), '%Y-%m-%d')
+					and  fund_type in ('7010','7001','7002','7011','7012','8101','7021','7022','7023','7024') and user_id>0 and fund_sq>0  
+				]]>   
+	</select>
+	
+	
+	
+	 <!-- 正常还款资金匹配检查 -->
+	 <select id="getNotFundBackMoney1" resultType = "java.math.BigDecimal" >
+			select IFNULL(SUM(repay_detail_money+detail_interest),0)   as money1
+				from bid_repayment_detail where repayment_sq in (
+					select repayment_sq from bid_repayment
+					where repayment_sq > 0
+					and (
+						( loop_time is null and CURDATE()=repayment_time) or
+						( loop_time is not null and CURDATE()=DATE_FORMAT(loop_time,'%Y-%m-%d'))
+					)
+				)
+	</select>
+	
+	
+	<select id="getNotFundBackMoney2" resultType = "java.math.BigDecimal" >
+			select IFNULL(SUM(d_money),0)   as money2  
+				from bid_fund_records where relevant_id in (
+					select repayment_detail_sq 
+					from bid_repayment_detail where  
+					 repayment_sq in (
+						select repayment_sq from bid_repayment
+						where repayment_sq > 0
+						and (
+							( loop_time is null and CURDATE()=repayment_time) or
+							( loop_time is not null and CURDATE()=DATE_FORMAT(loop_time,'%Y-%m-%d'))
+						)
+					)
+				) and fund_type in ('7001','7002','7021','7022')
+	</select>
+		
+		
+		
+	<select id="getNotFundBackMoney3" resultType = "java.math.BigDecimal" >
+			select IFNULL(SUM(repay_detail_money+detail_interest),0)   as money3
+				from bid_repayment_detail_hist 
+					where repayment_sq in (
+						select repayment_sq from bid_repayment_hist
+						where repayment_sq > 0
+						and (
+							( loop_time is null and CURDATE()=repayment_time) or
+							( loop_time is not null and CURDATE()=DATE_FORMAT(loop_time,'%Y-%m-%d'))
+						)
+					) 
+	</select>
+	
+	
+     <select id="getNotFundBackMoney4" resultType = "java.math.BigDecimal" >
+			select IFNULL(SUM(d_money),0)  as  money4  
+			from bid_fund_records where relevant_id in (
+				select repayment_detail_sq from bid_repayment_detail_hist where  
+				 repayment_sq in (
+				 	select repayment_sq from bid_repayment_hist
+					where repayment_sq > 0
+					and (
+						( loop_time is null and CURDATE()=repayment_time) or
+						( loop_time is not null and CURDATE()=DATE_FORMAT(loop_time,'%Y-%m-%d'))
+					)
+				)
+			) and fund_type in ('7001','7002','7021','7022')
+	</select>
+	
+	
+	<!-- 检查用户注册后缺少资金记录 -->
+	 <select id="getNotCnpUserFund" resultType = "java.lang.Integer" >
+			SELECT  COUNT(*) as v_user_fund_count  
+				from cnp_user
+		   LEFT JOIN cnp_user_fund on cnp_user.user_id = cnp_user_fund.user_id 
+		   WHERE cnp_user_fund.user_backing is NULL  <![CDATA[ AND cnp_user.user_id >0 ]]>
+	</select>
+	
+	
+	<!-- 检查电商体验币账户是否充足开始  -->
+	
+	 <select id="getSumExpMoney" resultType = "java.math.BigDecimal" >
+		select IFNULL(sum(bid_investment.exp_money),0) as sumexpmoney 
+		from bid_investment 
+		where  <![CDATA[ bid_investment.`status`<15 and bid_investment.investment_sq>0
+		and bid_investment.investor_id>0 ]]>
+	</select>
+
+	<select id="getOrgUsable" resultType = "java.math.BigDecimal" >
+		SELECT
+			IFNULL(org_split_financing.org_usable,0) as usermoney
+		FROM
+			org_split_financing
+		WHERE
+			<![CDATA[ org_split_financing.userid = '000'  ]]>
+	</select>
+	
+	
+	
+	
+	<!-- 判断每天的注册短信数量是否存在被机刷  -->
+	<select id="getMsgCount" resultType = "java.lang.Integer" >
+		SELECT
+		COUNT(*) as msg_count
+		FROM
+			sys_sms_mt
+		WHERE svr_id='000' AND DATE_FORMAT(create_time, '%Y-%m-%d') = curdate()
+	</select>
+	
+	
+	<!-- 有用户账户可用金额为负数   -->
+	<select id="getUserUsableMinus" resultType = "java.lang.Integer" >
+		SELECT COUNT(*) as minus 
+			from cnp_user_fund WHERE 
+				<![CDATA[ 
+					user_usable <0  
+				]]>
+	</select>
+	
+	
+	<!-- 查询移动端充值成功后添加的银行卡信息为空 每30分钟 -->
+	<select id="getNotRepyayCount" resultType = "java.lang.Integer" >
+		SELECT
+			COUNT(*) as repyaycount
+		FROM
+			cnp_bank_card
+		WHERE
+			is_delete = 0
+		AND bank_name IS NULL
+		AND card_acct IN (
+			SELECT
+				recharge_account
+			FROM
+				bid_recharge
+			WHERE
+				recharge_account IS NOT NULL
+			AND `status` = 5
+		)
+	</select>
+	
+		<!-- 满标未核保的数据 每30分钟-->
+		<select id="getNotCore" resultType = "java.lang.Integer" >
+			SELECT
+				count(*) AS notcore
+			FROM
+				bid_borrow
+			WHERE
+				inteaccr_methd = '0'
+			<![CDATA[
+					AND item_type <> '17'
+					AND `status` > 11
+					and  status <>45
+					AND borrow_sq NOT IN (
+						SELECT
+							borrow_sq
+						FROM
+							job_core
+					)
+					AND bid_borrow.bidding_time >= '2016-01-01'
+			 ]]>
+
+	</select>
+	
+	
+		<!-- 用户资金总额 <> 可用+冻结+待收本金+待收利息  每30分钟-->
+		<select id="getWrongTotalCapital" resultType = "java.lang.Integer" >
+			SELECT
+				count(*) as counts
+			FROM
+				cnp_user_fund
+			WHERE
+			<![CDATA[
+				user_total <> user_usable + user_freeze + user_backing + user_backing_interest
+			]]>
+		</select>
+
+		<!-- 微信支付失败 -->
+		<select id="getWeChatPaymentFailed" resultType = "java.lang.Integer" >
+			SELECT
+				COUNT(*) as counts
+			FROM
+				bid_recharge br
+			INNER JOIN bid_recharge_receive brr ON br.recharge_no = brr.recharge_no
+			WHERE
+				br.recharge_type = '12'
+			AND br.STATUS = '0'
+		</select>
+		
+		<!-- 债权转让核保异常-->
+	<select id="getNotCoreForCreditor" resultType = "java.lang.Integer" >
+	<![CDATA[ 	SELECT 
+			count(bid_borrow.borrow_sq) as count 
+		FROM 
+			bid_borrow 
+		WHERE 
+			bid_borrow.inteaccr_methd=1 and DATE_ADD(bid_borrow.full_time,INTERVAL 90 MINUTE)<=SYSDATE()
+			AND bid_borrow.`status` in (11,12);
+		]]>
+	</select>
+	
+	<!-- 还款异常 -->
+	<select id="getNotJobrepcountFalse" resultType = "java.lang.Integer" >
+		select count(*) rowcount from bid_repayment where status='41' and repayment_sq > 0 and repayment_time > DATE_ADD(SYSDATE(),INTERVAL -1 DAY)
+	</select>
+	<!-- 自动投标数据 -->
+	<select id="getAotoInvestSuccessList" resultType="java.util.HashMap" >
+	<![CDATA[ 
+		select bi.investor_id,SUM(investment_money) as total_aoto,cu.user_phone,
+			brd.repay_detail_money total_core,brd.detail_interest total_interest
+		from bid_investment bi 
+			LEFT JOIN cnp_user cu on bi.investor_id=cu.user_id
+			LEFT JOIN (
+				SELECT investment_sq,borrow_sq ,SUM(repay_detail_money) repay_detail_money,
+			investor_id,SUM(detail_interest) detail_interest 
+				from bid_repayment_detail where investment_type =1 
+				and investment_sq>0 and borrow_sq >0 and investor_id>0 
+				and DATE_FORMAT(create_time,'%Y-%m-%d') =DATE_FORMAT(now(),'%Y-%m-%d')
+				GROUP BY investor_id 
+			) brd on bi.investor_id=brd.investor_id
+			where bi.investment_type=1  and bi.investor_id>0
+			and  UNIX_TIMESTAMP(bi.create_time) BETWEEN UNIX_TIMESTAMP(
+			date_add(curdate(), interval '-6:00:00' day_second))
+			and UNIX_TIMESTAMP(date_add(curdate(), interval '17:59:59' day_second)) group by bi.investor_id 
+	]]>
+	</select>
+	<select id="queryIsBlackUser" resultType="java.lang.Boolean">
+		select IFNULL(IF(cnt>0,'true','false'),'true') from (select COUNT(0) cnt 
+			from sys_send_blacklist WHERE user_id=#{0} and FIND_IN_SET(#{1},message_type)) a
+	</select>
+	<!-- MO9回款只有一期，换完即归档，所以查询历史表 -->
+	<select id="runMo9RepayMsg" resultType="java.util.HashMap" >
+	<![CDATA[ 
+		select brd.investor_id,SUM(repay_detail_money) total_repay_detail,cu.user_phone,cu.user_email,
+			SUM(detail_interest) total_interest,cuf.user_total from bid_repayment_detail_hist brd 
+			LEFT JOIN bid_borrow bb on brd.borrow_sq=bb.borrow_sq
+			LEFT JOIN cnp_user cu on brd.investor_id=cu.user_id
+			LEFT JOIN cnp_user_fund cuf on brd.investor_id=cuf.user_id
+			where bb.product_type in ('31','32','33','34')  and brd.`status`='40'
+			and IF(TIMEDIFF(curtime(),'11:00:00')>0 and TIMEDIFF(curtime(),'12:00:00')<0,
+			UNIX_TIMESTAMP(brd.actual_time) BETWEEN UNIX_TIMESTAMP(date_add(curdate(), interval '-07:00:00' day_second))
+			and UNIX_TIMESTAMP(date_add(curdate(), interval '11:29:59' day_second)), 
+				IF(TIMEDIFF(curtime(),'16:30:00')>0 and TIMEDIFF(curtime(),'17:30:00')<0,
+					UNIX_TIMESTAMP(brd.actual_time) BETWEEN UNIX_TIMESTAMP(date_add(curdate(), interval '11:30:00' day_second))
+					and UNIX_TIMESTAMP(date_add(curdate(), interval '16:59:59' day_second)),1 = 2))
+			group by investor_id
+	]]>
+	</select>
+	
+	<select id="runMonthRepayMsg" resultType="java.util.HashMap" >
+	<![CDATA[ 
+		select brd.investor_id,SUM(repay_detail_money) total_repay_detail,cu.user_phone,cu.user_email,
+			SUM(detail_interest) total_interest,cuf.user_total from bid_repayment_detail_hist brd 
+			LEFT JOIN bid_borrow bb on brd.borrow_sq=bb.borrow_sq
+			LEFT JOIN cnp_user cu on brd.investor_id=cu.user_id
+			LEFT JOIN cnp_user_fund cuf on brd.investor_id=cuf.user_id
+			where bb.product_type in ('71','72','73')  and brd.`status`='40'
+			and IF(TIMEDIFF(curtime(),'11:00:00')>0 and TIMEDIFF(curtime(),'12:00:00')<0,
+			UNIX_TIMESTAMP(brd.actual_time) BETWEEN UNIX_TIMESTAMP(date_add(curdate(), interval '-07:00:00' day_second))
+			and UNIX_TIMESTAMP(date_add(curdate(), interval '11:29:59' day_second)), 
+				IF(TIMEDIFF(curtime(),'16:30:00')>0 and TIMEDIFF(curtime(),'17:30:00')<0,
+					UNIX_TIMESTAMP(brd.actual_time) BETWEEN UNIX_TIMESTAMP(date_add(curdate(), interval '11:30:00' day_second))
+					and UNIX_TIMESTAMP(date_add(curdate(), interval '16:59:59' day_second)),1 = 2))
+			group by investor_id
+   UNION ALL
+   select brd.investor_id,SUM(repay_detail_money) total_repay_detail,cu.user_phone,cu.user_email,
+			SUM(detail_interest) total_interest,cuf.user_total from bid_repayment_detail brd 
+			LEFT JOIN bid_borrow bb on brd.borrow_sq=bb.borrow_sq
+			LEFT JOIN cnp_user cu on brd.investor_id=cu.user_id
+			LEFT JOIN cnp_user_fund cuf on brd.investor_id=cuf.user_id
+			where bb.product_type in ('71','72','73')  and brd.`status`='40' and brd.repayment_sq > 0
+			and IF(TIMEDIFF(curtime(),'11:00:00')>0 and TIMEDIFF(curtime(),'12:00:00')<0,
+			UNIX_TIMESTAMP(brd.actual_time) BETWEEN UNIX_TIMESTAMP(date_add(curdate(), interval '-07:00:00' day_second))
+			and UNIX_TIMESTAMP(date_add(curdate(), interval '11:29:59' day_second)), 
+				IF(TIMEDIFF(curtime(),'16:30:00')>0 and TIMEDIFF(curtime(),'17:30:00')<0,
+					UNIX_TIMESTAMP(brd.actual_time) BETWEEN UNIX_TIMESTAMP(date_add(curdate(), interval '11:30:00' day_second))
+					and UNIX_TIMESTAMP(date_add(curdate(), interval '16:59:59' day_second)),1 = 2))
+			group by investor_id
+	]]>
+	</select>
+	
+	<select id="getPaRepaymentFail" resultType = "java.lang.Integer" >
+		select count(*) rowcount from bid_repayment r
+		where r.status in ('17', '18')  and r.repayment_sq > 0 and r.repayment_time > DATE_ADD(SYSDATE(),INTERVAL -1 DAY)
+			and r.hosting_status='F'
+	</select>
+	<select id="getPaBatchFail" resultType = "java.lang.Integer" >
+		select count(1) rowcount from pa_batch where tranStatus='3'
+	</select>
+	<select id="getPaUnderwritingFailed" resultType="java.lang.Integer">
+		select count(b.borrow_sq ) rowcount from (
+			select b.borrow_sq,b.borrow_title from bid_borrow b
+			where b.loan_status='2' and (b.loop_time is null or b.loop_time > DATE_ADD(SYSDATE(),INTERVAL -2 DAY))
+			union
+			select b.borrow_sq,b.borrow_title
+			from bid_borrow b
+			left join bid_investment i on b.borrow_sq=i.borrow_sq
+			where b.status in ('11','12','13') and b.is_hosting='2' and i.`hosting_status`='1' and (b.loop_time is null or b.loop_time > DATE_ADD(SYSDATE(),INTERVAL -2 DAY))
+		) b
+	</select>
+	<select id="getUnderwritingFailed" resultType="java.lang.Integer">
+		select count(b.borrow_sq ) rowcount from (
+			select b.borrow_sq,b.borrow_title from bid_borrow b
+			where b.`status`='19' and (b.loop_time is null or b.loop_time > DATE_ADD(SYSDATE(),INTERVAL -1 DAY))
+			union
+			select b.borrow_sq,b.borrow_title
+			from bid_borrow b
+			left join bid_investment i on b.borrow_sq=i.borrow_sq
+			where b.status in ('11','12','13') and i.`status`='19' and (b.loop_time is null or b.loop_time > DATE_ADD(SYSDATE(),INTERVAL -1 DAY))
+		) b
+	</select>
+	<select id="getUnderwritingNoStart" resultType="java.lang.Integer">
+		select count(a.borrow_sq) rowcount from (
+			select b.borrow_sq from bid_borrow b
+			where b.inteaccr_methd in ('0','2') and status='12' and b.borrow_sq > 0 and b.is_hosting!='2'
+				and (b.loop_time is null or SYSDATE() > DATE_ADD(b.loop_time,INTERVAL 40 MINUTE))
+			union
+			select b.borrow_sq from bid_borrow b
+			where b.inteaccr_methd in ('0','2') and status='12' and b.borrow_sq > 0 and b.is_hosting='2'
+				and (b.loop_time is null or SYSDATE() > DATE_ADD(DATE_ADD(b.full_time,INTERVAL 1 DAY),INTERVAL 4 HOUR))
+			union
+			select b.borrow_sq from bid_borrow b,bid_investment i
+			where b.inteaccr_methd='1' and b.is_hosting!='2' and b.status in ('11','12') and b.borrow_sq > 0
+				and b.borrow_sq=i.borrow_sq and i.status in ('01','11','12')
+				and SYSDATE() > DATE_ADD(i.create_time,INTERVAL 40 MINUTE)
+		) a
+	</select>
+	<select id="getSchedulerStop" resultType = "java.lang.Integer" >
+		select count(*) as stopcount
+		from sys_jobs j, qrtz_triggers t
+		where j.job_name=t.TRIGGER_NAME and j.job_group=t.TRIGGER_GROUP and j.sched_name=t.SCHED_NAME and j.is_active = 1
+		<![CDATA[ 
+			and t.trigger_state not in ('WAITING', 'ACQUIRED','BLOCKED')
+			and j.is_monitor='1'
+		]]>
+	</select>	
+
+	<select id="getSysSendmessAge" resultType = "java.lang.Integer" >
+	  <![CDATA[ 
+		select count(*) as count from sys_send_message
+ 	where DATE_ADD(sys_send_message.create_time,INTERVAL 90 MINUTE)<=SYSDATE()
+  		 and sys_send_message.`status`=0 and sys_send_message.send_type=0
+  		 and sys_send_message.msg_type !=7
+	  ]]>
+	</select>	
+	
+	<select id="queryReekendCoreBorrowAndRepayment" resultType="java.util.HashMap" >
+	  <![CDATA[ 
+		
+		select 
+		  sys_company.com_name,
+		  sys_company.com_code,
+		  bid_borrow.bidding_time,
+		  bid_borrow.back_date_first,
+		  ROUND(bid_borrow.allchips_money/bid_borrow.borrow_money,2) as jd,
+		  cnp_user_vip.vip_name,
+		  bid_borrow.borrow_username,
+		  bid_borrow.borrow_sq,
+		  bid_borrow.borrow_title,
+		  if(
+				bid_borrow.limit_type in ('M','D'),CONCAT(bid_borrow.borrow_limit,if(bid_borrow.limit_type='M','月','天'))
+				,CONCAT(bid_borrow.borrow_limit,'月',bid_borrow.limit_day,'天')
+			) as limit_name
+		from bid_borrow 
+		left join sys_company on (sys_company.com_code=bid_borrow.bid_code)
+		left join cnp_user_vip on (cnp_user_vip.user_id=bid_borrow.borrow_userid)
+		 where bid_borrow.`status` = 11
+		   and (bid_borrow.inteaccr_type in (1,3) or bid_borrow.is_plan=1 )
+		   and bid_borrow.inteaccr_methd=1
+		   and (select count(*) from bfms_holidays
+						where DATE_FORMAT(bfms_holidays.date_holiday,'%Y-%m-%d')=DATE_ADD(CURDATE(),INTERVAL 1 day)
+					  or DATE_FORMAT(bfms_holidays.date_holiday,'%Y-%m-%d')=DATE_ADD(CURDATE(),INTERVAL 2 day) 
+				)>0
+		   and (
+						DATE_FORMAT( bid_borrow.back_date_first,'%Y-%m-%d')=DATE_ADD(CURDATE(),INTERVAL 1 day)
+		        or 
+		        DATE_FORMAT(bid_borrow.back_date_first,'%Y-%m-%d')=DATE_ADD(CURDATE(),INTERVAL 2 day) 
+				)
+
+	  ]]>
+	</select>	
+	
+	<select id="getNoUnderwritingData" resultType="java.util.Map">
+		select '标的号' borrow_sq,'标的标题' borrow_title,'满标时间' full_time,'标的类型' is_hosting
+		union all
+		select borrow_sq,borrow_title,full_time,case is_hosting when '0' then '普通标' when '2' then '存管标' end as is_hosting
+		from bid_borrow
+		where status='12' and (loop_time is null || sysdate()>=loop_time)
+	</select>
+	
+	<select id="getNoRepaymentData" resultType="java.util.Map">
+		select '标的号' borrow_sq,'标的标题' borrow_title,'还款日期' repayment_time,'还款期数' repayment_period union all
+		select r.borrow_sq,b.borrow_title,r.repayment_time,r.repayment_period
+		from bid_repayment r 
+		left join bid_borrow b on r.borrow_sq=b.borrow_sq
+		where r.repayment_time=CURDATE() and repayment_sq>0 and r.status='15'
+			 and (r.loop_time is null || sysdate()>=r.loop_time)
+	</select>
+
+
+</mapper>

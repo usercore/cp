@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<script th:src="@{/js/jquery-3.1.1.min.js}"></script>
+<meta charset="UTF-8" />
+<title>Title</title>
+<script type="text/javascript">
+	login();
+	function login() {
+		$.ajax({
+			type : "get",
+			url : "login",
+			async : true,
+			data : {
+				actina : 'userLogin',
+				userPhone : "13424342791",
+				password : "1234567"
+			},
+			success : function(res) {
+				if (res.erorcd == "000000") {
+					alert('登录成功');
+				} else {
+					alert(res.errmsg);
+				}
+			}
+		});
+	}
+</script>
+
+</head>
+<body>hello world
+</body>
+</html>

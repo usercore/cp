@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bc.user.fund.dao.UserFundMapper">
+
+ <resultMap id="BaseResultMap" type="com.bc.user.fund.domain.UserFund" >
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="user_id" property="userId" jdbcType="VARCHAR" />
+		<result column="user_total" property="userTotal" jdbcType="DECIMAL" />
+		<result column="user_usable" property="userUsable" jdbcType="DECIMAL" />
+		<result column="user_freeze" property="userFreeze" jdbcType="DECIMAL" />
+		<result column="user_invest" property="userInvest" jdbcType="DECIMAL" />
+		<result column="user_award" property="userAward" jdbcType="DECIMAL" />
+		<result column="user_interest" property="userInterest" jdbcType="DECIMAL" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="BIGINT" />
+ </resultMap>
+	
+	<insert id="insert" parameterType="com.bc.user.fund.domain.UserFund">
+		insert into user_fund ( user_id,update_time)
+		values (#{userId},#{updateTime})
+	</insert>
+
+  <select id="selectByPk" resultMap="BaseResultMap" parameterType="java.util.Map" >
+    select  * from user_fund where user_id = #{pk}
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.bc.user.fund.domain.UserFund" >
+      select * from user_fund 
+    	<trim prefix="WHERE" prefixOverrides="AND|OR">
+					<if test="id!=null and id!=''"> 
+						and id = #{id}
+					</if>
+					<if test="userId!=null and userId!=''"> 
+						and user_id = #{userId}
+					</if>
+					<if test="userTotal!=null and userTotal!=''"> 
+						and user_total = #{userTotal}
+					</if>
+					<if test="userUsable!=null and userUsable!=''"> 
+						and user_usable = #{userUsable}
+					</if>
+					<if test="userFreeze!=null and userFreeze!=''"> 
+						and user_freeze = #{userFreeze}
+					</if>
+					<if test="userInvest!=null and userInvest!=''"> 
+						and user_invest = #{userInvest}
+					</if>
+					<if test="userAward!=null and userAward!=''"> 
+						and user_award = #{userAward}
+					</if>
+					<if test="userInterest!=null and userInterest!=''"> 
+						and user_interest = #{userInterest}
+					</if>
+					<if test="createTime!=null and createTime!=''"> 
+						and create_time = #{createTime}
+					</if>
+					<if test="updateTime!=null and updateTime!=''"> 
+						and update_time = #{updateTime}
+					</if>
+		</trim>
+		<if test="orderBy != null and orderBy !=''" >
+      			order by ${orderBy}
+    	</if>
+		<if test="startRecord != -1" >
+      			limit  #{startRecord},  #{pageSize}
+    	</if>
+  </select>
+  <select id="countByExample" parameterType="com.bc.user.fund.domain.UserFund" resultType="java.lang.Integer" >
+    select count(*) from user_fund 
+    <trim prefix="WHERE" prefixOverrides="AND|OR">
+					<if test="id!=null and id!=''"> 
+						and id = #{id}
+					</if>
+					<if test="userId!=null and userId!=''"> 
+						and user_id = #{userId}
+					</if>
+					<if test="userTotal!=null and userTotal!=''"> 
+						and user_total = #{userTotal}
+					</if>
+					<if test="userUsable!=null and userUsable!=''"> 
+						and user_usable = #{userUsable}
+					</if>
+					<if test="userFreeze!=null and userFreeze!=''"> 
+						and user_freeze = #{userFreeze}
+					</if>
+					<if test="userInvest!=null and userInvest!=''"> 
+						and user_invest = #{userInvest}
+					</if>
+					<if test="userAward!=null and userAward!=''"> 
+						and user_award = #{userAward}
+					</if>
+					<if test="userInterest!=null and userInterest!=''"> 
+						and user_interest = #{userInterest}
+					</if>
+					<if test="createTime!=null and createTime!=''"> 
+						and create_time = #{createTime}
+					</if>
+					<if test="updateTime!=null and updateTime!=''"> 
+						and update_time = #{updateTime}
+					</if>
+		</trim>
+  	</select>
+	
+	<update id="updateByExample" parameterType="map" >
+    update user_fund
+    <set >
+ 				 <if test="record.id!=null and record.id!=''"> 
+						id = #{record.id},
+					</if>
+ 				 <if test="record.userId!=null and record.userId!=''"> 
+						user_id = #{record.userId},
+					</if>
+ 				 <if test="record.userTotal!=null and record.userTotal!=''"> 
+						user_total = #{record.userTotal},
+					</if>
+ 				 <if test="record.userUsable!=null and record.userUsable!=''"> 
+						user_usable = #{record.userUsable},
+					</if>
+ 				 <if test="record.userFreeze!=null and record.userFreeze!=''"> 
+						user_freeze = #{record.userFreeze},
+					</if>
+ 				 <if test="record.userInvest!=null and record.userInvest!=''"> 
+						user_invest = #{record.userInvest},
+					</if>
+ 				 <if test="record.userAward!=null and record.userAward!=''"> 
+						user_award = #{record.userAward},
+					</if>
+ 				 <if test="record.userInterest!=null and record.userInterest!=''"> 
+						user_interest = #{record.userInterest},
+					</if>
+ 				 <if test="record.createTime!=null and record.createTime!=''"> 
+						create_time = #{record.createTime},
+					</if>
+ 				 <if test="record.updateTime!=null and record.updateTime!=''"> 
+						update_time = #{record.updateTime},
+					</if>
+    </set>
+    <trim prefix="WHERE" prefixOverrides="AND|OR"> 
+ 			<if test="example.id!=null and example.id!=''">
+			   and id = #{example.id}
+			</if>
+			
+ 			<if test="example.userId!=null and example.userId!=''">
+			   and user_id = #{example.userId}
+			</if>
+			
+ 			<if test="example.userTotal!=null and example.userTotal!=''">
+			   and user_total = #{example.userTotal}
+			</if>
+			
+ 			<if test="example.userUsable!=null and example.userUsable!=''">
+			   and user_usable = #{example.userUsable}
+			</if>
+			
+ 			<if test="example.userFreeze!=null and example.userFreeze!=''">
+			   and user_freeze = #{example.userFreeze}
+			</if>
+			
+ 			<if test="example.userInvest!=null and example.userInvest!=''">
+			   and user_invest = #{example.userInvest}
+			</if>
+			
+ 			<if test="example.userAward!=null and example.userAward!=''">
+			   and user_award = #{example.userAward}
+			</if>
+			
+ 			<if test="example.userInterest!=null and example.userInterest!=''">
+			   and user_interest = #{example.userInterest}
+			</if>
+			
+			
+ 			<if test="example.updateTime!=null and example.updateTime!=''">
+			   and update_time = #{example.updateTime}
+			</if>
+			
+	</trim>
+  </update>
+
+<update id="updateByPk" parameterType="com.bc.user.fund.domain.UserFund" >
+    update user_fund
+    <set >
+					<if test="id!=null and id!=''"> 
+						id = #{id},
+					</if>
+					<if test="userId!=null and userId!=''"> 
+						user_id = #{userId},
+					</if>
+					<if test="userTotal!=null and userTotal!=''"> 
+						user_total = #{userTotal},
+					</if>
+					<if test="userUsable!=null and userUsable!=''"> 
+						user_usable = #{userUsable},
+					</if>
+					<if test="userFreeze!=null and userFreeze!=''"> 
+						user_freeze = #{userFreeze},
+					</if>
+					<if test="userInvest!=null and userInvest!=''"> 
+						user_invest = #{userInvest},
+					</if>
+					<if test="userAward!=null and userAward!=''"> 
+						user_award = #{userAward},
+					</if>
+					<if test="userInterest!=null and userInterest!=''"> 
+						user_interest = #{userInterest},
+					</if>
+					<if test="createTime!=null and createTime!=''"> 
+						create_time = #{createTime},
+					</if>
+					<if test="updateTime!=null and updateTime!=''"> 
+						update_time = #{updateTime},
+					</if>
+    </set>
+    where user_id = #{userId};
+  </update>
+  <delete id="deleteByPk" parameterType="map" >
+    delete from user_fund  where user_id =  #{pk}
+  </delete>
+</mapper>
