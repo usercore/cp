@@ -44,17 +44,19 @@ function getBasicData() {
 // 填充期号
 function fileIssue(issue, tr) {
     $("#chart").append(tr);
-    tr.append('<td class="chart-bg-qh">' + issue.substring(issue.length-2) + '</td>');
+    tr.append('<td class="chart-bg-qh">' + issue.substring(issue.length - 2) + '</td>');
 }
 
 // 填充开奖号码、与开奖号码分布
 function fillAwardNum(awardNum, tr) {
-    var awardNums = awardNum.split('/');
+    //20180218 增加数组排序；修复因未排序前一位比后一位号码大的情况下，部分开奖号码不显示的问题
+    var awardNums = awardNum.split('/').sort();
     tr.append('<td class="chart-bg-kjhm" id="2_0">' + awardNums[0] + '</td>');
     tr.append('<td class="chart-bg-kjhm" id="2_1">' + awardNums[1] + '</td>');
     tr.append('<td class="chart-bg-kjhm" id="2_2">' + awardNums[2] + '</td>');
     var index = 0;
     for (var i = 1; i <= 6; i++) {
+        // console.log(awardNum+" ,, "+i + "," + awardNums[index]);
         if (i == awardNums[index]) {
             if (awardNums[index] == awardNums[index + 1]) {// 重号
                 tr.append('<td class="chart-bg-hmfb q2 dqhm"><span class="bigred_q">' + i + '</span></td>');
@@ -84,7 +86,7 @@ function fillSum(sum, tr, index) {
 function fillSpan(span, tr) {
     for (var i = 0; i <= 5; i++) {
         if (i == span) {
-            tr.append('<td class="chart-bg-c10 blank-c10" id="basic_e2_'+i+'">' + i + '</td>');
+            tr.append('<td class="chart-bg-c10 blank-c10" id="basic_e2_' + i + '">' + i + '</td>');
         } else {
             tr.append('<td class="chart-bg-c6 blank-c6 k3even"></td>');
         }

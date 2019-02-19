@@ -345,16 +345,16 @@
 
     $window.resize(function () {
         sliderHeight();
-        console.log(1)
+        //console.log(1)
     });
 
     sliderHeight();
 
     function sliderHeight() {
-    	console.log(document.body.clientHeight);
-    	
+    	//console.log(document.body.clientHeight);
+
         var wHeight = $(window).height();
-        console.log(wHeight);
+        //console.log(wHeight);
         var sliderHeight = wHeight - $('.trend_heard').height()
 
         $(".swipe li").height($(document).height());
@@ -467,7 +467,7 @@
     })
 
     function drawPage1() {
-        console.log('esunchart')
+        //console.log('esunchart')
         ESUNChart.init();
         oZXZ._on = true;
         oZXZ.check = function (td) {
@@ -486,27 +486,27 @@
 
     }
 
-    function drawPage2() {
-        console.log('esunchart')
-        ESUNChart.init();
-        oZXZ._on = true;
-        oZXZ.check = function (td) {
-            //td.className == 'chart-bg-hmfb dqhm' || 去掉第一段
-            if (td.className == 'chart-bg-c6 blank-c6' || td.className == 'chart-bg-c10 blank-c10') {
-                return true;
-            }
-            return false;
-        }
-        oZXZ.drawElementId = "canvasbox1";
-        oZXZ.bind('fixedtable2')
-            .color("#272727").indent(5).setvl(0).add(28, 2, 6, 0);
-        // .color("#272727").add(25, 2, 10, 0)
-        // .color("#272727").add(31, 2, 3, 0);
-        oZXZ.draw(ESUNChart.ini.default_has_line);
-    }
+    // function drawPage2() {
+    //     //console.log('esunchart')
+    //     ESUNChart.init();
+    //     oZXZ._on = true;
+    //     oZXZ.check = function (td) {
+    //         //td.className == 'chart-bg-hmfb dqhm' || 去掉第一段
+    //         if (td.className == 'chart-bg-c6 blank-c6' || td.className == 'chart-bg-c10 blank-c10') {
+    //             return true;
+    //         }
+    //         return false;
+    //     }
+    //     oZXZ.drawElementId = "canvasbox1";
+    //     oZXZ.bind('fixedtable2')
+    //         .color("#272727").indent(5).setvl(0).add(28, 2, 6, 0);
+    //     // .color("#272727").add(25, 2, 10, 0)
+    //     // .color("#272727").add(31, 2, 3, 0);
+    //     oZXZ.draw(ESUNChart.ini.default_has_line);
+    // }
 
     function drawPage3() {
-        console.log('esunchart')
+        //console.log('esunchart')
         ESUNChart.init();
         oZXZ._on = true;
         oZXZ.check = function (td) {
@@ -525,7 +525,7 @@
     }
 
     function drawPage4() {
-        console.log('esunchart')
+        //console.log('esunchart')
         ESUNChart.init();
         oZXZ._on = true;
         oZXZ.check = function (td) {

@@ -87,7 +87,7 @@
     	<#if meta?size != 0>
  				<#list meta as x>
 					<if test="${x.property}!=null and ${x.property}!=''"> 
-						${x.columnName} = <@mapperEl x.property/>,
+						${x.columnName} = ${x.property},
 					</if>
 				</#list>
  			</#if>

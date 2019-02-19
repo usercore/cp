@@ -18,7 +18,7 @@
 
 	<context:property-placeholder location="classpath:conf/*.properties" />
     <context:component-scan base-package="com.bc"/>
-	<dubbo:application name="qbb-data" />
+	<dubbo:application name="bc-query" />
 	<!-- 本机 伪集群 测试      -->
    <!--  <dubbo:registry  protocol="zookeeper"  address="${address}"  />
    	<dubbo:protocol name="dubbo" port="${dubboPort}" />   
@@ -120,7 +120,7 @@
 		<property name="dataSource" ref="dataSource1"></property>
 	</bean>
 
-	<context:component-scan base-package="com.qbb"></context:component-scan>
+	<context:component-scan base-package="com.bc"></context:component-scan>
 	
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource">

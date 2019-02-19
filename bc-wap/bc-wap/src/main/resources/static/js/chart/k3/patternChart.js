@@ -53,7 +53,8 @@ function fileIssue3(issue, tr) {
 
 // 填充开奖号码、与开奖号码分布
 function fillAwardNum3(awardNum, tr) {
-    var awardNums = awardNum.split('/');
+    //20180218 增加数组排序；修复因未排序前一位比后一位号码大的情况下，部分开奖号码不显示的问题
+    var awardNums = awardNum.split('/').sort();
     tr.append('<td class="chart-bg-kjhm" id="2_0">' + awardNums[0] + '</td>');
     tr.append('<td class="chart-bg-kjhm" id="2_1">' + awardNums[1] + '</td>');
     tr.append('<td class="chart-bg-kjhm" id="2_2">' + awardNums[2] + '</td>');

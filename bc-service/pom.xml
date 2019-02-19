@@ -76,6 +76,8 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
@@ -165,6 +167,14 @@
 					<include>**/*.xml</include>
 				</includes>
 				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<!--<includes>-->
+					<!--<include>**/*.properties</include>-->
+					<!--<include>**/*.xml</include>-->
+				<!--</includes>-->
+				<!--<filtering>false</filtering>-->
 			</resource>
 		</resources>
 	</build>
