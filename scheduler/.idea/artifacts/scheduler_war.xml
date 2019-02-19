@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="scheduler:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="qian88_scheduler.war">
-      <element id="artifact" artifact-name="scheduler:war exploded" />
-    </root>
-  </artifact>
-</component>
