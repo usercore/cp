@@ -37,27 +37,29 @@ public class IGanSuK3ServiceImpl implements IGanSuK3Service {
         try {
             Date nowDate = new Date();
             DateFormat yyyy_MM_dd = new SimpleDateFormat("yyyyMMdd");
-            StringBuffer nowDateSb = new StringBuffer(yyyy_MM_dd.format(nowDate));
             // 设置每天第一期开始时间
             DateFormat HH_MM_SS = new SimpleDateFormat("yyyyMMdd HH:mm:ss");
-            Date startDate = HH_MM_SS.parse(new StringBuffer(nowDateSb).append(" 10:00:00").toString());
+            Date startDate = HH_MM_SS.parse(new StringBuffer(yyyy_MM_dd.format(nowDate)).append(" 10:00:00").toString());
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(startDate);
+
             // 当前期数 = （当前时间 - 第一期开奖时间）/(1000*60)/20  2019年已更改为20分钟一期
             long timeDiff = (nowDate.getTime() - startDate.getTime()) / (1000 * 60) / 20;
-            if (timeDiff < 1) {
+            if (timeDiff < 1 || timeDiff > 36) {
+                if (timeDiff > 36) {
+                    calendar.add(Calendar.DATE, 1);
+                }
                 timeDiff = 1;
-            } else if (timeDiff > 36) {
-                timeDiff = 36;
             } else {
                 timeDiff += 1;
             }
-            String issue = String.format("%03d", timeDiff);
-            String issueNo = nowDateSb.append(issue).toString().substring(2);
+            String issueNum = String.format("%03d", timeDiff);
+            StringBuffer nowDateSb = new StringBuffer(yyyy_MM_dd.format(nowDate));
+            String issueNo = nowDateSb.append(issueNum).toString().substring(2);
             // 查询该期数据是否存在
             TraditionIssue traditionIssue = new TraditionIssue(issueNo, "301");
             traditionIssue.setStatus(0);
             traditionIssue.setSellStatus(0);
-            Calendar calendar = Calendar.getInstance();
-            calendar.setTime(startDate);
             calendar.add(Calendar.MILLISECOND, Integer.parseInt((timeDiff - 1) * 20 * 1000 * 60 + ""));
             traditionIssue.setStartTime(calendar.getTime());
             calendar.add(Calendar.MILLISECOND, Integer.parseInt(20 * 1000 * 60 + ""));
