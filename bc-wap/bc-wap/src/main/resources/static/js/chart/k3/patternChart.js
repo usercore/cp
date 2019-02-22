@@ -2,7 +2,7 @@ function getPatternsChartData() {
     var data = {
         actina: 'getPatternsChartData',
         pageNo: 1,
-        pageSize:45
+        pageSize: 45
     };
     var succCallBackFunc = function (res) {
         if (res.erorcd == "000000") {
@@ -48,7 +48,7 @@ function getPatternsChartData() {
 // 填充期号
 function fileIssue3(issue, tr) {
     $("#chart3").append(tr);
-    tr.append('<td class="chart-bg-qh">' + issue.substring(issue.length-2) + '</td>');
+    tr.append('<td class="chart-bg-qh">' + issue.substring(issue.length - 2) + '</td>');
 }
 
 // 填充开奖号码、与开奖号码分布
@@ -78,7 +78,7 @@ function fillAwardNum3(awardNum, tr) {
 function fillSpan3(span, tr) {
     for (var i = 0; i <= 5; i++) {
         if (i == span) {
-            tr.append('<td class="chart-bg-c10 blank-c10" id="pattern_e2_'+i+'">' + i + '</td>');
+            tr.append('<td class="chart-bg-c10 blank-c10" id="pattern_e2_' + i + '">' + i + '</td>');
         } else {
             tr.append('<td class="chart-bg-c6 blank-c6 k3even"></td>');
         }
@@ -129,6 +129,7 @@ function fillNumsForm(value, tr, index) {
     var three_same = '三同', three_diff = '三不同', two_diff = '二不同', three_line = '三连', two_same = '二同';
     if (value == three_same) {//三同，满足两同，其他置空
         three_diff = '', two_diff = '', three_line = '';
+        two_same = '';// 20190221 三同时不再显示两同
     } else if (value == three_diff) {//三不同，满足两不同，其他置空
         three_same = '', three_line = '', two_same = '';
     } else if (value == two_diff || value == two_same) {//两不同，满足两同，其他置空
@@ -138,72 +139,7 @@ function fillNumsForm(value, tr, index) {
     }
     tr.append('<td class="chart-bg-ssd blank-ssd" id="thsa' + index + '">' + three_same + '</td>');
     tr.append('<td class="chart-bg-ssd blank-ssd" id="thdi' + index + '">' + three_diff + '</td>');
-    tr.append('<td class="chart-bg-ssd blank-ssd" id="twdi' + index + '">' + two_diff + '</td>');
+    // tr.append('<td class="chart-bg-ssd blank-ssd" id="twdi' + index + '">' + two_diff + '</td>');
     tr.append('<td class="chart-bg-ssd blank-ssd" id="thli' + index + '">' + three_line + '</td>');
     tr.append('<td class="chart-bg-ssd blank-ssd" id="twsa' + index + '">' + two_same + '</td>');
 }
-
-// // 填充遗漏
-// function fillCurrentLost(tr) {
-//     numLost.sort(sortLostNum);
-//     sumLost.sort(sortLostNum);
-//     spanLost.sort(sortLostNum);
-//     tr.append('<td class="chart-bg-qh" colspan="4">当前遗漏</td>');
-//     numLost.forEach(function (value, key, map) {
-//         tr.append('<td class="chart-bg-hmfb" id=num' + value.lost_num + '>' + value.lost_value + '</td>');
-//     });
-//     sumLost.forEach(function (value, key, map) {
-//         tr.append('<td class="chart-bg-c6" id=sum' + value.lost_num + '>' + value.lost_value + '</td>');
-//     });
-//     spanLost.forEach(function (value, key, map) {
-//         tr.append('<td class="chart-bg-c6 k3even" id=span' + value.lost_num + '>' + value.lost_value + '</td>');
-//     });
-// }
-//
-// // 填充冷热号
-// function fillHotCold(tr, value) {
-//     tr.append('<td class="chart-bg-qh" colspan="4">冷热号码</td>');
-//     for (var i = 0; i < 28; i++) {
-//         tr.append('<td class="chart-bg-c6" id=hot' + i + '></td>');
-//     }
-//     // {"num":"10","lost_type":"0","show_type":"1"}
-//     value.forEach(function (value, key, map) {
-//         var startPos = 0;
-//         if (value.lost_type == '0') {
-//             startPos = parseInt(startPos) + 6 + parseInt(value.num) - 3;
-//         } else if (value.lost_type == '2') {
-//             startPos = parseInt(startPos) + 22 + parseInt(value.num);
-//         } else {
-//             startPos = parseInt(startPos) + parseInt(value.num) - 1;
-//         }
-//         // show_type:0冷 1热
-//         $("#hot" + startPos).html(value.num);
-//     });
-//
-// }
-//
-// var numLost = eval('([])');
-// var sumLost = eval('([])');
-// var spanLost = eval('([])');
-//
-// function initLost(value) {
-//     var temp = {
-//         "lost_num": value.lost_num,
-//         "lost_value": value.lost_value
-//     };
-//     if (value.lost_type == '0') {
-//         sumLost.push(temp);
-//     } else if (value.lost_type == '2') {
-//         spanLost.push(temp);
-//     } else if (value.lost_type == '6') {
-//         numLost.push(temp);
-//     }
-// }
-//
-// function sortLostValue(a, b) {
-//     return b.lost_value - a.lost_value;
-// }
-//
-// function sortLostNum(a, b) {
-//     return a.lost_num - b.lost_num;
-// }

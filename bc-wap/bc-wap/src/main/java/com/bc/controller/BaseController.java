@@ -40,7 +40,7 @@ public class BaseController {
 	@Autowired  
 	protected  HttpServletResponse response; 
 	/**
-	 * @Description: 将字符串以json格式输出
+	 * @Description: 灏嗗瓧绗︿覆浠son鏍煎紡杈撳嚭
 	 * @Author Yang Cheng
 	 * @Date: Feb 9, 2012 1:53:02 AM
 	 * @param jsonStr
@@ -57,7 +57,7 @@ public class BaseController {
 	}
 	
 	/** 
-	* @Description: 将对象以json格式输出
+	* @Description: 灏嗗璞′互json鏍煎紡杈撳嚭
 	* @Author Yang Cheng
 	* @Date: Feb 9, 2012 1:53:58 AM  
 	* @param obj
@@ -71,7 +71,7 @@ public class BaseController {
 	}
 	
 	/** 
-	* @Description: 将字集合以json格式输出
+	* @Description: 灏嗗瓧闆嗗悎浠son鏍煎紡杈撳嚭
 	* @Author Yang Cheng 
 	* @Date: Feb 9, 2012 1:54:24 AM  
 	* @param list

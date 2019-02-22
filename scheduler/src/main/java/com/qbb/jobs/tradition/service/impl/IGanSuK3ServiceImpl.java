@@ -44,17 +44,17 @@ public class IGanSuK3ServiceImpl implements IGanSuK3Service {
             calendar.setTime(startDate);
 
             // 当前期数 = （当前时间 - 第一期开奖时间）/(1000*60)/20  2019年已更改为20分钟一期
-            long timeDiff = (nowDate.getTime() - startDate.getTime()) / (1000 * 60) / 20;
-            if (timeDiff < 1 || timeDiff > 36) {
-                if (timeDiff > 36) {
+            // 例如：(10:01-10:00)/60秒/20分钟 = 0 (
+            // 22:01-10:00)/60秒/20分钟 = （12*60+1）/120 = 36.05 此时应该
+            long timeDiff = (nowDate.getTime() - startDate.getTime()) / (1000 * 60) / 20 + 1;
+            if (timeDiff < 1 || timeDiff > 72) {
+                if (timeDiff > 72) {
                     calendar.add(Calendar.DATE, 1);
                 }
                 timeDiff = 1;
-            } else {
-                timeDiff += 1;
             }
             String issueNum = String.format("%03d", timeDiff);
-            StringBuffer nowDateSb = new StringBuffer(yyyy_MM_dd.format(nowDate));
+            StringBuffer nowDateSb = new StringBuffer(yyyy_MM_dd.format(calendar.getTime()));
             String issueNo = nowDateSb.append(issueNum).toString().substring(2);
             // 查询该期数据是否存在
             TraditionIssue traditionIssue = new TraditionIssue(issueNo, "301");
@@ -62,7 +62,8 @@ public class IGanSuK3ServiceImpl implements IGanSuK3Service {
             traditionIssue.setSellStatus(0);
             calendar.add(Calendar.MILLISECOND, Integer.parseInt((timeDiff - 1) * 20 * 1000 * 60 + ""));
             traditionIssue.setStartTime(calendar.getTime());
-            calendar.add(Calendar.MILLISECOND, Integer.parseInt(20 * 1000 * 60 + ""));
+            calendar.add(Calendar.MILLISECOND, Integer.parseInt(20 * 1000 * 60 + "") - 1000);
+
             traditionIssue.setEndTime(calendar.getTime());
             calendar.add(Calendar.MILLISECOND, Integer.parseInt(1 * 1000 * 60 + ""));
             traditionIssue.setAwardTime(calendar.getTime());
