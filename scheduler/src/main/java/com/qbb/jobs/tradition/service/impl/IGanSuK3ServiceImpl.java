@@ -47,8 +47,8 @@ public class IGanSuK3ServiceImpl implements IGanSuK3Service {
             // 例如：(10:01-10:00)/60秒/20分钟 = 0 (
             // 22:01-10:00)/60秒/20分钟 = （12*60+1）/120 = 36.05 此时应该
             long timeDiff = (nowDate.getTime() - startDate.getTime()) / (1000 * 60) / 20 + 1;
-            if (timeDiff < 1 || timeDiff > 72) {
-                if (timeDiff > 72) {
+            if (timeDiff < 1 || timeDiff > 36) {
+                if (timeDiff > 36) {
                     calendar.add(Calendar.DATE, 1);
                 }
                 timeDiff = 1;
