@@ -1,0 +1,12 @@
+server:
+  port: 8003
+service_url: http://127.0.0.1:8001/bussInovk.action/
+app_version: 1.0
+
+
+
+# 应用自定义配置
+logging:
+  file: /home/ubuntu/logs/bc-wap.log
+  config: classpath:logback.xml
+

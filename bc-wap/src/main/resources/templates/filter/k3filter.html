@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>缩水组号</title>
+		<script type="text/javascript" th:src="@{/js/viewprort.js}"></script>
+		<script type="text/javascript" th:src="@{/js/form-submit.js}"></script>
+		<script type="text/javascript" th:src="@{/js/filter/k3Filter.js}"></script>
+		<script th:src="@{/js/jquery-3.1.1.min.js}"></script>
+		<link rel="stylesheet" th:href="@{css/newpage.css}" />
+</head>
+<body>
+	<header class="head nav-back">
+		<a href="javascript:backChoice()" class="back"></a>
+		<h2>缩水组号</h2>
+	</header>
+	<div class="zh-content" id="filterNum">
+		<div class="suoZu">
+			<div class="np-ls2">胆码</div>
+			<div class="suoZu-dm-con">
+				<ul class="suoZu-dm-ul">
+					<li id="d0">1</li>
+					<li id="d1">2</li>
+					<li id="d2">3</li>
+					<li id="d3">4</li>
+					<li id="d4">5</li>
+					<li id="d5" class="np-border-none">6</li>
+				</ul>
+			</div>
+			<span class="myFangan-line"></span>
+			<div class="np-ls2 np-mt28 np-mb20">拖码</div>
+			<div class="suoZu-tm-con">
+				<ul class="suoZu-tm-ul">
+					<li id="t0">1</li>
+					<li id="t1">2</li>
+					<li id="t2">3</li>
+					<li id="t3">4</li>
+					<li id="t4">5</li>
+					<li id="t5" class="np-border-none">6</li>
+				</ul>
+			</div>
+			<span class="myFangan-line"></span>
+			<div class="np-ls2 np-mt28 np-mb20">类型</div>
+			<div class="suoZu-lx-con">
+				<ul class="suoZu-lx-ul">
+					<li id="lx0">二不同</li>
+					<li id="lx1">三不同</li>
+					<li id="lx2">三同号</li>
+					<li id="lx3">三连号</li>
+				</ul>
+			</div>
+			<span class="myFangan-line"></span>
+			<div class="np-ls2 np-mt28 np-mb20">和值</div>
+			<div class="suoZu-hz-con">
+				<ul class="suoZu-hz-ul">
+					<li id="hz0">3</li>
+					<li id="hz1">4</li>
+					<li id="hz2">5</li>
+					<li id="hz3">6</li>
+					<li id="hz4">7</li>
+					<li id="hz5">8</li>
+					<li id="hz6">9</li>
+					<li id="hz7">10</li>
+					<li id="hz8">11</li>
+					<li id="hz9">12</li>
+					<li id="hz10">13</li>
+					<li id="hz11">14</li>
+					<li id="hz12">15</li>
+					<li id="hz13">16</li>
+					<li id="hz14">17</li>
+					<li id="hz15">18</li>
+				</ul>
+			</div>
+			<span class="myFangan-line"></span>
+			<div class="np-ls2 np-mt28 np-mb20">跨度</div>
+			<div class="suoZu-kd-con">
+				<ul class="suoZu-kd-ul" >
+					<li id="kd0">0</li>
+					<li id="kd1">1</li>
+					<li id="kd2">2</li>
+					<li id="kd3">3</li>
+					<li id="kd4">4</li>
+					<li id="kd5" class="np-border-none">5</li>
+				</ul>
+			</div>
+			<span class="myFangan-line"></span>
+			<div class="np-ls2 np-mt28 np-mb20">奇偶</div>
+			<div class="suoZu-hz-con">
+				<ul class="suoZu-jo-ul">
+					<li id="jo0">全奇</li>
+					<li id="jo1">全偶</li>
+					<li id="jo2">两奇一偶</li>
+					<li id="jo3" class="np-border-none">两偶一奇</li>
+				</ul>
+			</div>
+			<span class="myFangan-line"></span>
+			<div class="np-ls2 np-mt28 np-mb20">012</div>
+			<div class="suoZu-hz-con">
+				<ul class="suoZu-012-ul">
+					<li id="0120">000</li>
+					<li id="0121">001</li>
+					<li id="0122">002</li>
+					<li id="0123">011</li>
+					<li id="0124" class="np-border-none">012</li>
+					<li id="0125">022</li>
+					<li id="0126">111</li>
+					<li id="0127">112</li>
+					<li id="0128">122</li>
+					<li id="0129" class="np-border-none">222</li>
+				</ul>
+			</div>
+			<span class="myFangan-line"></span>
+			<div class="np-ls2 np-mt28 np-mb20">大中小</div>
+			<div class="suoZu-hz-con">
+				<ul class="suoZu-dzx-ul">
+					<li id="dzx0">大中小</li>
+					<li id="dzx1">大大大</li>
+					<li id="dzx2">中中中</li>
+					<li id="dzx3">小小小</li>
+					<li id="dzx4" class="np-border-none">小小中</li>
+					<li id="dzx5">小小大</li>
+					<li id="dzx6">小中中</li>
+					<li id="dzx7">小大大</li>
+					<li id="dzx8">大中中</li>
+					<li id="dzx9" class="np-border-none">中大大</li>
+				</ul>
+			</div>
+			<span class="myFangan-line"></span>
+		</div>
+	</div>
+	
+	<div class="zh-content" id="filterNumPage">
+		<div class="zh-kjqi">
+			<div class="zh-tishileft">
+				<span id="preIssue"></span>&nbsp;&nbsp; <span id="one" class="zh-kjnum"></span>
+				<span id="two" class="zh-kjnum"></span> <span id="three" class="zh-kjnum"2</span> </span>
+			</div>
+			<div id="time" class="zh-tishiright">
+				距离 <span id="currentIssue">29</span>期截止 <span id="countDown">06:05</span> </span>
+			</div>
+		</div>
+		<div class="zh-result">
+			<ul class="zh-rs-ul">
+			</ul>
+			<div class="zh-rs-tj">
+			</div>
+		</div>
+		<div class="zh-bt_zh">
+			<div class="zh-bt">
+				倍投&nbsp;:&nbsp <input class="zh-input" type="text" id="multiple" onChange="countMoney()" value="1"/>&nbsp;倍
+			</div>
+			<div class="zh-zh">
+				追号&nbsp;:&nbsp <input class="zh-input" type="text" id="repeat" onChange="countMoney()" value="1"/>&nbsp;期
+			</div>
+		</div>
+	</div>
+
+	<div id="choice" class="zh-btjs">
+		<input type="button" class="zh-btn-qk" onclick="clearChoice()" value="清空" /> <span> 共 <span id='bets'>0</span>注<span id='summoney'>0</span>元
+		</span> <input type="button" class="zh-btn-qd" onclick="showFilterNum()" value="组出号码" />
+	</div>
+	
+	<div id="commitButton" class="zh-btjs">
+		<input type="button" class="zh-btn-qk" onclick="clearNum()" value="清空" /> <span> 共 <span id='bets1'>0</span>注<span id='summoney1'>0</span>元
+		</span> <input type="button" class="zh-btn-qd" onclick="bet()" value="确定" />
+	</div>
+</body>
+</html>
+<script>
+
+	$(function(){
+	   $('.suoZu-tm-ul>li').each(function(index){
+	    $(this).on('click',function(){
+	    	choiceTuo(index);
+	    })
+	  })
+	  
+	  $('.suoZu-dm-ul>li').each(function(index){
+	    $(this).on('click',function(){
+	    	choiceDan(index);
+	    })
+	  }) 
+	})
+	
+	 $('.suoZu-lx-ul>li').each(function(index){
+	    $(this).on('click',function(){
+	    	choiceOther(index,"type");
+	    })
+	  })
+	  drawPageAll();
+	  $('.suoZu-kd-ul>li').each(function(index){
+	    $(this).on('click',function(){
+	    	choiceOther(index,"span");
+	    })
+	  })
+	  //和值
+	  $('.suoZu-hz-ul>li').each(function(index){
+	    $(this).on('click',function(){
+	    	choiceOther(index,"hz");
+	    })
+	  })
+	  
+	  //奇偶
+	  $('.suoZu-jo-ul>li').each(function(index){
+	    $(this).on('click',function(){
+	    	choiceOther(index,"jo");
+	    })
+	  })
+	  
+	  //012
+	  $('.suoZu-012-ul>li').each(function(index){
+	    $(this).on('click',function(){
+	    	choiceOther(index,"012");
+	    })
+	  })
+	   //大中小
+	  $('.suoZu-dzx-ul>li').each(function(index){
+	    $(this).on('click',function(){
+	    	choiceOther(index,"dzx");
+	    })
+	  })
+	 
+	  $('#filterNumPage').hide();
+	  $('#commitButton').hide();
+	  
+	  
+	  
+</script>

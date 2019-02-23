@@ -1,0 +1,17 @@
+server:
+  port: 8001
+commonQuery_gateway: http://127.0.0.1:8007/commonQuery/
+
+logging:
+  file: /home/ubuntu/logs/bc-service.log
+  config: classpath:logback.xml
+
+######### tencent cloud #######
+jdbc:
+  url: jdbc:mysql://cd-cdb-7cb7r7d2.sql.tencentcdb.com:63812/cp_buss?characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull
+  username: root
+  password: FGq2PNXG5qJr6AdgX6naidjMG2qUX9l3vtmWmUj5yDnIDV+tDwwG278zUw7E1dYQvIku8fgPcmjFHovQI8KiEA==
+  url1: jdbc:mysql://cd-cdb-7cb7r7d2.sql.tencentcdb.com:63812/cp_buss?characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull
+  username1: root
+  password1: FGq2PNXG5qJr6AdgX6naidjMG2qUX9l3vtmWmUj5yDnIDV+tDwwG278zUw7E1dYQvIku8fgPcmjFHovQI8KiEA==
+

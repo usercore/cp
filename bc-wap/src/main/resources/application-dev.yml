@@ -1,0 +1,11 @@
+server:
+  port: 8103
+service_url: http://192.168.43.27:8101/bussInovk.action/
+app_version: 1.0
+
+
+# 应用自定义配置
+logging:
+  file: logs/bc-wap.log
+  config: classpath:logback.xml
+

@@ -1,0 +1,17 @@
+server:
+  port: 8101
+commonQuery_gateway: http://127.0.0.1:8107/commonQuery/
+
+logging:
+  file: logs/bc-service.log
+  config: classpath:logback.xml
+
+
+####### localhost #######
+jdbc:
+  url: jdbc:mysql://127.0.0.1:3306/cp_buss?characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull
+  username: root
+  password: YJtjmGSGY129I9npNp8sh0GirIhbhNs21rwDL36v0Cu4KIzpZJWsHVNSIMe20/UuX9BValKAGxEcNwkswYxmEA==
+  url1: jdbc:mysql://127.0.0.1:3306/cp_buss?characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull
+  username1: root
+  password1: YJtjmGSGY129I9npNp8sh0GirIhbhNs21rwDL36v0Cu4KIzpZJWsHVNSIMe20/UuX9BValKAGxEcNwkswYxmEA==

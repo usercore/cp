@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev
+
+#endpoints:
+#  shutdown:
+#    #启用shutdown
+#    enabled: true
+#    #禁用密码验证
+#    sensitive: false
+
+debug: true

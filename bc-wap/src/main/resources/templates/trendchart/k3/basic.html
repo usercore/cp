@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title></title>
+    <link rel="stylesheet" th:href="@{/css/chart.css}"/>
+    <script type="text/javascript" th:src="@{/js/form-submit.js}"></script>
+    <script type="text/javascript" th:src="@{/js/viewprort.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery-2.1.0.js}"></script>
+    <script type="text/javascript" th:src="@{/js/chart/k3/basicChart.js}"></script><!-- 基本走势图js -->
+    <script type="text/javascript" th:src="@{/js/chart/k3/comprehensiveChart.js}"></script><!-- 综合走势图js -->
+    <script type="text/javascript" th:src="@{/js/chart/k3/m3Chart.js}"></script><!-- 012路走势图js -->
+    <script type="text/javascript" th:src="@{/js/chart/k3/patternChart.js}"></script><!-- 形态走势图js -->
+    <!--统计图-->
+    <script type="text/javascript" th:src="@{/js/ESUNChart-min.js}"></script>
+    <!--缩放-->
+    <script type="text/javascript" th:src="@{/js/pinchzoom.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/touchslider.js}"></script>
+</head>
+
+<body>
+<header class="trend_heard">
+    <!-- <span class="lssue" id="currentIssue">第****期</span> -->
+    <h2>甘肃快3</h2>
+    <span class="ico_share"></span>
+    <span class="ico_statistics"></span>
+</header>
+
+<!--/third-menu-->
+<script type="text/javascript">
+
+</script>
+
+<div id="slider1" class="swipe">
+    <ul class="box01_list">
+        <!-- 基本走势图 -->
+        <li class="li_list" style="background:#db7575">
+            <div class="fixedtable-box">
+                <div class="zoombox">
+                    <div id="canvasbox"></div>
+                    <table id="fixedtable" border="0" cellpadding="0" cellspacing="0" class="fixedtable1 ch-tb-db1">
+                        <tbody id='chart'>
+                        <tr>
+                            <th rowspan="2">
+                                <div>期号</div>
+                            </th>
+                            <th colspan="3" rowspan="2">开奖号码</th>
+                            <th colspan="6">开奖号码分布</th>
+                            <th colspan="16">和值</th>
+                            <th colspan="6" class="k3big"><span>跨度趋势</span></th>
+                        </tr>
+                        <tr class="">
+                            <th>01</th>
+                            <th>02</th>
+                            <th>03</th>
+                            <th>04</th>
+                            <th>05</th>
+                            <th>06</th>
+                            <th>03</th>
+                            <th>04</th>
+                            <th>05</th>
+                            <th>06</th>
+                            <th>07</th>
+                            <th>08</th>
+                            <th>09</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th>
+                            <th class="k3big">0</th>
+                            <th class="k3big">1</th>
+                            <th class="k3big">2</th>
+                            <th class="k3big">3</th>
+                            <th class="k3big">4</th>
+                            <th class="k3big">5</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </li>
+        <!-- 综合走势图 -->
+        <li class="li_list" style="background:#75b140">
+            <div class="fixedtable-box">
+                <div class="zoombox">
+                    <div id="canvasbox1"></div>
+                    <table id="fixedtable2" border="0" cellpadding="0" cellspacing="0" class="fixedtable1 ch-tb-db1">
+                        <tbody id="chart1">
+                        <tr>
+                            <th rowspan="2" colspan="1">
+                                <div>期号</div>
+                            </th>
+                            <th colspan="3" rowspan="2">开奖号码</th>
+                            <th colspan="6">开奖号码分布</th>
+                            <th colspan="6">百位</th>
+                            <th colspan="6">十位</th>
+                            <th colspan="6">个位</th>
+                            <th colspan="6" class="k3big"><span>跨度</span></th>
+                            <!-- <th colspan="16">和值</th> -->
+                        </tr>
+                        <tr class="">
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th class="k3big">0</th>
+                            <th class="k3big">1</th>
+                            <th class="k3big">2</th>
+                            <th class="k3big">3</th>
+                            <th class="k3big">4</th>
+                            <th class="k3big">5</th>
+                            <!--<th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th> -->
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </li>
+        <!-- 012路走势图 -->
+        <li class="li_list" style="background:#75b140">
+            <div class="fixedtable-box">
+                <div class="zoombox">
+                    <div id="canvasbox2"></div>
+                    <table id="fixedtable3" border="0" cellpadding="0" cellspacing="0" class="fixedtable1 ch-tb-db1">
+                        <tbody id="chart2">
+                        <tr>
+                            <th rowspan="2">
+                                <div>期号</div>
+                            </th>
+                            <th colspan="3" rowspan="2">开奖号码</th>
+                            <th colspan="6">开奖号码分布</th>
+                            <th colspan="6" class="k3big"><span>跨度趋势</span></th>
+                            <th colspan="3" rowspan="2">跨度012</th>
+                            <th colspan="16">和值</th>
+                            <th colspan="3" rowspan="2">和值012</th>
+                            <th colspan="10">和尾</th>
+                            <th colspan="3" rowspan="2">和尾012</th>
+                        </tr>
+                        <tr class="">
+                            <th>01</th>
+                            <th>02</th>
+                            <th>03</th>
+                            <th>04</th>
+                            <th>05</th>
+                            <th>06</th>
+                            <th class="k3big">0</th>
+                            <th class="k3big">1</th>
+                            <th class="k3big">2</th>
+                            <th class="k3big">3</th>
+                            <th class="k3big">4</th>
+                            <th class="k3big">5</th>
+                            <th>03</th>
+                            <th>04</th>
+                            <th>05</th>
+                            <th>06</th>
+                            <th>07</th>
+                            <th>08</th>
+                            <th>09</th>
+                            <th>10</th>
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th>
+                            <th>0</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </li>
+        <!-- 形态走势图 -->
+        <li class="li_list" style="background:#75b140">
+            <div class="fixedtable-box">
+                <div class="zoombox">
+                    <div id="canvasbox3"></div>
+                    <table id="fixedtable4" border="0" cellpadding="0" cellspacing="0" class="fixedtable1 ch-tb-db1">
+                        <tbody id="chart3">
+                        <tr>
+                            <th rowspan="2">
+                                <div>期号</div>
+                            </th>
+                            <th colspan="3" rowspan="2">开奖号码</th>
+                            <th colspan="6">开奖号码分布</th>
+                            <th colspan="6" class="k3big"><span>跨度</span></th>
+                            <th rowspan="2">和值</th>
+                            <th colspan="3">和值012</th>
+                            <th colspan="4">和值形态</th>
+                            <th colspan="5">号码形态</th>
+                        </tr>
+                        <tr class="">
+                            <th>01</th>
+                            <th>02</th>
+                            <th>03</th>
+                            <th>04</th>
+                            <th>05</th>
+                            <th>06</th>
+                            <th class="k3big">0</th>
+                            <th class="k3big">1</th>
+                            <th class="k3big">2</th>
+                            <th class="k3big">3</th>
+                            <th class="k3big">4</th>
+                            <th class="k3big">5</th>
+                            <th>0</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>大</th>
+                            <th>小</th>
+                            <th>单</th>
+                            <th>双</th>
+                            <th>三同</th>
+                            <th>三不同</th>
+                            <!--<th>二不同</th>-->
+                            <th>三连</th>
+                            <th>二同</th>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="find_nav">
+    <div class="find_nav_left">
+        <div class="find_nav_list">
+            <ul id="pagenavi1">
+                <li>
+                    <a href="#" class="active">基本走势图</a>
+                </li>
+                <li>
+                    <a href="#">综合走势图</a>
+                </li>
+                <li>
+                    <a href="#">012路走势图</a>
+                </li>
+                <li>
+                    <a href="#">形态走势图</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="zoombtn">
+    缺图标
+</div>
+
+<footer class="trend_footer">
+    <a onclick="toPage('homePage')">首页</a>
+    <a onclick="toPage('trendchart/k3/basic')" class="active">走势图</a>
+    <a onclick="toPage('user/myInfo')">我的</a>
+</footer>
+<script>
+    $(function () {
+        var topHeight = $('.trend_heard').height(),
+            footHeight = $('.trend_footer').height(),
+            wH = $(document).height();
+        console.log(wH)
+        $('.fixedtable1').height(wH - topHeight);
+
+        $(".zoombtn").click(function () {
+            $(".zoombox").toggleClass("add_scale");
+            $(".zoombtn").toggleClass("add_ico");
+            $(".trend_heard").toggle()
+            $(".trend_footer").toggle()
+        })
+
+
+        $('div.zoombox').each(function () {
+            new RTP.PinchZoom($(this), {});
+        });
+        $(".pinch-zoom-container").height($('.fixedtable1').height())
+
+    })
+</script>
+
+<script type="text/javascript">
+    var isGet0 = false;
+    var isGet1 = false;
+    var isGet2 = false;
+    var isGet3 = false;
+
+    // 给li定义高度，配合css使li独立滚动
+    var $window = $(window);
+    var initialWindowHeight = null;
+
+    $window.resize(function () {
+        sliderHeight();
+        //console.log(1)
+    });
+
+    sliderHeight();
+
+    function sliderHeight() {
+    	//console.log(document.body.clientHeight);
+
+        var wHeight = $(window).height();
+        //console.log(wHeight);
+        var sliderHeight = wHeight - $('.trend_heard').height()
+
+        $(".swipe li").height($(document).height());
+    }
+
+    $(".find_nav_list").css("left", 0);
+
+    $(".find_nav_list li").each(function () {
+        $(".sideline").css({
+            left: 0
+        });
+        $(".find_nav_list li").eq(0).addClass("find_nav_cur").siblings().removeClass("find_nav_cur");
+    });
+    var nav_w = $(".find_nav_list li").first().width();
+    $(".sideline").width(nav_w);
+    $(".find_nav_list li").on('click', function () {
+        nav_w = $(this).width();
+        $(".sideline").stop(true);
+        $(".sideline").animate({
+            left: $(this).position().left
+        }, 300);
+        $(".sideline").animate({
+            width: nav_w
+        });
+        $(this).addClass("find_nav_cur").siblings().removeClass("find_nav_cur");
+        var fn_w = ($(".find_nav").width() - nav_w) / 2;
+        var fnl_l;
+        var fnl_x = parseInt($(this).position().left);
+        if (fnl_x <= fn_w) {
+            fnl_l = 0;
+        } else if (fn_w - fnl_x <= flb_w - fl_w) {
+            fnl_l = flb_w - fl_w;
+        } else {
+            fnl_l = fn_w - fnl_x;
+        }
+
+    });
+    var fl_w = $(".find_nav_list").width();
+    var flb_w = $(".find_nav_left").width();
+
+    for (n = 1; n < 5; n++) {
+        var page = 'pagenavi' + n;
+        var mslide = 'slider' + n;
+        var mtitle = 'emtitle' + n;
+        arrdiv = 'arrdiv' + n;
+        var as = $("#" + page + "").find("a");
+        var tt = new TouchSlider({
+            id: mslide,
+            'auto': '-1',
+            fx: 'ease-out',
+            direction: 'left',
+            speed: 600,
+            timeout: 5000,
+            'before': function (index) {
+                var as = document.getElementById(this.page).getElementsByTagName('a');
+                as[this.p].className = '';
+                this.p = index;
+
+                fnl_x = parseInt($(".find_nav_list li").eq(this.p).position().left);
+
+                nav_w = $(".find_nav_list li").eq(this.p).width();
+                $(".sideline").stop(true);
+                $(".sideline").animate({
+                    width: nav_w
+                }, 100);
+                $(".find_nav_list li").eq(this.p).addClass("find_nav_cur").siblings().removeClass("find_nav_cur");
+                $('.find_nav').show()
+                setTimeout(function () {
+                    $('.find_nav').hide()
+                }, 2000)
+                var fn_w = ($(".find_nav").width() - nav_w) / 2;
+                var fnl_l;
+                if (fnl_x <= fn_w) {
+                    fnl_l = 0;
+                } else if (fn_w - fnl_x <= flb_w - fl_w) {
+                    fnl_l = flb_w - fl_w;
+                } else {
+                    fnl_l = fn_w - fnl_x;
+                }
+                if (index == 1 && !isGet1) {
+                    isGet1 = true;
+                    getComprehensiveData();
+                } else if (index == 2 && !isGet2) {
+                    isGet2 = true;
+                    getM3PlotData();
+                } else if (index == 3 && !isGet3) {
+                    isGet3 = true;
+                    getPatternsChartData();
+                }
+            }
+        });
+        tt.page = page;
+        tt.p = 0;
+        //console.dir(tt); console.dir(tt.__proto__);
+
+        for (var i = 0; i < as.length; i++) {
+            (function () {
+                var j = i;
+                as[j].tt = tt;
+                as[j].onclick = function () {
+                    this.tt.slide(j);
+                    return false;
+                }
+            })();
+        }
+    }
+    //初始化数据
+    $(function () {
+        getBasicData();
+    })
+
+    function drawPage1() {
+        //console.log('esunchart')
+        ESUNChart.init();
+        oZXZ._on = true;
+        oZXZ.check = function (td) {
+            //td.className == 'chart-bg-hmfb dqhm' || 去掉第一段
+            if (td.className == 'chart-bg-c6 blank-c6' || td.className == 'chart-bg-c10 blank-c10') {
+                return true;
+            }
+            return false;
+        }
+        oZXZ.drawElementId = "canvasbox";
+        oZXZ.bind('fixedtable')
+            .color("#272727").indent(5).setvl(0).add(10, 2, 16, 0)
+            .color("#272727").add(26, 2, 10, 0);
+        // .color("#272727").add(32, 2, 3, 0);
+        oZXZ.draw(ESUNChart.ini.default_has_line);
+
+    }
+
+    // function drawPage2() {
+    //     //console.log('esunchart')
+    //     ESUNChart.init();
+    //     oZXZ._on = true;
+    //     oZXZ.check = function (td) {
+    //         //td.className == 'chart-bg-hmfb dqhm' || 去掉第一段
+    //         if (td.className == 'chart-bg-c6 blank-c6' || td.className == 'chart-bg-c10 blank-c10') {
+    //             return true;
+    //         }
+    //         return false;
+    //     }
+    //     oZXZ.drawElementId = "canvasbox1";
+    //     oZXZ.bind('fixedtable2')
+    //         .color("#272727").indent(5).setvl(0).add(28, 2, 6, 0);
+    //     // .color("#272727").add(25, 2, 10, 0)
+    //     // .color("#272727").add(31, 2, 3, 0);
+    //     oZXZ.draw(ESUNChart.ini.default_has_line);
+    // }
+
+    function drawPage3() {
+        //console.log('esunchart')
+        ESUNChart.init();
+        oZXZ._on = true;
+        oZXZ.check = function (td) {
+            //td.className == 'chart-bg-hmfb dqhm' || 'chart-bg-012' 去掉第一段
+            if (td.className == 'chart-bg-c6 blank-c6' || td.className == 'chart-bg-c10 blank-c10') {
+                return true;
+            }
+            return false;
+        }
+        oZXZ.drawElementId = "canvasbox2";
+        oZXZ.bind('fixedtable3')
+            .color("#272727").indent(5).setvl(0).add(10, 2, 6, 0)
+            .color("#272727").add(19, 2, 16, 0)
+            .color("#272727").add(38, 2, 10, 0);
+        oZXZ.draw(ESUNChart.ini.default_has_line);
+    }
+
+    function drawPage4() {
+        //console.log('esunchart')
+        ESUNChart.init();
+        oZXZ._on = true;
+        oZXZ.check = function (td) {
+            //td.className == 'chart-bg-hmfb dqhm' || 'chart-bg-012' 去掉第一段
+            if (td.className == 'chart-bg-c6 blank-c6' || td.className == 'chart-bg-c10 blank-c10') {
+                return true;
+            }
+            return false;
+        }
+        oZXZ.drawElementId = "canvasbox3";
+        oZXZ.bind('fixedtable4')
+            .color("#272727").indent(5).setvl(0).add(10, 2, 6, 0);
+        oZXZ.draw(ESUNChart.ini.default_has_line);
+    }
+</script>
+</body>
+
+</html>

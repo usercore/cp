@@ -1,0 +1,7 @@
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    prefix: classpath:templates/
+#此段用于修复html标签没有闭合而报错的问题
+    mode: LEGACYHTML5
