@@ -5,3 +5,27 @@ spring:
     prefix: classpath:templates/
 #此段用于修复html标签没有闭合而报错的问题
     mode: LEGACYHTML5
+appname: bc-wap
+
+---
+spring:
+  profiles: dev
+server:
+  port: 8103
+# 应用自定义配置
+logging:
+  path: logs
+  config: classpath:logback-spring.xml
+service_url: http://127.0.0.1:8101/bussInovk.action/
+app_version: 1.0
+---
+spring:
+  profiles: prod
+server:
+  port: 8003
+# 应用自定义配置
+logging:
+  path: /home/ubuntu/logs
+  config: classpath:logback-spring.xml
+service_url: http://127.0.0.1:8001/bussInovk.action/
+app_version: 1.0
