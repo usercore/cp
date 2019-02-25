@@ -39,6 +39,8 @@ public class IGanSuK3ServiceImpl implements IGanSuK3Service {
             DateFormat yyyy_MM_dd = new SimpleDateFormat("yyyyMMdd");
             // 设置每天第一期开始时间
             DateFormat HH_MM_SS = new SimpleDateFormat("yyyyMMdd HH:mm:ss");
+            System.out.println("\n\n\n======================================="+HH_MM_SS.format(new Date()));
+
             Date startDate = HH_MM_SS.parse(new StringBuffer(yyyy_MM_dd.format(nowDate)).append(" 10:00:00").toString());
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(startDate);
@@ -93,13 +95,13 @@ public class IGanSuK3ServiceImpl implements IGanSuK3Service {
                 log.info("没有待开奖数据");
                 return;
             }
-            Integer nextOpenIssueNo = Integer.parseInt(traditionIssue.getIssueNo());
-            Date awardTime = traditionIssue.getAwardTime();
+//            Integer nextOpenIssueNo = Integer.parseInt(traditionIssue.getIssueNo());
+//            Date awardTime = traditionIssue.getAwardTime();
             // 判断 1、已开奖的数据 是否与 待开奖的期数 为连续期数 2、待开奖期数 的开奖时间 是否 已过
-            if (nextOpenIssueNo - openedIssueNo == 1 && new Date().before(awardTime)) {
-                log.info("没有期数遗漏，并且当前时间小于开奖时间，下期未开奖，跳过此次扫描，等待开奖。。。");
-                return;
-            }
+//            if (nextOpenIssueNo - openedIssueNo == 1 && new Date().before(awardTime)) {
+//                log.info("没有期数遗漏，并且当前时间小于开奖时间，下期未开奖，跳过此次扫描，等待开奖。。。");
+//                return;
+//            }
         } else {
             log.info("未查询到已开奖数据");
         }

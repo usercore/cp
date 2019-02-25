@@ -21,6 +21,10 @@ public class RunGanSuK3Job extends DisallowConcurrentExecutionJob {
     IScheduleService scheduleService;
     @Autowired
     IGanSuK3Service iGanSuK3Service;
+    @Autowired
+    IGanSuK3PropService iGanSuK3PropService;
+    @Autowired
+    IGanSuK3LostService iGanSuK3LostService;
 
     public void setScheduleService(IScheduleService scheduleService) {
         this.scheduleService = scheduleService;
@@ -37,6 +41,15 @@ public class RunGanSuK3Job extends DisallowConcurrentExecutionJob {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        try {
+            iGanSuK3PropService.doCalculateProp();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            iGanSuK3LostService.doCalculateLost();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

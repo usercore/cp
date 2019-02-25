@@ -206,7 +206,7 @@ public class GanSuK3Result {
     }
 
     /**
-     * 获取待开奖数据
+     * 获取待开奖数据 已弃用
      *
      * @return
      */
@@ -266,6 +266,13 @@ public class GanSuK3Result {
         resultMap.put("nextIssue", nextIssue);
         return resultMap;
     }
+
+    public static Map<String, TraditionIssue> zhcw() {
+        Map<String, TraditionIssue> resultMap = new HashMap<String, TraditionIssue>();
+        String url = "http://data.zhcw.com/k3/index.php?act=kstb";
+        return resultMap;
+    }
+
 
     public static void main(String[] args) {
         //icaile();
